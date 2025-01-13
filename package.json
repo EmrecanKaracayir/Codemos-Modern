@@ -574,7 +574,7 @@
     "*.{ts,json,md}": "prettier --write"
   },
   "dependencies": {
-    "@octokit/rest": "^21.0.1",
+    "@octokit/rest": "^21.1.0",
     "@resvg/resvg-js": "^2.6.0",
     "axios": "^1.6.5",
     "jsdom": "^25.0.0"
