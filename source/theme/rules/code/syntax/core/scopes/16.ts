@@ -18,7 +18,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Labels
     {
-      scope: ["entity.name.label"],
+      scope: ["entity.name.label", "entity.name.goto-label"],
       settings: {
         foreground: color,
         fontStyle: "",
