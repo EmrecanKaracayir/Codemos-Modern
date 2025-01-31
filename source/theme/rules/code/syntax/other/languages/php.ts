@@ -22,6 +22,14 @@ export const getRules = (themeContext: ThemeContext): object => {
         fontStyle: "",
       },
     },
+    // Variables
+    {
+      scope: ["variable.other.php"],
+      settings: {
+        foreground: colors.scope10,
+        fontStyle: "",
+      },
+    },
     // Interpolated variables
     {
       scope: [
