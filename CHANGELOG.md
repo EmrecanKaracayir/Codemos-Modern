@@ -4,6 +4,12 @@ All notable changes to the "codemos-modern" extension will be documented in this
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.1rc1] - 2025-02-01 - PHP improvements 🐘
+
+### Fixed
+
+- PHP syntax highlighting for various keywords and operators.
+
 ## [3.0.0rc1] - 2024-12-10 - V3 Release Candidate 🚀
 
 > **Note:** This is a release candidate, there may be bugs and disabled features. Please test and report any issues you encounter.
@@ -460,6 +466,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Initial release
 
+[3.0.1rc1]: https://github.com/Codemos-Inc/codemos-modern/compare/v3.0.0rc1...v3.0.1rc1
+[3.0.0rc1]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.8.3...v3.0.0rc1
 [2.8.3]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.8.2...v2.8.3
 [2.8.2]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.8.1...v2.8.2
 [2.8.1]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.8.0...v2.8.1

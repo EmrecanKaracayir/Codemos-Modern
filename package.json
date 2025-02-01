@@ -5,7 +5,7 @@
   "icon": "resource/icon.gif",
   "description": "%ext.desc%",
   "pricing": "Free",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": "MIT",
   "preview": true,
   "homepage": "https://github.com/Codemos-Inc/Codemos-Modern",
@@ -577,7 +577,7 @@
     "@octokit/rest": "^21.0.1",
     "@resvg/resvg-js": "^2.6.0",
     "axios": "^1.6.5",
-    "jsdom": "^25.0.0"
+    "jsdom": "^26.0.0"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.6",
@@ -587,7 +587,7 @@
     "@typescript-eslint/parser": "^8.3.0",
     "esbuild": "^0.24.0",
     "eslint": "^9.9.1",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-prettier": "^10.0.0",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
