@@ -3,6 +3,14 @@ import { ThemeContext } from "../../../../../../@types";
 export const getRules = (themeContext: ThemeContext): object => {
   const colors = themeContext.variantConfig.codeColors;
   return [
+    // Aliases
+    {
+      scope: ["source.php entity.other.alias"],
+      settings: {
+        foreground: colors.scope03,
+        fontStyle: "",
+      },
+    },
     // Enum Access
     {
       scope: ["constant.other.class.php"],
