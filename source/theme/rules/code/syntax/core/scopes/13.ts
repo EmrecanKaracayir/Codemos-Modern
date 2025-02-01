@@ -14,6 +14,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Enum members
     {
       scope: [
+        "constant.enum",
         "constant.other.enum-member",
         "constant.other.enum",
         "entity.name.variable.enum-member",
