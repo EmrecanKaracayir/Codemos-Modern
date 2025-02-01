@@ -12,6 +12,7 @@ export const getRules = (themeContext: ThemeContext): object => {
         "entity.other.attribute-name.namespace",
         "storage.modifier.namespace",
         "support.namespace",
+        "support.other.namespace",
       ],
       settings: {
         foreground: color,
@@ -26,6 +27,7 @@ export const getRules = (themeContext: ThemeContext): object => {
         "entity.other.attribute-name.module",
         "storage.modifier.module",
         "support.module",
+        "support.other.module",
       ],
       settings: {
         foreground: color,
@@ -41,6 +43,7 @@ export const getRules = (themeContext: ThemeContext): object => {
         "storage.modifier.import",
         "storage.modifier.package",
         "support.package",
+        "support.other.package",
       ],
       settings: {
         foreground: color,
