@@ -1761,6 +1761,7 @@
     },
     {
       "scope": [
+        "constant.enum",
         "constant.other.enum-member",
         "constant.other.enum",
         "entity.name.variable.enum-member",
@@ -1867,7 +1868,8 @@
     },
     {
       "scope": [
-        "entity.name.label"
+        "entity.name.label",
+        "entity.name.goto-label"
       ],
       "settings": {
         "foreground": "#CD95b8FF",
@@ -3019,6 +3021,15 @@
       ],
       "settings": {
         "foreground": "#87ABC0FF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "variable.other.php"
+      ],
+      "settings": {
+        "foreground": "#C59E7FFF",
         "fontStyle": ""
       }
     },

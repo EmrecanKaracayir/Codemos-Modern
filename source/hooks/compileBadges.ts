@@ -10,7 +10,7 @@ const VSCODE_VERSION = "1.94";
 
 // Dynamics
 fetchModifySvg(
-  "https://img.shields.io/github/release/Codemos-Inc/Codemos-Modern.svg?labelColor=373737&color=45AA41&label=&logo=github&logoColor=%23FFFFFFC7&style=for-the-badge",
+  "https://img.shields.io/github/release/EmrecanKaracayir/Codemos-Modern.svg?labelColor=373737&color=45AA41&label=&logo=github&logoColor=%23FFFFFFC7&style=for-the-badge",
   join(IMAGES_PATH, "badge-release.svg"),
   true,
   false,

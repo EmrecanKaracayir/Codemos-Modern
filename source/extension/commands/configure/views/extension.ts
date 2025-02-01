@@ -52,7 +52,7 @@ export const extensionView = async (
   auxExtensionQPIs.push({
     auxExtensionId: "_",
     label: "$(library) Codemos Modern",
-    description: "Codemos-Inc/Codemos-Modern $(verified-filled)",
+    description: "EmrecanKaracayir/Codemos-Modern $(verified-filled)",
     detail: `$(organization) Codemos • $(compass) ${l10nT(
       "quickPick.extension.item.origin.bundled",
     )} • $(law) MIT`,
@@ -72,19 +72,6 @@ export const extensionView = async (
         );
       },
     );
-    for (const filteredAuxTheme of filteredAuxThemes) {
-      const installedOption = auxThemeRegIndexWithId.auxThemeRegIndex.themes[variant].find(
-        (auxTheme) => {
-          return auxTheme.extension === filteredAuxTheme.extension && auxTheme.installed;
-        },
-      );
-      if (installedOption) {
-        const index = filteredAuxThemes.findIndex((auxTheme) => {
-          return auxTheme === filteredAuxTheme;
-        });
-        filteredAuxThemes[index] = installedOption;
-      }
-    }
     const isVerifiedOwner = verifiedOwners.find((verifiedOwner) => {
       return verifiedOwner === auxThemeRegIndexWithId.auxThemeRegId.owner.toLowerCase();
     })

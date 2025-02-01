@@ -1,7 +1,7 @@
 import { Config } from "../@types";
 
 export const defaultConfig: Config = {
-  auxiliaryThemeRegistries: ["Codemos-Inc/Auxiliary-Theme-Registry"],
+  auxiliaryThemeRegistries: ["EmrecanKaracayir/Auxiliary-Theme-Registry"],
   textDecorations: {
     strikeThrough: true,
     bold: true,

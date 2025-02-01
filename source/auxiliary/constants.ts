@@ -1,1 +1,4 @@
-export const verifiedOwners: string[] = ["Codemos-Inc".toLowerCase()];
+export const verifiedOwners: string[] = [
+  "Codemos-Inc".toLowerCase(),
+  "EmrecanKaracayir".toLowerCase(),
+];
