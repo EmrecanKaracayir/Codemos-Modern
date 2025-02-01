@@ -4,6 +4,44 @@ All notable changes to the "codemos-modern" extension will be documented in this
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.1] - 2025-02-01 - PHP improvements 🐘
+
+### Updated
+
+- Moved Codemos Modern from "Codemos-Inc" to "EmrecanKaracayir" organization.
+
+### Fixed
+
+- PHP syntax highlighting for various keywords and operators.
+- Configure command Quick Pick list item duplication issue.
+
+## [3.0.0] - 2024-12-10 - V3 Release Candidate 🚀
+
+> **Note:** This is a release candidate, there may be bugs and disabled features. Please test and report any issues you encounter.
+
+### Disabled
+
+- Localizations other than English for now.
+
+### Added
+
+- Support for VS Code v1.95.x.
+- New design, **"Natural"**. Users can now choose between **"Modern"**, **"Minimal"**, **"Flat"** and **"Natural"** designs.
+- Code color customizations. Users can now customize the colors of their code.
+- Ability to select another color as the adaptation color.
+
+### Updated
+
+- Some designs to be more consistent.
+
+### Changed
+
+- Adaptation mode to allow more customizations.
+
+### Fixed
+
+- CMake parentheses colors incorrectly highlighted.
+
 ## [2.8.3] - 2024-10-10 - Minor fixes 🛠️
 
 ### Changed
@@ -74,7 +112,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- How Modern makes requests for the GitHub sessions, now it will not repeat requests further if first one denied. Thanks to [@zliebersbach#177](https://github.com/Codemos-Inc/Codemos-Modern/issues/177).
+- How Modern makes requests for the GitHub sessions, now it will not repeat requests further if first one denied. Thanks to [@zliebersbach#177](https://github.com/EmrecanKaracayir/Codemos-Modern/issues/177).
 
 ### Updated
 
@@ -433,43 +471,45 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Initial release
 
-[2.8.3]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.8.2...v2.8.3
-[2.8.2]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.8.1...v2.8.2
-[2.8.1]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.8.0...v2.8.1
-[2.8.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.7.2...v2.8.0
-[2.7.2]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.7.1...v2.7.2
-[2.7.1]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.7.0...v2.7.1
-[2.7.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.6.1...v2.7.0
-[2.6.1]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.6.0...v2.6.1
-[2.6.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.5.4...v2.6.0
-[2.5.4]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.5.3...v2.5.4
-[2.5.3]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.5.2...v2.5.3
-[2.5.2]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.5.1...v2.5.2
-[2.5.1]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.5.0...v2.5.1
-[2.5.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.4.0...v2.5.0
-[2.4.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.3.1...v2.4.0
-[2.3.1]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.3.0...v2.3.1
-[2.3.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.2.0...v2.3.0
-[2.2.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.1.9...v2.2.0
-[2.1.9]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.1.8...v2.1.9
-[2.1.8]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.1.7...v2.1.8
-[2.1.7]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.1.6...v2.1.7
-[2.1.6]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.1.5...v2.1.6
-[2.1.5]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.1.4...v2.1.5
-[2.1.4]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.1.3...v2.1.4
-[2.1.3]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.1.2...v2.1.3
-[2.1.2]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.1.1...v2.1.2
-[2.1.1]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.1.0...v2.1.1
-[2.1.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.0.1...v2.1.0
-[2.0.1]: https://github.com/Codemos-Inc/codemos-modern/compare/v2.0.0...v2.0.1
-[2.0.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v1.2.2...v2.0.0
-[1.2.2]: https://github.com/Codemos-Inc/codemos-modern/compare/v1.2.1...v1.2.2
-[1.2.1]: https://github.com/Codemos-Inc/codemos-modern/compare/v1.2.0...v1.2.1
-[1.2.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v1.1.2...v1.2.0
-[1.1.2]: https://github.com/Codemos-Inc/codemos-modern/compare/v1.1.0...v1.1.2
-[1.1.0]: https://github.com/Codemos-Inc/codemos-modern/compare/v1.0.4...v1.1.0
-[1.0.4]: https://github.com/Codemos-Inc/codemos-modern/compare/v1.0.3...v1.0.4
-[1.0.3]: https://github.com/Codemos-Inc/codemos-modern/compare/v1.0.2...v1.0.3
-[1.0.2]: https://github.com/Codemos-Inc/codemos-modern/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/Codemos-Inc/codemos-modern/compare/v1.0.0...v1.0.1
-[1.0.0]: https://github.com/Codemos-Inc/codemos-modern/releases/tag/v1.0.0
+[3.0.1]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.0...v3.0.1
+[3.0.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.8.3...v3.0.0
+[2.8.3]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.8.2...v2.8.3
+[2.8.2]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.8.1...v2.8.2
+[2.8.1]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.8.0...v2.8.1
+[2.8.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.7.2...v2.8.0
+[2.7.2]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.7.1...v2.7.2
+[2.7.1]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.7.0...v2.7.1
+[2.7.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.6.1...v2.7.0
+[2.6.1]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.6.0...v2.6.1
+[2.6.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.5.4...v2.6.0
+[2.5.4]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.5.3...v2.5.4
+[2.5.3]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.5.2...v2.5.3
+[2.5.2]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.5.1...v2.5.2
+[2.5.1]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.5.0...v2.5.1
+[2.5.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.4.0...v2.5.0
+[2.4.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.3.1...v2.4.0
+[2.3.1]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.3.0...v2.3.1
+[2.3.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.2.0...v2.3.0
+[2.2.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.1.9...v2.2.0
+[2.1.9]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.1.8...v2.1.9
+[2.1.8]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.1.7...v2.1.8
+[2.1.7]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.1.6...v2.1.7
+[2.1.6]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.1.5...v2.1.6
+[2.1.5]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.1.4...v2.1.5
+[2.1.4]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.1.3...v2.1.4
+[2.1.3]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.1.2...v2.1.3
+[2.1.2]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.1.1...v2.1.2
+[2.1.1]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.1.0...v2.1.1
+[2.1.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.0.1...v2.1.0
+[2.0.1]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v1.2.2...v2.0.0
+[1.2.2]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v1.2.1...v1.2.2
+[1.2.1]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v1.2.0...v1.2.1
+[1.2.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v1.1.2...v1.2.0
+[1.1.2]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v1.1.0...v1.1.2
+[1.1.0]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v1.0.4...v1.1.0
+[1.0.4]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v1.0.3...v1.0.4
+[1.0.3]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v1.0.2...v1.0.3
+[1.0.2]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/EmrecanKaracayir/codemos-modern/releases/tag/v1.0.0

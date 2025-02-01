@@ -2,13 +2,20 @@
   "name": "codemos-modern",
   "displayName": "Codemos Modern",
   "publisher": "Codemos",
-  "icon": "res/icon.gif",
+  "icon": "resource/icon.gif",
   "description": "%ext.desc%",
-  "version": "2.8.3",
+  "pricing": "Free",
+  "version": "3.0.1",
   "license": "MIT",
+  "preview": true,
+  "homepage": "https://github.com/EmrecanKaracayir/Codemos-Modern",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Codemos-Inc/Codemos-Modern"
+    "url": "https://github.com/EmrecanKaracayir/Codemos-Modern"
+  },
+  "bugs": {
+    "url": "https://github.com/EmrecanKaracayir/Codemos-Modern/issues",
+    "email": "developer@karacayir.com"
   },
   "sponsor": {
     "url": "https://github.com/sponsors/EmrecanKaracayir"
@@ -24,7 +31,6 @@
     "Themes"
   ],
   "keywords": [
-    "color-theme",
     "theme",
     "dark",
     "light",
@@ -72,9 +78,10 @@
         "properties": {
           "codemosModern.auxiliaryThemeRegistries": {
             "order": 0,
+            "scope": "window",
             "type": "array",
             "default": [
-              "Codemos-Inc/Auxiliary-Theme-Registry"
+              "EmrecanKaracayir/Auxiliary-Theme-Registry"
             ],
             "minItems": 1,
             "markdownDescription": "%conf.auxiliaryThemeRegistries.desc%",
@@ -88,30 +95,35 @@
         "properties": {
           "codemosModern.textDecorations.strikethrough": {
             "order": 0,
+            "scope": "window",
             "type": "boolean",
             "default": true,
             "markdownDescription": "%conf.textDec.strikethrough.desc%"
           },
           "codemosModern.textDecorations.bold": {
             "order": 1,
+            "scope": "window",
             "type": "boolean",
             "default": true,
             "markdownDescription": "%conf.textDec.bold.desc%"
           },
           "codemosModern.textDecorations.italic": {
             "order": 2,
+            "scope": "window",
             "type": "boolean",
             "default": true,
             "markdownDescription": "%conf.textDec.italic.desc%"
           },
           "codemosModern.textDecorations.underline": {
             "order": 3,
+            "scope": "window",
             "type": "boolean",
             "default": false,
             "markdownDescription": "%conf.textDec.underline.desc%"
           },
           "codemosModern.textDecorations.forComments": {
             "order": 4,
+            "scope": "window",
             "type": "array",
             "items": {
               "type": "string",
@@ -140,6 +152,7 @@
         "properties": {
           "codemosModern.dark.auxiliaryUiTheme": {
             "order": 0,
+            "scope": "window",
             "type": [
               "string",
               "null"
@@ -151,15 +164,18 @@
           },
           "codemosModern.dark.design": {
             "order": 1,
+            "scope": "window",
             "type": "string",
             "default": "modern",
             "enum": [
               "modern",
+              "natural",
               "minimal",
               "flat"
             ],
             "enumDescriptions": [
               "%conf.*.design.enum.modern.desc%",
+              "%conf.*.design.enum.natural.desc%",
               "%conf.*.design.enum.minimal.desc%",
               "%conf.*.design.enum.flat.desc%"
             ],
@@ -167,32 +183,34 @@
           },
           "codemosModern.dark.accentColor": {
             "order": 2,
+            "scope": "window",
             "type": "string",
             "default": "#CB8569",
             "markdownDescription": "%conf.dark.accentColor.desc%",
             "pattern": "^#[0-9A-Fa-f]{6}$",
-            "patternErrorMessage": "%conf.dark.accentColor.err%"
+            "patternErrorMessage": "%conf.dark.*Color.err%"
           },
-          "codemosModern.dark.adaptiveMode": {
+          "codemosModern.dark.adaptationColor": {
             "order": 3,
+            "scope": "window",
             "type": "string",
-            "default": "none",
-            "enum": [
-              "none",
-              "gentle",
-              "moderate",
-              "aggressive"
-            ],
-            "enumDescriptions": [
-              "%conf.*.adaptiveMode.enum.none.desc%",
-              "%conf.*.adaptiveMode.enum.gentle.desc%",
-              "%conf.*.adaptiveMode.enum.moderate.desc%",
-              "%conf.*.adaptiveMode.enum.aggressive.desc%"
-            ],
-            "markdownDescription": "%conf.dark.adaptiveMode.desc%"
+            "default": "#CB8569",
+            "markdownDescription": "%conf.dark.adaptationColor.desc%",
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "patternErrorMessage": "%conf.dark.*Color.err%"
+          },
+          "codemosModern.dark.adaptationIntensity": {
+            "order": 4,
+            "scope": "window",
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 100,
+            "markdownDescription": "%conf.dark.adaptationIntensity.desc%"
           },
           "codemosModern.dark.auxiliaryCodeTheme": {
-            "order": 4,
+            "order": 5,
+            "scope": "window",
             "type": [
               "string",
               "null"
@@ -201,6 +219,141 @@
             "markdownDescription": "%conf.dark.auxiliaryCodeTheme.desc%",
             "pattern": "^[a-zA-Z0-9-]+/[a-zA-Z0-9._-]+/.+/.+/.+$",
             "patternErrorMessage": "%conf.dark.auxiliary*Theme.err%"
+          },
+          "codemosModern.dark.codeColors": {
+            "order": 6,
+            "scope": "window",
+            "type": "object",
+            "additionalProperties": false,
+            "markdownDescription": "%conf.dark.codeColors.desc%",
+            "properties": {
+              "scope00": {
+                "type": "string",
+                "default": "#CB8569FF",
+                "description": "%conf.*.scope00.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope01": {
+                "type": "string",
+                "default": "#EF6363FF",
+                "description": "%conf.*.scope01.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope02": {
+                "type": "string",
+                "default": "#D28342FF",
+                "description": "%conf.*.scope02.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope03": {
+                "type": "string",
+                "default": "#BFAF40FF",
+                "description": "%conf.*.scope03.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope04": {
+                "type": "string",
+                "default": "#45AA41FF",
+                "description": "%conf.*.scope04.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope05": {
+                "type": "string",
+                "default": "#46A598FF",
+                "description": "%conf.*.scope05.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope06": {
+                "type": "string",
+                "default": "#4B9ECDFF",
+                "description": "%conf.*.scope06.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope07": {
+                "type": "string",
+                "default": "#9B87EAFF",
+                "description": "%conf.*.scope07.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope08": {
+                "type": "string",
+                "default": "#ED63BAFF",
+                "description": "%conf.*.scope08.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope09": {
+                "type": "string",
+                "default": "#D19797FF",
+                "description": "%conf.*.scope09.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope10": {
+                "type": "string",
+                "default": "#C59E7FFF",
+                "description": "%conf.*.scope10.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope11": {
+                "type": "string",
+                "default": "#ADA77FFF",
+                "description": "%conf.*.scope11.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope12": {
+                "type": "string",
+                "default": "#80B27FFF",
+                "description": "%conf.*.scope12.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope13": {
+                "type": "string",
+                "default": "#83AEA8FF",
+                "description": "%conf.*.scope13.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope14": {
+                "type": "string",
+                "default": "#87ABC0FF",
+                "description": "%conf.*.scope14.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope15": {
+                "type": "string",
+                "default": "#A9A0CBFF",
+                "description": "%conf.*.scope15.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope16": {
+                "type": "string",
+                "default": "#CD95b8FF",
+                "description": "%conf.*.scope16.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.dark.codeColor.err%"
+              },
+              "scope17": {
+                "type": "string",
+                "default": "#FFFFFF8A",
+                "description": "%conf.*.scope17.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              }
+            }
           }
         }
       },
@@ -209,6 +362,7 @@
         "properties": {
           "codemosModern.light.auxiliaryUiTheme": {
             "order": 0,
+            "scope": "window",
             "type": [
               "string",
               "null"
@@ -220,15 +374,18 @@
           },
           "codemosModern.light.design": {
             "order": 1,
+            "scope": "window",
             "type": "string",
             "default": "modern",
             "enum": [
               "modern",
+              "natural",
               "minimal",
               "flat"
             ],
             "enumDescriptions": [
               "%conf.*.design.enum.modern.desc%",
+              "%conf.*.design.enum.natural.desc%",
               "%conf.*.design.enum.minimal.desc%",
               "%conf.*.design.enum.flat.desc%"
             ],
@@ -236,32 +393,34 @@
           },
           "codemosModern.light.accentColor": {
             "order": 2,
+            "scope": "window",
             "type": "string",
             "default": "#784F3F",
             "markdownDescription": "%conf.light.accentColor.desc%",
             "pattern": "^#[0-9A-Fa-f]{6}$",
-            "patternErrorMessage": "%conf.light.accentColor.err%"
+            "patternErrorMessage": "%conf.light.*Color.err%"
           },
-          "codemosModern.light.adaptiveMode": {
+          "codemosModern.light.adaptationColor": {
             "order": 3,
+            "scope": "window",
             "type": "string",
-            "default": "none",
-            "enum": [
-              "none",
-              "gentle",
-              "moderate",
-              "aggressive"
-            ],
-            "enumDescriptions": [
-              "%conf.*.adaptiveMode.enum.none.desc%",
-              "%conf.*.adaptiveMode.enum.gentle.desc%",
-              "%conf.*.adaptiveMode.enum.moderate.desc%",
-              "%conf.*.adaptiveMode.enum.aggressive.desc%"
-            ],
-            "markdownDescription": "%conf.light.adaptiveMode.desc%"
+            "default": "#784F3F",
+            "markdownDescription": "%conf.light.adaptationColor.desc%",
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "patternErrorMessage": "%conf.light.*Color.err%"
+          },
+          "codemosModern.light.adaptationIntensity": {
+            "order": 4,
+            "scope": "window",
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 100,
+            "markdownDescription": "%conf.light.adaptationIntensity.desc%"
           },
           "codemosModern.light.auxiliaryCodeTheme": {
-            "order": 4,
+            "order": 5,
+            "scope": "window",
             "type": [
               "string",
               "null"
@@ -270,6 +429,141 @@
             "markdownDescription": "%conf.light.auxiliaryCodeTheme.desc%",
             "pattern": "^[a-zA-Z0-9-]+/[a-zA-Z0-9._-]+/.+/.+/.+$",
             "patternErrorMessage": "%conf.light.auxiliary*Theme.err%"
+          },
+          "codemosModern.light.codeColors": {
+            "order": 6,
+            "scope": "window",
+            "type": "object",
+            "additionalProperties": false,
+            "markdownDescription": "%conf.light.codeColors.desc%",
+            "properties": {
+              "scope00": {
+                "type": "string",
+                "default": "#784F3FFF",
+                "description": "%conf.*.scope00.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope01": {
+                "type": "string",
+                "default": "#B70004FF",
+                "description": "%conf.*.scope01.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope02": {
+                "type": "string",
+                "default": "#9F5500FF",
+                "description": "%conf.*.scope02.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope03": {
+                "type": "string",
+                "default": "#7D7000FF",
+                "description": "%conf.*.scope03.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope04": {
+                "type": "string",
+                "default": "#006904FF",
+                "description": "%conf.*.scope04.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope05": {
+                "type": "string",
+                "default": "#006560FF",
+                "description": "%conf.*.scope05.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope06": {
+                "type": "string",
+                "default": "#0052C6FF",
+                "description": "%conf.*.scope06.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope07": {
+                "type": "string",
+                "default": "#7700EEFF",
+                "description": "%conf.*.scope07.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope08": {
+                "type": "string",
+                "default": "#AC0074FF",
+                "description": "%conf.*.scope08.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope09": {
+                "type": "string",
+                "default": "#C35354FF",
+                "description": "%conf.*.scope09.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope10": {
+                "type": "string",
+                "default": "#8D7252FF",
+                "description": "%conf.*.scope10.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope11": {
+                "type": "string",
+                "default": "#7D7852FF",
+                "description": "%conf.*.scope11.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope12": {
+                "type": "string",
+                "default": "#528256FF",
+                "description": "%conf.*.scope12.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope13": {
+                "type": "string",
+                "default": "#567E7CFF",
+                "description": "%conf.*.scope13.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope14": {
+                "type": "string",
+                "default": "#5B79A2FF",
+                "description": "%conf.*.scope14.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope15": {
+                "type": "string",
+                "default": "#8E64B9FF",
+                "description": "%conf.*.scope15.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope16": {
+                "type": "string",
+                "default": "#AF5A92FF",
+                "description": "%conf.*.scope16.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              },
+              "scope17": {
+                "type": "string",
+                "default": "#000000B8",
+                "description": "%conf.*.scope17.desc%",
+                "pattern": "^#[0-9A-Fa-f]{8}$",
+                "patternErrorMessage": "%conf.light.codeColor.err%"
+              }
+            }
           }
         }
       }
@@ -283,7 +577,7 @@
     "@octokit/rest": "^21.0.1",
     "@resvg/resvg-js": "^2.6.0",
     "axios": "^1.6.5",
-    "jsdom": "^25.0.0"
+    "jsdom": "^26.0.0"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.6",
@@ -293,7 +587,7 @@
     "@typescript-eslint/parser": "^8.3.0",
     "esbuild": "^0.24.0",
     "eslint": "^9.9.1",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-prettier": "^10.0.0",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
@@ -306,12 +600,12 @@
     "clean": "rm -rf out && rm -rf data/.state.json && rm -rf data/cache/*",
     "winClean": "if exist out (rmdir /s /q out 2>nul) && if exist data\\.state.json (del /q data\\.state.json 2>nul) && if exist data\\cache (rmdir /s /q data\\cache 2>nul)",
     "format": "prettier --write .",
-    "lint": "eslint src && tsc --noEmit",
+    "lint": "eslint source && tsc --noEmit",
     "beforeBuild": "npm run clean && npm run format && npm run lint",
     "winBeforeBuild": "npm run winClean && npm run format && npm run lint",
-    "compile:badges": " tsx src/hooks/compileBadges.ts",
-    "compile:stateFile": "tsx src/hooks/compileStateFile.ts",
-    "compile:themes": "tsx src/hooks/compileThemes.ts",
+    "compile:badges": " tsx source/hooks/compileBadges.ts",
+    "compile:stateFile": "tsx source/hooks/compileStateFile.ts",
+    "compile:themes": "tsx source/hooks/compileThemes.ts",
     "compile": "tsc",
     "compile-all": "npm run compile && npm run compile:stateFile && npm run compile:themes",
     "package:dev": "node esbuild.js --dev",

@@ -1,5 +1,5 @@
-images
-res
-out
+/images
+/resource
+/out
 **/.state.json
-themes
+/themes

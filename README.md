@@ -2,13 +2,13 @@
 
 <br/>
 
-<img src="res/icon.gif" width="200"/>
+<img src="resource/icon.gif" width="200"/>
 
 <br/>
 
 # **Codemos Modern**
 
-<a href="https://github.com/Codemos-Inc/Codemos-Modern/releases/latest"><img src="images/badge-release.png" height="32" alt="Latest release"></a>&nbsp;
+<a href="https://github.com/EmrecanKaracayir/Codemos-Modern/releases/latest"><img src="images/badge-release.png" height="32" alt="Latest release"></a>&nbsp;
 <a href="https://code.visualstudio.com/updates/"><img src="images/badge-vscode.png" height="32" alt="Supported VS Code release"></a>&nbsp;
 <a href="https://marketplace.visualstudio.com/items?itemName=Codemos.codemos-modern"><img src="images/badge-downloads.png" height="32" alt="Download count"></a>&nbsp;
 <a href="https://github.com/sponsors/EmrecanKaracayir"><img src="images/badge-sponsors.png" height="32" alt="Sponsor count"></a>&nbsp;
@@ -152,9 +152,9 @@ After the launch of **Codemos Modern V2** we've decided to make Modern more modu
 
 #### How it works?
 
-We've designed a system for installing and managing third party themes. This system consists of two elements. **Auxiliary theme registries** and **Auxiliary themes**. Auxiliary theme registries are GitHub repositories that are the databases for third party themes and auxiliary themes are the actual third party themes. More information can be found in [our official registry's docs](https://github.com/Codemos-Inc/Auxiliary-Theme-Registry).
+We've designed a system for installing and managing third party themes. This system consists of two elements. **Auxiliary theme registries** and **Auxiliary themes**. Auxiliary theme registries are GitHub repositories that are the databases for third party themes and auxiliary themes are the actual third party themes. More information can be found in [our official registry's docs](https://github.com/EmrecanKaracayir/Auxiliary-Theme-Registry).
 
-By default, Modern comes with [our official registry](https://github.com/Codemos-Inc/Auxiliary-Theme-Registry), so you can benefit this system without any extra effort. However, you are not forced to use our official registry. You can use community registries or even create your own registries, _possibilities are endless_.
+By default, Modern comes with [our official registry](https://github.com/EmrecanKaracayir/Auxiliary-Theme-Registry), so you can benefit this system without any extra effort. However, you are not forced to use our official registry. You can use community registries or even create your own registries, _possibilities are endless_.
 
 This system allows you to match your favorite themes to **create your own style**. You can also share your styles to the community.
 
@@ -229,7 +229,7 @@ These decorations are:
 
 <h2 id="rdme-ext">🧩 Extensions</h2>
 
-We've also decided to theme some of the most used extensions to provide more consistent experience across the entire UI. In order an extension to be themed, it must [contribute themeable colors](https://code.visualstudio.com/api/references/contribution-points#contributes.colors). You can find the list of supported extensions that are themed in Codemos Modern below. If your favorite extension is not on the list, visit [Codemos Modern's GitHub repository](https://github.com/Codemos-Inc/Codemos-Modern) and let us know!
+We've also decided to theme some of the most used extensions to provide more consistent experience across the entire UI. In order an extension to be themed, it must [contribute themeable colors](https://code.visualstudio.com/api/references/contribution-points#contributes.colors). You can find the list of supported extensions that are themed in Codemos Modern below. If your favorite extension is not on the list, visit [Codemos Modern's GitHub repository](https://github.com/EmrecanKaracayir/Codemos-Modern) and let us know!
 
 ### Supported Extensions
 
@@ -246,7 +246,7 @@ We've also decided to theme some of the most used extensions to provide more con
 
 <h2 id="rdme-locale">🌐 Localization</h2>
 
-We try to make Codemos Modern the most accessible theming extension for VS Code. That's why we are planning to localize Codemos Modern to as many languages as possible. In this cause we need your help the most. Below, you can find the localization table. In this table you can see the status of the localization for each language. We are looking for volunteers to help us localize Codemos Modern. If you want to help us, join us on [GitHub](https://github.com/Codemos-Inc/Codemos-Modern).
+We try to make Codemos Modern the most accessible theming extension for VS Code. That's why we are planning to localize Codemos Modern to as many languages as possible. In this cause we need your help the most. Below, you can find the localization table. In this table you can see the status of the localization for each language. We are looking for volunteers to help us localize Codemos Modern. If you want to help us, join us on [GitHub](https://github.com/EmrecanKaracayir/Codemos-Modern).
 
 > **NOTE:** Native speakers can help us by reviewing localizations with the status "💬". There are two files to check: `l10n/bundle.l10n.{locale}.json` and `package.nls.{locale}.json`.
 
@@ -319,7 +319,7 @@ In this section you can find how Codemos Modern looks and feels in most used lan
 
 <h2 id="rdme-clog">📋 Change Log</h2>
 
-Changes from the last major release shown below. If you want to see the full change log, visit [CHANGELOG.md](https://github.com/Codemos-Inc/Codemos-Modern/blob/main/CHANGELOG.md).
+Changes from the last major release shown below. If you want to see the full change log, visit [CHANGELOG.md](https://github.com/EmrecanKaracayir/Codemos-Modern/blob/main/CHANGELOG.md).
 
 ### Added
 
@@ -342,10 +342,10 @@ Changes from the last major release shown below. If you want to see the full cha
 
 <h2 id="rdme-contrib">🙌🏼 Contribution</h2>
 
-We are open to any kind of contribution. If you want to contribute to Codemos Modern, join us on [GitHub](https://github.com/Codemos-Inc/Codemos-Modern).
+We are open to any kind of contribution. If you want to contribute to Codemos Modern, join us on [GitHub](https://github.com/EmrecanKaracayir/Codemos-Modern).
 
 <br/>
 
 <h2 id="rdme-license">📜 License</h2>
 
-Codemos Modern is licensed under the [MIT License](https://github.com/Codemos-Inc/Codemos-Modern/blob/main/LICENSE.md).
+Codemos Modern is licensed under the [MIT License](https://github.com/EmrecanKaracayir/Codemos-Modern/blob/main/LICENSE.md).
