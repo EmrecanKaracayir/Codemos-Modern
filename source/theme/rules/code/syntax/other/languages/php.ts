@@ -88,6 +88,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     {
       scope: [
         "meta.embedded.block.php keyword.operator.arithmetic",
+        "source.php keyword.definition.arrow",
         "source.php punctuation.section.array",
       ],
       settings: {
