@@ -2,7 +2,24 @@ import { ThemeContext } from "../../../../../../@types";
 
 export const getRules = (themeContext: ThemeContext): object => {
   const colors = themeContext.variantConfig.codeColors;
+  const decorations = themeContext.textDecorations;
   return [
+    // Aliases
+    {
+      scope: ["source.php entity.other.alias"],
+      settings: {
+        foreground: colors.scope03,
+        fontStyle: "",
+      },
+    },
+    // Enum access
+    {
+      scope: ["constant.other.class.php"],
+      settings: {
+        foreground: colors.scope13,
+        fontStyle: "",
+      },
+    },
     // Constants
     {
       scope: ["meta.embedded.block.php constant.other", "source.php constant.other"],
@@ -79,11 +96,37 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Other operators
     {
       scope: [
+        "meta.attribute.href punctuation.definition.arguments",
         "meta.embedded.block.php keyword.operator.arithmetic",
+        "source.php keyword.definition.arrow",
         "source.php punctuation.section.array",
       ],
       settings: {
         foreground: colors.scope17,
+        fontStyle: "",
+      },
+    },
+    // Blade keywords
+    {
+      scope: ["keyword.blade"],
+      settings: {
+        foreground: colors.scope08,
+        fontStyle: "",
+      },
+    },
+    // Blade php constructs
+    {
+      scope: ["support.function.construct.begin", "support.function.construct.end"],
+      settings: {
+        foreground: colors.scope14,
+        fontStyle: "",
+      },
+    },
+    // Blade php functions
+    {
+      scope: ["meta.attribute.href entity.name.function"],
+      settings: {
+        foreground: colors.scope02,
         fontStyle: "",
       },
     },
@@ -93,6 +136,14 @@ export const getRules = (themeContext: ThemeContext): object => {
       settings: {
         foreground: colors.scope17,
         fontStyle: "",
+      },
+    },
+    // Static function calls
+    {
+      scope: "meta.method-call.static entity.name.function",
+      settings: {
+        foreground: colors.scope02,
+        fontStyle: decorations.italic ? "italic" : "",
       },
     },
   ];

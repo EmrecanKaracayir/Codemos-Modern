@@ -1450,7 +1450,8 @@
         "entity.name.type.namespace",
         "entity.other.attribute-name.namespace",
         "storage.modifier.namespace",
-        "support.namespace"
+        "support.namespace",
+        "support.other.namespace"
       ],
       "settings": {
         "foreground": "#006560FF",
@@ -1463,7 +1464,8 @@
         "entity.name.type.module",
         "entity.other.attribute-name.module",
         "storage.modifier.module",
-        "support.module"
+        "support.module",
+        "support.other.module"
       ],
       "settings": {
         "foreground": "#006560FF",
@@ -1477,7 +1479,8 @@
         "entity.other.attribute-name.package",
         "storage.modifier.import",
         "storage.modifier.package",
-        "support.package"
+        "support.package",
+        "support.other.package"
       ],
       "settings": {
         "foreground": "#006560FF",
@@ -1489,6 +1492,7 @@
         "entity.name.tag",
         "entity.name.type.tag",
         "entity.other.attribute-name.tag",
+        "entity.tag",
         "storage.type.tag",
         "support.tag"
       ],
@@ -3006,6 +3010,24 @@
     },
     {
       "scope": [
+        "source.php entity.other.alias"
+      ],
+      "settings": {
+        "foreground": "#7D7000FF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "constant.other.class.php"
+      ],
+      "settings": {
+        "foreground": "#567E7CFF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
         "meta.embedded.block.php constant.other",
         "source.php constant.other"
       ],
@@ -3077,11 +3099,41 @@
     },
     {
       "scope": [
+        "meta.attribute.href punctuation.definition.arguments",
         "meta.embedded.block.php keyword.operator.arithmetic",
+        "source.php keyword.definition.arrow",
         "source.php punctuation.section.array"
       ],
       "settings": {
         "foreground": "#000000B8",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "keyword.blade"
+      ],
+      "settings": {
+        "foreground": "#AC0074FF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "support.function.construct.begin",
+        "support.function.construct.end"
+      ],
+      "settings": {
+        "foreground": "#5B79A2FF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "meta.attribute.href entity.name.function"
+      ],
+      "settings": {
+        "foreground": "#9F5500FF",
         "fontStyle": ""
       }
     },
@@ -3092,6 +3144,13 @@
       "settings": {
         "foreground": "#000000B8",
         "fontStyle": ""
+      }
+    },
+    {
+      "scope": "meta.method-call.static entity.name.function",
+      "settings": {
+        "foreground": "#9F5500FF",
+        "fontStyle": "italic"
       }
     },
     {
