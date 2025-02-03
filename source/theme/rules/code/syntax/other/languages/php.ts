@@ -2,6 +2,7 @@ import { ThemeContext } from "../../../../../../@types";
 
 export const getRules = (themeContext: ThemeContext): object => {
   const colors = themeContext.variantConfig.codeColors;
+  const decorations = themeContext.textDecorations;
   return [
     // Aliases
     {
@@ -11,7 +12,7 @@ export const getRules = (themeContext: ThemeContext): object => {
         fontStyle: "",
       },
     },
-    // Enum Access
+    // Enum access
     {
       scope: ["constant.other.class.php"],
       settings: {
@@ -95,9 +96,9 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Other operators
     {
       scope: [
+        "meta.attribute.href punctuation.definition.arguments",
         "meta.embedded.block.php keyword.operator.arithmetic",
         "source.php keyword.definition.arrow",
-        "source.php meta.attribute punctuation.definition.arguments",
         "source.php punctuation.section.array",
       ],
       settings: {
@@ -115,15 +116,15 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Blade php constructs
     {
-      scope: ["support.function.construct"],
+      scope: ["support.function.construct.begin", "support.function.construct.end"],
       settings: {
-        foreground: colors.scope16,
+        foreground: colors.scope14,
         fontStyle: "",
       },
     },
-    // Blade functions fix
+    // Blade php functions
     {
-      scope: ["source.php meta.attribute entity.name.function"],
+      scope: ["meta.attribute.href entity.name.function"],
       settings: {
         foreground: colors.scope02,
         fontStyle: "",
@@ -135,6 +136,14 @@ export const getRules = (themeContext: ThemeContext): object => {
       settings: {
         foreground: colors.scope17,
         fontStyle: "",
+      },
+    },
+    // Static function calls
+    {
+      scope: "meta.method-call.static entity.name.function",
+      settings: {
+        foreground: colors.scope02,
+        fontStyle: decorations.italic ? "italic" : "",
       },
     },
   ];

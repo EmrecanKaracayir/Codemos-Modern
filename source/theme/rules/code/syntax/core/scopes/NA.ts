@@ -1,7 +1,6 @@
 import type { ThemeContext } from "../../../../../../@types";
 
 export const getRules = (themeContext: ThemeContext): object => {
-  const colors = themeContext.variantConfig.codeColors;
   const styles = themeContext.styles;
   const decorations = themeContext.textDecorations;
   return [
@@ -32,14 +31,6 @@ export const getRules = (themeContext: ThemeContext): object => {
       settings: {
         foreground: styles.basic.def.red.pri,
         fontStyle: "",
-      },
-    },
-    // Static symbols
-    {
-      scope: "meta.method-call.static",
-      settings: {
-        foreground: colors.scope02,
-        fontStyle: decorations.italic ? "italic" : "",
       },
     },
     // Deprecated symbols
