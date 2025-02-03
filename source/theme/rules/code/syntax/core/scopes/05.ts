@@ -56,6 +56,7 @@ export const getRules = (themeContext: ThemeContext): object => {
         "entity.name.tag",
         "entity.name.type.tag",
         "entity.other.attribute-name.tag",
+        "entity.tag",
         "storage.type.tag",
         "support.tag",
       ],
