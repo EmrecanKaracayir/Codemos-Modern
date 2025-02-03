@@ -97,10 +97,35 @@ export const getRules = (themeContext: ThemeContext): object => {
       scope: [
         "meta.embedded.block.php keyword.operator.arithmetic",
         "source.php keyword.definition.arrow",
+        "source.php meta.attribute punctuation.definition.arguments",
         "source.php punctuation.section.array",
       ],
       settings: {
         foreground: colors.scope17,
+        fontStyle: "",
+      },
+    },
+    // Blade keywords
+    {
+      scope: ["keyword.blade"],
+      settings: {
+        foreground: colors.scope08,
+        fontStyle: "",
+      },
+    },
+    // Blade php constructs
+    {
+      scope: ["support.function.construct"],
+      settings: {
+        foreground: colors.scope16,
+        fontStyle: "",
+      },
+    },
+    // Blade functions fix
+    {
+      scope: ["source.php meta.attribute entity.name.function"],
+      settings: {
+        foreground: colors.scope02,
         fontStyle: "",
       },
     },
