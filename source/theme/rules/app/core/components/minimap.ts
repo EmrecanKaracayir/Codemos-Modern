@@ -4,6 +4,7 @@ import { OPAQUE } from "../../../../../color/constants";
 export const getRules = (themeContext: ThemeContext): object => {
   const styles = themeContext.styles;
   const rules = {
+    "editorMinimap.inlineChatInserted": styles.basic.def.green.qua,
     "minimap.background": styles.bg.solid.surface,
     "minimap.errorHighlight": styles.basic.def.red.qua,
     "minimap.findMatchHighlight": styles.basic.def.mint.qua,

@@ -6,6 +6,7 @@ export const getRules = (themeContext: ThemeContext): object => {
   const styles = themeContext.styles;
   const rules = {
     "editor.background": styles.bg.solid.layer,
+    "editor.compositionBorder": "#FF0000FF", // 🔵 Unknown attribute
     "editor.findMatchBackground": styles.basic.def.mint.qua,
     "editor.findMatchBorder": styles.stroke.control.default,
     "editor.findMatchForeground": null,
@@ -144,6 +145,25 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorWarning.foreground": styles.basic.def.orange.pri,
     "editorWatermark.foreground": styles.fill.text.sec,
     "editorWhitespace.foreground": styles.fill.text.ghost,
+    "inlineEdit.gutterIndicator.background": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.gutterIndicator.primaryBackground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.gutterIndicator.primaryForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.gutterIndicator.secondaryBackground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.gutterIndicator.secondaryForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.gutterIndicator.successfulBackground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.gutterIndicator.successfulForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.indicator.background": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.indicator.border": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.indicator.foreground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.modifiedBackground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.modifiedBorder": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.modifiedChangedLineBackground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.modifiedChangedTextBackground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.originalBackground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.originalBorder": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.originalChangedLineBackground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.originalChangedTextBackground": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.wordReplacementView.background": "#FF0000FF", // 🔵 Unknown attribute
     "problemsErrorIcon.foreground": styles.basic.def.red.pri,
     "problemsInfoIcon.foreground": styles.basic.def.blue.pri,
     "problemsWarningIcon.foreground": styles.basic.def.orange.pri,

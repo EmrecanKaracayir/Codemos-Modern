@@ -5,7 +5,7 @@
   "icon": "resource/icon.gif",
   "description": "%ext.desc%",
   "pricing": "Free",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "license": "MIT",
   "preview": true,
   "homepage": "https://github.com/EmrecanKaracayir/Codemos-Modern",
@@ -43,7 +43,7 @@
     }
   },
   "engines": {
-    "vscode": "^1.94.0"
+    "vscode": "^1.97.0"
   },
   "activationEvents": [
     "*"
