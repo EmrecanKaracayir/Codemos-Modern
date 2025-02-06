@@ -16,15 +16,18 @@ export const getRules = (themeContext: ThemeContext): object => {
     "sideBarStickyScroll.border": styles.stroke.divider.default,
     "sideBarStickyScroll.shadow": styles.effect.shadow.default,
     "sideBarTitle.background": styles.bg.solid.base,
+    "sideBarTitle.border": styles.stroke.divider.default,
     "sideBarTitle.foreground": styles.fill.text.pri,
   };
   const design = themeContext.variantConfig.design;
   if (design === "natural" || design === "minimal") {
     rules["sideBarSectionHeader.background"] = TRANSPARENT;
-    rules["sideBarSectionHeader.border"] = styles.stroke.control.default;
+    rules["sideBarSectionHeader.border"] = styles.stroke.divider.default;
+    rules["sideBarTitle.border"] = TRANSPARENT;
   } else if (design === "flat") {
     rules["sideBarSectionHeader.background"] = TRANSPARENT;
-    rules["sideBarSectionHeader.border"] = styles.stroke.control.default;
+    rules["sideBarSectionHeader.border"] = styles.stroke.divider.default;
+    rules["sideBarTitle.border"] = TRANSPARENT;
   }
   return rules;
 };

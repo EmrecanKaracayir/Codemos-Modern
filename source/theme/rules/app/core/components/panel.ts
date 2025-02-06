@@ -20,6 +20,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "panelStickyScroll.shadow": styles.effect.shadow.default,
     "panelTitle.activeBorder": styles.fill.accent.pri,
     "panelTitle.activeForeground": styles.fill.text.pri,
+    "panelTitle.border": styles.stroke.divider.default,
     "panelTitle.inactiveForeground": styles.fill.text.sec,
   };
   const design = themeContext.variantConfig.design;
@@ -28,12 +29,14 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["panelSectionHeader.background"] = TRANSPARENT;
     rules["panelSectionHeader.border"] = styles.stroke.control.default;
     rules["panelTitle.activeBorder"] = TRANSPARENT;
+    rules["panelTitle.border"] = TRANSPARENT;
     rules["panelTitle.activeForeground"] = styles.fill.accent.pri;
   } else if (design === "flat") {
     rules["outputView.background"] = styles.bg.solid.base;
     rules["panelSectionHeader.background"] = TRANSPARENT;
     rules["panelSectionHeader.border"] = styles.stroke.control.default;
     rules["panelTitle.activeBorder"] = TRANSPARENT;
+    rules["panelTitle.border"] = TRANSPARENT;
     rules["panelTitle.activeForeground"] = styles.fill.accent.pri;
   }
   return rules;

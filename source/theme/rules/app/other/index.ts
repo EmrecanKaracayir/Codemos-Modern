@@ -4,7 +4,6 @@ import { getRules as getErrorLensRules } from "./extensions/errorLens";
 import { getRules as getGitLensRules } from "./extensions/gitLens";
 import { getRules as getGithubPullRequestsAndIssuesRules } from "./extensions/githubPullRequestsAndIssues";
 import { getRules as getRemoteRepositoriesRules } from "./extensions/remoteRepositories";
-import { getRules as getRustAnalyzerRules } from "./extensions/rustAnalyzer";
 
 export const getRules = (themeContext: ThemeContext): object => {
   return {
@@ -13,6 +12,5 @@ export const getRules = (themeContext: ThemeContext): object => {
     ...getGithubPullRequestsAndIssuesRules(themeContext),
     ...getGitLensRules(themeContext),
     ...getRemoteRepositoriesRules(themeContext),
-    ...getRustAnalyzerRules(themeContext),
   };
 };
