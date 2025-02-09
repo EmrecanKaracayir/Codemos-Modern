@@ -6,7 +6,7 @@ import { join } from "path";
 
 const IMAGES_PATH = join(__dirname, "..", "..", "images");
 
-const VSCODE_VERSION = "1.94";
+const VSCODE_VERSION = "1.97";
 
 // Dynamics
 fetchModifySvg(
