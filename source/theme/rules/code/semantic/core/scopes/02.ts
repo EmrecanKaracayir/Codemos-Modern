@@ -11,5 +11,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     method: color,
     // Builtin methods
     "method.defaultLibrary": color,
+    // Overridden operators
+    "operator.overridden": color,
   };
 };

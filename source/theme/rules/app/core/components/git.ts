@@ -3,7 +3,7 @@ import { ThemeContext } from "../../../../../@types";
 export const getRules = (themeContext: ThemeContext): object => {
   const styles = themeContext.styles;
   return {
-    "git.blame.editorDecorationForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "git.blame.editorDecorationForeground": styles.fill.text.ghost,
     "gitDecoration.addedResourceForeground": styles.basic.def.green.pri,
     "gitDecoration.conflictingResourceForeground": styles.basic.def.orange.pri,
     "gitDecoration.deletedResourceForeground": styles.basic.alt.red.pri,

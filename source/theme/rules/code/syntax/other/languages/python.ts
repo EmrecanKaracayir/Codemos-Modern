@@ -10,6 +10,13 @@ export const getRules = (themeContext: ThemeContext): object => {
         foreground: colors.scope17,
       },
     },
+    // Interpolation brackets
+    {
+      scope: ["source.python constant.character.format.placeholder"],
+      settings: {
+        foreground: colors.scope14,
+      },
+    },
     // Magic functions
     {
       scope: ["support.function.magic", "support.variable.magic"],

@@ -17,6 +17,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     "peekViewResult.selectionForeground": styles.fill.text.pri,
     "peekViewTitle.background": styles.basic.loc.mint.pri,
     "peekViewTitleDescription.foreground": styles.fill.text.sec,
-    "peekViewTitleLabel.foreground": styles.basic.alt.mint.pri,
+    "peekViewTitleLabel.foreground": styles.fill.text.sec,
   };
 };

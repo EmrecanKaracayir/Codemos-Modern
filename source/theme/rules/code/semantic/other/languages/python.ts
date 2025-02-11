@@ -9,9 +9,9 @@ export const getRules = (themeContext: ThemeContext): object => {
     selfParameter: colors.scope03,
     // Class parameters
     clsParameter: colors.scope03,
-    // Builtins types
-    "class.builtin": colors.scope06,
     // Decorator functions
     "function.decorator": colors.scope01,
+    // Builtin constants
+    builtinConstant: colors.scope06,
   };
 };
