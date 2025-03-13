@@ -3,6 +3,13 @@ import { ThemeContext } from "../../../../../../@types";
 export const getRules = (themeContext: ThemeContext): object => {
   const colors = themeContext.variantConfig.codeColors;
   return [
+    // Class decorators
+    {
+      scope: ["source.python meta.function.decorator support.type"],
+      settings: {
+        foreground: colors.scope01,
+      },
+    },
     // List brackets
     {
       scope: ["source.python punctuation.definition.list"],

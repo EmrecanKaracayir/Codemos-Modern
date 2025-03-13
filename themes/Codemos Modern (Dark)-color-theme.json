@@ -1132,6 +1132,7 @@
     "clsParameter": "#BFAF40FF",
     "function.decorator": "#EF6363FF",
     "builtinConstant": "#4B9ECDFF",
+    "class.decorator:python": "#EF6363FF",
     "angle": "#FFFFFF8A",
     "arithmetic": "#FFFFFF8A",
     "attribute": "#EF6363FF",
@@ -3216,6 +3217,14 @@
       "settings": {
         "foreground": "#4B9ECDFF",
         "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "source.python meta.function.decorator support.type"
+      ],
+      "settings": {
+        "foreground": "#EF6363FF"
       }
     },
     {

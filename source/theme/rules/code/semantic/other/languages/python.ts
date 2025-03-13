@@ -13,5 +13,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "function.decorator": colors.scope01,
     // Builtin constants
     builtinConstant: colors.scope06,
+    // Class decorators
+    "class.decorator:python": colors.scope01,
   };
 };
