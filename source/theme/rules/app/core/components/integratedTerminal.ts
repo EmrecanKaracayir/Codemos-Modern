@@ -2,6 +2,7 @@ import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
 export const getRules = (themeContext: ThemeContext): object => {
+  const colors = themeContext.variantConfig.codeColors;
   const styles = themeContext.styles;
   const rules = {
     "terminal.ansiBlack": styles.fill.terminal.loc,
@@ -46,6 +47,15 @@ export const getRules = (themeContext: ThemeContext): object => {
     "terminalStickyScroll.background": styles.bg.solid.base,
     "terminalStickyScroll.border": styles.stroke.divider.default,
     "terminalStickyScrollHover.background": styles.fill.terminal.stickyScrollHover, // 🟢 Undesired solution
+    "terminalSymbolIcon.aliasForeground": colors.scope03,
+    "terminalSymbolIcon.argumentForeground": colors.scope10,
+    "terminalSymbolIcon.fileForeground": styles.fill.accentText.pri,
+    "terminalSymbolIcon.flagForeground": colors.scope11,
+    "terminalSymbolIcon.folderForeground": styles.fill.accentText.pri,
+    "terminalSymbolIcon.inlineSuggestionForeground": styles.basic.def.yellow.pri,
+    "terminalSymbolIcon.methodForeground": colors.scope02,
+    "terminalSymbolIcon.optionForeground": colors.scope11,
+    "terminalSymbolIcon.optionValueForeground": colors.scope11,
   };
   const design = themeContext.variantConfig.design;
   if (design === "natural" || design === "minimal") {

@@ -6,6 +6,7 @@ export const getRules = (themeContext: ThemeContext): object => {
   const rules = {
     "editorMinimap.inlineChatInserted": styles.basic.def.green.qua,
     "minimap.background": styles.bg.solid.surface,
+    "minimap.chatEditHighlight": styles.basic.def.purple.qua,
     "minimap.errorHighlight": styles.basic.def.red.qua,
     "minimap.findMatchHighlight": styles.basic.def.mint.qua,
     "minimap.foregroundOpacity": OPAQUE,

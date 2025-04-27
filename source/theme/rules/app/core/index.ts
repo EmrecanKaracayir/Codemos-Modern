@@ -20,6 +20,7 @@ import { getRules as getEditorRules } from "./components/editor";
 import { getRules as getEditorGroupsAndTabsRules } from "./components/editorGroupsAndTabs";
 import { getRules as getEditorWidgetRules } from "./components/editorWidget";
 import { getRules as getExtensionsRules } from "./components/extensions";
+import { getRules as getGaugeRules } from "./components/gauge";
 import { getRules as getGitRules } from "./components/git";
 import { getRules as getInteractiveEditorRules } from "./components/inlineChat";
 import { getRules as getInputControlRules } from "./components/inputControl";
@@ -76,6 +77,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     ...getEditorGroupsAndTabsRules(themeContext),
     ...getEditorWidgetRules(themeContext),
     ...getExtensionsRules(themeContext),
+    ...getGaugeRules(themeContext),
     ...getGitRules(themeContext),
     ...getInputControlRules(themeContext),
     ...getIntegratedTerminalRules(themeContext),

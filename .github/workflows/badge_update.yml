@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout release
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4.0.3
+        uses: actions/setup-node@v4.4.0
         with:
           node-version-file: ".nvmrc"
 
@@ -33,7 +33,7 @@ jobs:
 
       - name: Commit & push changes
         run: |
-          git config --local user.email "actions@codemos.dev"
+          git config --local user.email "actions@karacayir.com"
           git config --local user.name "GitHub Actions"
           git add images
           git diff --quiet && git diff --staged --quiet || git commit -n -m "Updated: badges."

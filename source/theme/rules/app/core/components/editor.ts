@@ -1,4 +1,5 @@
 import { ThemeContext } from "../../../../../@types";
+import { getMixedColorHex9 } from "../../../../../color";
 import { TRANSPARENT } from "../../../../../color/constants";
 import { matchHex9Alpha } from "../../../../../color/utils";
 
@@ -77,6 +78,8 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorGutter.commentUnresolvedGlyphForeground": styles.basic.def.blue.pri,
     "editorGutter.deletedBackground": styles.basic.def.red.pri,
     "editorGutter.foldingControlForeground": styles.fill.text.sec,
+    "editorGutter.itemBackground": styles.fill.accent.pri,
+    "editorGutter.itemGlyphForeground": styles.fill.onAccent.pri,
     "editorGutter.modifiedBackground": styles.basic.def.blue.pri,
     "editorHint.border": TRANSPARENT,
     "editorHint.foreground": styles.basic.def.mint.pri,
@@ -145,25 +148,29 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorWarning.foreground": styles.basic.def.orange.pri,
     "editorWatermark.foreground": styles.fill.text.sec,
     "editorWhitespace.foreground": styles.fill.text.ghost,
-    "inlineEdit.gutterIndicator.background": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.gutterIndicator.primaryBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.gutterIndicator.primaryForeground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.gutterIndicator.secondaryBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.gutterIndicator.secondaryForeground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.gutterIndicator.successfulBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.gutterIndicator.successfulForeground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.indicator.background": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.indicator.border": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.indicator.foreground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.modifiedBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.modifiedBorder": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.modifiedChangedLineBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.modifiedChangedTextBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.originalBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.originalBorder": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.originalChangedLineBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.originalChangedTextBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "inlineEdit.wordReplacementView.background": "#FF0000FF", // 🔵 Unknown attribute
+    "inlineEdit.gutterIndicator.background": styles.basic.def.purple.sen,
+    "inlineEdit.gutterIndicator.primaryBackground": styles.basic.def.purple.qua,
+    "inlineEdit.gutterIndicator.primaryBorder": styles.basic.def.purple.ter,
+    "inlineEdit.gutterIndicator.primaryForeground": styles.basic.alt.purple.pri,
+    "inlineEdit.gutterIndicator.secondaryBackground": styles.basic.alt.purple.qua,
+    "inlineEdit.gutterIndicator.secondaryBorder": styles.basic.alt.purple.ter,
+    "inlineEdit.gutterIndicator.secondaryForeground": styles.basic.alt.purple.pri,
+    "inlineEdit.gutterIndicator.successfulBackground": styles.basic.def.purple.pri,
+    "inlineEdit.gutterIndicator.successfulBorder": getMixedColorHex9(
+      styles.basic.def.purple.pri,
+      styles.stroke.control.default,
+    ), // 🟢 Undesired solution
+    "inlineEdit.gutterIndicator.successfulForeground": styles.fill.onColor.pri,
+    "inlineEdit.modifiedBackground": styles.basic.def.green.sen,
+    "inlineEdit.modifiedBorder": styles.basic.def.green.qua,
+    "inlineEdit.modifiedChangedLineBackground": styles.basic.def.green.sen,
+    "inlineEdit.modifiedChangedTextBackground": styles.basic.def.green.sen,
+    "inlineEdit.originalBackground": styles.basic.def.red.sen,
+    "inlineEdit.originalBorder": styles.basic.def.red.qua,
+    "inlineEdit.originalChangedLineBackground": styles.basic.def.red.sen,
+    "inlineEdit.originalChangedTextBackground": styles.basic.def.red.sen,
+    "inlineEdit.tabWillAcceptModifiedBorder": styles.basic.def.green.sec,
+    "inlineEdit.tabWillAcceptOriginalBorder": styles.basic.def.red.sec,
     "problemsErrorIcon.foreground": styles.basic.def.red.pri,
     "problemsInfoIcon.foreground": styles.basic.def.blue.pri,
     "problemsWarningIcon.foreground": styles.basic.def.orange.pri,

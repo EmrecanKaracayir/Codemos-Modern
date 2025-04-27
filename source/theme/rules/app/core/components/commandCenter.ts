@@ -8,7 +8,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "commandCenter.activeForeground": styles.fill.text.pri,
     "commandCenter.background": styles.fill.control.rest,
     "commandCenter.border": styles.stroke.control.default,
-    "commandCenter.debuggingBackground": styles.basic.def.yellow.qui,
+    "commandCenter.debuggingBackground": styles.basic.def.yellow.sen,
     "commandCenter.foreground": styles.fill.text.pri,
     "commandCenter.inactiveBorder": styles.stroke.control.default,
     "commandCenter.inactiveForeground": styles.fill.text.sec,
