@@ -5,8 +5,9 @@
   "icon": "resource/icon.gif",
   "description": "%ext.desc%",
   "pricing": "Free",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "license": "MIT",
+  "private": true,
   "preview": true,
   "homepage": "https://github.com/EmrecanKaracayir/Codemos-Modern",
   "repository": {
@@ -35,7 +36,9 @@
     "dark",
     "light",
     "modern",
-    "minimal"
+    "minimal",
+    "flat",
+    "natural"
   ],
   "capabilities": {
     "untrustedWorkspaces": {
@@ -43,7 +46,7 @@
     }
   },
   "engines": {
-    "vscode": "^1.97.0"
+    "vscode": "^1.99.0"
   },
   "activationEvents": [
     "*"

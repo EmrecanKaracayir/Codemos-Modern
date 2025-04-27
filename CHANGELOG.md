@@ -4,6 +4,16 @@ All notable changes to the "codemos-modern" extension will be documented in this
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.5] - 2025-04-27 - VS Code v1.99.x support 🟢
+
+### Added
+
+- Support for VS Code v1.99.x.
+
+### Fixed
+
+- Various syntax highlighting issues.
+
 ## [3.0.4] - 2025-02-28 - Python Improvements 🐍
 
 ### Added
@@ -497,6 +507,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Initial release
 
+[3.0.5]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.4...v3.0.5
 [3.0.4]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.3...v3.0.4
 [3.0.3]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.2...v3.0.3
 [3.0.2]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.1...v3.0.2

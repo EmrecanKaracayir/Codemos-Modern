@@ -54,6 +54,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       red: {
         pri: string;
@@ -61,6 +62,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       orange: {
         pri: string;
@@ -68,6 +70,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       yellow: {
         pri: string;
@@ -75,6 +78,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       green: {
         pri: string;
@@ -82,6 +86,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       mint: {
         pri: string;
@@ -89,6 +94,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       blue: {
         pri: string;
@@ -96,6 +102,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       purple: {
         pri: string;
@@ -103,6 +110,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       pink: {
         pri: string;
@@ -110,6 +118,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
     };
     alt: {
@@ -119,6 +128,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       orange: {
         pri: string;
@@ -126,6 +136,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       yellow: {
         pri: string;
@@ -133,6 +144,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       green: {
         pri: string;
@@ -140,6 +152,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       mint: {
         pri: string;
@@ -147,6 +160,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       blue: {
         pri: string;
@@ -154,6 +168,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       purple: {
         pri: string;
@@ -161,6 +176,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       pink: {
         pri: string;
@@ -168,6 +184,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
     };
     loc: {
@@ -177,6 +194,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       orange: {
         pri: string;
@@ -184,6 +202,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       yellow: {
         pri: string;
@@ -191,6 +210,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       green: {
         pri: string;
@@ -198,6 +218,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       mint: {
         pri: string;
@@ -205,6 +226,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       blue: {
         pri: string;
@@ -212,6 +234,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       purple: {
         pri: string;
@@ -219,6 +242,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
       pink: {
         pri: string;
@@ -226,6 +250,7 @@ export type Styles = {
         ter: string;
         qua: string;
         qui: string;
+        sen: string;
       };
     };
     neutral: {

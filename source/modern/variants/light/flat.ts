@@ -79,6 +79,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.def.brown}${getHexAlpha(50)}`,
           qua: `${palette.basic.def.brown}${getHexAlpha(20)}`,
           qui: `${palette.basic.def.brown}${getHexAlpha(14)}`,
+          sen: `${palette.basic.def.brown}${getHexAlpha(8)}`,
         },
         red: {
           pri: `${palette.basic.def.red}${getHexAlpha(100)}`,
@@ -86,6 +87,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.def.red}${getHexAlpha(50)}`,
           qua: `${palette.basic.def.red}${getHexAlpha(20)}`,
           qui: `${palette.basic.def.red}${getHexAlpha(14)}`,
+          sen: `${palette.basic.def.red}${getHexAlpha(8)}`,
         },
         orange: {
           pri: `${palette.basic.def.orange}${getHexAlpha(100)}`,
@@ -93,6 +95,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.def.orange}${getHexAlpha(50)}`,
           qua: `${palette.basic.def.orange}${getHexAlpha(20)}`,
           qui: `${palette.basic.def.orange}${getHexAlpha(14)}`,
+          sen: `${palette.basic.def.orange}${getHexAlpha(8)}`,
         },
         yellow: {
           pri: `${palette.basic.def.yellow}${getHexAlpha(100)}`,
@@ -100,6 +103,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.def.yellow}${getHexAlpha(50)}`,
           qua: `${palette.basic.def.yellow}${getHexAlpha(20)}`,
           qui: `${palette.basic.def.yellow}${getHexAlpha(14)}`,
+          sen: `${palette.basic.def.yellow}${getHexAlpha(8)}`,
         },
         green: {
           pri: `${palette.basic.def.green}${getHexAlpha(100)}`,
@@ -107,6 +111,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.def.green}${getHexAlpha(50)}`,
           qua: `${palette.basic.def.green}${getHexAlpha(20)}`,
           qui: `${palette.basic.def.green}${getHexAlpha(14)}`,
+          sen: `${palette.basic.def.green}${getHexAlpha(8)}`,
         },
         mint: {
           pri: `${palette.basic.def.mint}${getHexAlpha(100)}`,
@@ -114,6 +119,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.def.mint}${getHexAlpha(50)}`,
           qua: `${palette.basic.def.mint}${getHexAlpha(20)}`,
           qui: `${palette.basic.def.mint}${getHexAlpha(14)}`,
+          sen: `${palette.basic.def.mint}${getHexAlpha(8)}`,
         },
         blue: {
           pri: `${palette.basic.def.blue}${getHexAlpha(100)}`,
@@ -121,6 +127,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.def.blue}${getHexAlpha(50)}`,
           qua: `${palette.basic.def.blue}${getHexAlpha(20)}`,
           qui: `${palette.basic.def.blue}${getHexAlpha(14)}`,
+          sen: `${palette.basic.def.blue}${getHexAlpha(8)}`,
         },
         purple: {
           pri: `${palette.basic.def.purple}${getHexAlpha(100)}`,
@@ -128,6 +135,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.def.purple}${getHexAlpha(50)}`,
           qua: `${palette.basic.def.purple}${getHexAlpha(20)}`,
           qui: `${palette.basic.def.purple}${getHexAlpha(14)}`,
+          sen: `${palette.basic.def.purple}${getHexAlpha(8)}`,
         },
         pink: {
           pri: `${palette.basic.def.pink}${getHexAlpha(100)}`,
@@ -135,6 +143,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.def.pink}${getHexAlpha(50)}`,
           qua: `${palette.basic.def.pink}${getHexAlpha(20)}`,
           qui: `${palette.basic.def.pink}${getHexAlpha(14)}`,
+          sen: `${palette.basic.def.pink}${getHexAlpha(8)}`,
         },
       },
       alt: {
@@ -144,6 +153,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.alt.red}${getHexAlpha(50)}`,
           qua: `${palette.basic.alt.red}${getHexAlpha(20)}`,
           qui: `${palette.basic.alt.red}${getHexAlpha(14)}`,
+          sen: `${palette.basic.alt.red}${getHexAlpha(8)}`,
         },
         orange: {
           pri: `${palette.basic.alt.orange}${getHexAlpha(100)}`,
@@ -151,6 +161,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.alt.orange}${getHexAlpha(50)}`,
           qua: `${palette.basic.alt.orange}${getHexAlpha(20)}`,
           qui: `${palette.basic.alt.orange}${getHexAlpha(14)}`,
+          sen: `${palette.basic.alt.orange}${getHexAlpha(8)}`,
         },
         yellow: {
           pri: `${palette.basic.alt.yellow}${getHexAlpha(100)}`,
@@ -158,6 +169,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.alt.yellow}${getHexAlpha(50)}`,
           qua: `${palette.basic.alt.yellow}${getHexAlpha(20)}`,
           qui: `${palette.basic.alt.yellow}${getHexAlpha(14)}`,
+          sen: `${palette.basic.alt.yellow}${getHexAlpha(8)}`,
         },
         green: {
           pri: `${palette.basic.alt.green}${getHexAlpha(100)}`,
@@ -165,6 +177,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.alt.green}${getHexAlpha(50)}`,
           qua: `${palette.basic.alt.green}${getHexAlpha(20)}`,
           qui: `${palette.basic.alt.green}${getHexAlpha(14)}`,
+          sen: `${palette.basic.alt.green}${getHexAlpha(8)}`,
         },
         mint: {
           pri: `${palette.basic.alt.mint}${getHexAlpha(100)}`,
@@ -172,6 +185,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.alt.mint}${getHexAlpha(50)}`,
           qua: `${palette.basic.alt.mint}${getHexAlpha(20)}`,
           qui: `${palette.basic.alt.mint}${getHexAlpha(14)}`,
+          sen: `${palette.basic.alt.mint}${getHexAlpha(8)}`,
         },
         blue: {
           pri: `${palette.basic.alt.blue}${getHexAlpha(100)}`,
@@ -179,6 +193,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.alt.blue}${getHexAlpha(50)}`,
           qua: `${palette.basic.alt.blue}${getHexAlpha(20)}`,
           qui: `${palette.basic.alt.blue}${getHexAlpha(14)}`,
+          sen: `${palette.basic.alt.blue}${getHexAlpha(8)}`,
         },
         purple: {
           pri: `${palette.basic.alt.purple}${getHexAlpha(100)}`,
@@ -186,6 +201,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.alt.purple}${getHexAlpha(50)}`,
           qua: `${palette.basic.alt.purple}${getHexAlpha(20)}`,
           qui: `${palette.basic.alt.purple}${getHexAlpha(14)}`,
+          sen: `${palette.basic.alt.purple}${getHexAlpha(8)}`,
         },
         pink: {
           pri: `${palette.basic.alt.pink}${getHexAlpha(100)}`,
@@ -193,6 +209,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.alt.pink}${getHexAlpha(50)}`,
           qua: `${palette.basic.alt.pink}${getHexAlpha(20)}`,
           qui: `${palette.basic.alt.pink}${getHexAlpha(14)}`,
+          sen: `${palette.basic.alt.pink}${getHexAlpha(8)}`,
         },
       },
       loc: {
@@ -202,6 +219,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.loc.red}${getHexAlpha(50)}`,
           qua: `${palette.basic.loc.red}${getHexAlpha(20)}`,
           qui: `${palette.basic.loc.red}${getHexAlpha(14)}`,
+          sen: `${palette.basic.loc.red}${getHexAlpha(8)}`,
         },
         orange: {
           pri: `${palette.basic.loc.orange}${getHexAlpha(100)}`,
@@ -209,6 +227,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.loc.orange}${getHexAlpha(50)}`,
           qua: `${palette.basic.loc.orange}${getHexAlpha(20)}`,
           qui: `${palette.basic.loc.orange}${getHexAlpha(14)}`,
+          sen: `${palette.basic.loc.orange}${getHexAlpha(8)}`,
         },
         yellow: {
           pri: `${palette.basic.loc.yellow}${getHexAlpha(100)}`,
@@ -216,6 +235,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.loc.yellow}${getHexAlpha(50)}`,
           qua: `${palette.basic.loc.yellow}${getHexAlpha(20)}`,
           qui: `${palette.basic.loc.yellow}${getHexAlpha(14)}`,
+          sen: `${palette.basic.loc.yellow}${getHexAlpha(8)}`,
         },
         green: {
           pri: `${palette.basic.loc.green}${getHexAlpha(100)}`,
@@ -223,6 +243,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.loc.green}${getHexAlpha(50)}`,
           qua: `${palette.basic.loc.green}${getHexAlpha(20)}`,
           qui: `${palette.basic.loc.green}${getHexAlpha(14)}`,
+          sen: `${palette.basic.loc.green}${getHexAlpha(8)}`,
         },
         mint: {
           pri: `${palette.basic.loc.mint}${getHexAlpha(100)}`,
@@ -230,6 +251,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.loc.mint}${getHexAlpha(50)}`,
           qua: `${palette.basic.loc.mint}${getHexAlpha(20)}`,
           qui: `${palette.basic.loc.mint}${getHexAlpha(14)}`,
+          sen: `${palette.basic.loc.mint}${getHexAlpha(8)}`,
         },
         blue: {
           pri: `${palette.basic.loc.blue}${getHexAlpha(100)}`,
@@ -237,6 +259,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.loc.blue}${getHexAlpha(50)}`,
           qua: `${palette.basic.loc.blue}${getHexAlpha(20)}`,
           qui: `${palette.basic.loc.blue}${getHexAlpha(14)}`,
+          sen: `${palette.basic.loc.blue}${getHexAlpha(8)}`,
         },
         purple: {
           pri: `${palette.basic.loc.purple}${getHexAlpha(100)}`,
@@ -244,6 +267,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.loc.purple}${getHexAlpha(50)}`,
           qua: `${palette.basic.loc.purple}${getHexAlpha(20)}`,
           qui: `${palette.basic.loc.purple}${getHexAlpha(14)}`,
+          sen: `${palette.basic.loc.purple}${getHexAlpha(8)}`,
         },
         pink: {
           pri: `${palette.basic.loc.pink}${getHexAlpha(100)}`,
@@ -251,6 +275,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
           ter: `${palette.basic.loc.pink}${getHexAlpha(50)}`,
           qua: `${palette.basic.loc.pink}${getHexAlpha(20)}`,
           qui: `${palette.basic.loc.pink}${getHexAlpha(14)}`,
+          sen: `${palette.basic.loc.pink}${getHexAlpha(8)}`,
         },
       },
       neutral: {

@@ -13,6 +13,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "extensionButton.prominentHoverBackground": styles.fill.accent.sec,
     "extensionButton.separator": styles.fill.onAccent.pri,
     "extensionIcon.preReleaseForeground": styles.basic.def.purple.pri,
+    "extensionIcon.privateForeground": "#FF0000FF", // 🔵 Unknown attribute
     "extensionIcon.sponsorForeground": styles.basic.def.red.pri,
     "extensionIcon.starForeground": styles.basic.def.yellow.pri,
     "extensionIcon.verifiedForeground": styles.basic.def.blue.pri,

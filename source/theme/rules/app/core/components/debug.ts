@@ -17,9 +17,9 @@ export const getRules = (themeContext: ThemeContext): object => {
     "debugView.stateLabelBackground": styles.fill.control.subtle,
     "debugView.stateLabelForeground": styles.fill.text.pri,
     "debugView.valueChangedHighlight": styles.basic.alt.blue.pri,
-    "editor.focusedStackFrameHighlightBackground": styles.basic.def.yellow.qui,
+    "editor.focusedStackFrameHighlightBackground": styles.basic.def.yellow.sen,
     "editor.inlineValuesBackground": styles.basic.def.yellow.qui,
     "editor.inlineValuesForeground": styles.basic.def.yellow.pri,
-    "editor.stackFrameHighlightBackground": styles.basic.def.yellow.qua,
+    "editor.stackFrameHighlightBackground": styles.basic.def.yellow.qui,
   };
 };

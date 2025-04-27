@@ -318,24 +318,7 @@ In this section you can find how Codemos Modern looks and feels in most used lan
 
 <h2 id="rdme-clog">📋 Change Log</h2>
 
-Changes from the last major release shown below. If you want to see the full change log, visit [CHANGELOG.md](https://github.com/EmrecanKaracayir/Codemos-Modern/blob/main/CHANGELOG.md).
-
-### Added
-
-- VS Code v1.94.x support.
-- Modularity system. Users can now side-load **third party themes**.
-- Brand new design, **"Flat"**. Users can now choose between **"Modern"**, **"Minimal"** and **"Flat"** designs.
-- Command `codemosModern.authenticate` to increase GitHub **api rate limits**.
-- Set of configurations to customize the text decorations on symbols. (Only bundled themes are effected)
-
-### Fixed
-
-- Material Icon Theme icons not correctly themed.
-- Multiple update requests to recompile themes.
-
-### Changed
-
-- Underlying syntax and semantic highlighting system to be more robust and open to future changes.
+To see the full change log, please visit [CHANGELOG.md](https://github.com/EmrecanKaracayir/Codemos-Modern/blob/main/CHANGELOG.md).
 
 <br/>
 

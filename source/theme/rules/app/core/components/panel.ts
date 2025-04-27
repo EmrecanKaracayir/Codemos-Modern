@@ -22,6 +22,8 @@ export const getRules = (themeContext: ThemeContext): object => {
     "panelTitle.activeForeground": styles.fill.text.pri,
     "panelTitle.border": styles.stroke.divider.default,
     "panelTitle.inactiveForeground": styles.fill.text.sec,
+    "panelTitleBadge.background": styles.fill.accent.pri,
+    "panelTitleBadge.foreground": styles.fill.onAccent.pri,
   };
   const design = themeContext.variantConfig.design;
   if (design === "natural" || design === "minimal") {
