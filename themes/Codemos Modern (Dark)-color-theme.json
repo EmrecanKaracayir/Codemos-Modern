@@ -1738,7 +1738,9 @@
         "punctuation.definition.arguments",
         "punctuation.definition.begin.bracket.round",
         "punctuation.definition.end.bracket.round",
-        "punctuation.definition.parameters"
+        "punctuation.definition.parameters",
+        "punctuation.section.function.begin.bracket.round",
+        "punctuation.section.function.end.bracket.round"
       ],
       "settings": {
         "foreground": "#C59E7FFF",
@@ -2404,6 +2406,33 @@
     },
     {
       "scope": [
+        "meta.property-name"
+      ],
+      "settings": {
+        "foreground": "#87ABC0FF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "support.constant.vendored.property-value"
+      ],
+      "settings": {
+        "foreground": "#EF6363FF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "meta.property-value"
+      ],
+      "settings": {
+        "foreground": "#4B9ECDFF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
         "keyword.other.important"
       ],
       "settings": {
@@ -2472,10 +2501,10 @@
     },
     {
       "scope": [
-        "punctuation.definition.entity"
+        "meta.at-rule.media.header"
       ],
       "settings": {
-        "foreground": "#46A598FF",
+        "foreground": "#CD95b8FF",
         "fontStyle": ""
       }
     },
@@ -2726,7 +2755,7 @@
     },
     {
       "scope": [
-        "punctuation.definition.entity"
+        "constant.character.entity"
       ],
       "settings": {
         "foreground": "#A9A0CBFF",

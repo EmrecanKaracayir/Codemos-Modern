@@ -57,6 +57,8 @@ export const getRules = (themeContext: ThemeContext): object => {
         "punctuation.definition.begin.bracket.round",
         "punctuation.definition.end.bracket.round",
         "punctuation.definition.parameters",
+        "punctuation.section.function.begin.bracket.round",
+        "punctuation.section.function.end.bracket.round",
       ],
       settings: {
         foreground: color,

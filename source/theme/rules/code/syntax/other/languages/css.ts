@@ -3,7 +3,7 @@ import { ThemeContext } from "../../../../../../@types";
 export const getRules = (themeContext: ThemeContext): object => {
   const colors = themeContext.variantConfig.codeColors;
   return [
-    // Vendor property
+    // Vendor property name
     {
       scope: ["support.type.vendored.property-name"],
       settings: {
@@ -11,7 +11,31 @@ export const getRules = (themeContext: ThemeContext): object => {
         fontStyle: "",
       },
     },
-    // Important keywords
+    // Property name
+    {
+      scope: ["meta.property-name"],
+      settings: {
+        foreground: colors.scope14,
+        fontStyle: "",
+      },
+    },
+    // Vendor property value
+    {
+      scope: ["support.constant.vendored.property-value"],
+      settings: {
+        foreground: colors.scope01,
+        fontStyle: "",
+      },
+    },
+    // Property value
+    {
+      scope: ["meta.property-value"],
+      settings: {
+        foreground: colors.scope06,
+        fontStyle: "",
+      },
+    },
+    // Important keyword
     {
       scope: ["keyword.other.important"],
       settings: {
@@ -74,11 +98,11 @@ export const getRules = (themeContext: ThemeContext): object => {
         fontStyle: "",
       },
     },
-    // Less tag references
+    // Media header
     {
-      scope: ["punctuation.definition.entity"],
+      scope: ["meta.at-rule.media.header"],
       settings: {
-        foreground: colors.scope05,
+        foreground: colors.scope16,
         fontStyle: "",
       },
     },
