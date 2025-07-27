@@ -1142,6 +1142,7 @@
     "source": "#000000B8",
     "source.interpolation": "#5B79A2FF",
     "*.annotation": "#B70004FF",
+    "string.format": "#5B79A2FF",
     "annotation": "#B70004FF",
     "annotationMember": "#C35354FF",
     "modifier": "#0052C6FF",
