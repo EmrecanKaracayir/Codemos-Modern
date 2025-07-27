@@ -96,8 +96,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Other operators
     {
       scope: [
-        "meta.attribute punctuation.definition.arguments.begin.bracket.round.php",
-        "meta.attribute punctuation.definition.arguments.end.bracket.round.php",
         "meta.embedded.block.php keyword.operator.arithmetic",
         "source.php keyword.definition.arrow",
         "source.php punctuation.section.array",

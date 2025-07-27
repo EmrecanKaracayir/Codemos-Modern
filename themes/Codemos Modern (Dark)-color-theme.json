@@ -1733,6 +1733,17 @@
     },
     {
       "scope": [
+        "meta.brace.round",
+        "punctuation.definition.arguments",
+        "punctuation.definition.parameters"
+      ],
+      "settings": {
+        "foreground": "#C59E7FFF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
         "entity.name.variable.field",
         "entity.name.variable.property",
         "meta.class variable",
@@ -3155,8 +3166,6 @@
     },
     {
       "scope": [
-        "meta.attribute punctuation.definition.arguments.begin.bracket.round.php",
-        "meta.attribute punctuation.definition.arguments.end.bracket.round.php",
         "meta.embedded.block.php keyword.operator.arithmetic",
         "source.php keyword.definition.arrow",
         "source.php punctuation.section.array"
@@ -3297,15 +3306,6 @@
     },
     {
       "scope": [
-        "meta.embedded.block.python punctuation.definition.arguments",
-        "source.python punctuation.definition.arguments"
-      ],
-      "settings": {
-        "foreground": "#FFFFFF8A"
-      }
-    },
-    {
-      "scope": [
         "meta.embedded.block.python storage.type.string",
         "source.python storage.type.string"
       ],
@@ -3362,7 +3362,15 @@
     },
     {
       "scope": [
-        "meta.function.decorator.python punctuation.definition.arguments",
+        "meta.function.decorator.python punctuation.definition.arguments"
+      ],
+      "settings": {
+        "foreground": "#EF6363FF"
+      }
+    },
+    {
+      "scope": [
+        "meta.function.decorator.python punctuation.separator",
         "meta.function.decorator.python punctuation.definition.string"
       ],
       "settings": {

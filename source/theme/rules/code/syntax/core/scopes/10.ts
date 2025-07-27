@@ -49,5 +49,17 @@ export const getRules = (themeContext: ThemeContext): object => {
         fontStyle: "",
       },
     },
+    // Braces
+    {
+      scope: [
+        "meta.brace.round",
+        "punctuation.definition.arguments",
+        "punctuation.definition.parameters",
+      ],
+      settings: {
+        foreground: color,
+        fontStyle: "",
+      },
+    },
   ];
 };
