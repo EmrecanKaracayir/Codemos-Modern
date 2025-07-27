@@ -54,6 +54,8 @@ export const getRules = (themeContext: ThemeContext): object => {
       scope: [
         "meta.brace.round",
         "punctuation.definition.arguments",
+        "punctuation.definition.begin.bracket.round",
+        "punctuation.definition.end.bracket.round",
         "punctuation.definition.parameters",
       ],
       settings: {
