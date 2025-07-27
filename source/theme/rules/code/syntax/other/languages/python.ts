@@ -114,5 +114,22 @@ export const getRules = (themeContext: ThemeContext): object => {
         foreground: colors.scope15,
       },
     },
+    // Decorator punctuations
+    {
+      scope: [
+        "meta.function.decorator.python punctuation.definition.arguments",
+        "meta.function.decorator.python punctuation.definition.string",
+      ],
+      settings: {
+        foreground: colors.scope09,
+      },
+    },
+    // Decorator strings
+    {
+      scope: ["meta.function.decorator.python string"],
+      settings: {
+        foreground: colors.scope09,
+      },
+    },
   ];
 };

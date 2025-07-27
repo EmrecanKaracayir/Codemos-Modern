@@ -11,6 +11,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     clsParameter: colors.scope03,
     // Decorator functions
     "function.decorator": colors.scope01,
+    // Decorator methods
+    "method.decorator": colors.scope01,
+    // decorator variables
+    "variable.decorator": colors.scope09,
     // Builtin constants
     builtinConstant: colors.scope06,
     // Class decorators

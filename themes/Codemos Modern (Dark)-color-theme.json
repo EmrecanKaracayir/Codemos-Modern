@@ -1154,6 +1154,8 @@
     "selfParameter": "#BFAF40FF",
     "clsParameter": "#BFAF40FF",
     "function.decorator": "#EF6363FF",
+    "method.decorator": "#EF6363FF",
+    "variable.decorator": "#D19797FF",
     "builtinConstant": "#4B9ECDFF",
     "class.decorator:python": "#EF6363FF",
     "angle": "#FFFFFF8A",
@@ -3356,6 +3358,23 @@
       ],
       "settings": {
         "foreground": "#A9A0CBFF"
+      }
+    },
+    {
+      "scope": [
+        "meta.function.decorator.python punctuation.definition.arguments",
+        "meta.function.decorator.python punctuation.definition.string"
+      ],
+      "settings": {
+        "foreground": "#D19797FF"
+      }
+    },
+    {
+      "scope": [
+        "meta.function.decorator.python string"
+      ],
+      "settings": {
+        "foreground": "#D19797FF"
       }
     },
     {
