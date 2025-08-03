@@ -5,5 +5,7 @@ export const getRules = (themeContext: ThemeContext): object => {
   return {
     // Formatting symbols inside strings
     "string.format": colors.scope14,
+    // nil, true, false
+    "variable.defaultLibrary:go": colors.scope06,
   };
 };

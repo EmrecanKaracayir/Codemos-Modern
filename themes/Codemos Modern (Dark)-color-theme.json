@@ -1143,6 +1143,7 @@
     "source.interpolation": "#87ABC0FF",
     "*.annotation": "#EF6363FF",
     "string.format": "#87ABC0FF",
+    "variable.defaultLibrary:go": "#4B9ECDFF",
     "annotation": "#EF6363FF",
     "annotationMember": "#D19797FF",
     "modifier": "#4B9ECDFF",
@@ -1738,6 +1739,8 @@
         "punctuation.definition.arguments",
         "punctuation.definition.begin.bracket.round",
         "punctuation.definition.end.bracket.round",
+        "punctuation.definition.group.begin",
+        "punctuation.definition.group.end",
         "punctuation.definition.parameters",
         "punctuation.section.function.begin.bracket.round",
         "punctuation.section.function.end.bracket.round"
