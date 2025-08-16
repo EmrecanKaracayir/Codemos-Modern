@@ -24,6 +24,7 @@ import { getRules as getLatexRules } from "./languages/latex";
 import { getRules as getLuaRules } from "./languages/lua";
 import { getRules as getMarkdownRules } from "./languages/markup";
 import { getRules as getMatlabRules } from "./languages/matlab";
+import { getRules as getNginxRules } from "./languages/nginx";
 import { getRules as getPerlRules } from "./languages/perl";
 import { getRules as getPhpRules } from "./languages/php";
 import { getRules as getPowerShellRules } from "./languages/powershell";
@@ -66,6 +67,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     ...(<[]>getLuaRules(themeContext)),
     ...(<[]>getMarkdownRules(themeContext)),
     ...(<[]>getMatlabRules(themeContext)),
+    ...(<[]>getNginxRules(themeContext)),
     ...(<[]>getPerlRules(themeContext)),
     ...(<[]>getPhpRules(themeContext)),
     ...(<[]>getPowerShellRules(themeContext)),

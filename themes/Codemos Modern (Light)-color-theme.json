@@ -3102,6 +3102,30 @@
     },
     {
       "scope": [
+        "source.nginx storage.type.directive.context"
+      ],
+      "settings": {
+        "foreground": "#AC0074FF"
+      }
+    },
+    {
+      "scope": [
+        "source.nginx entity.name.context.location"
+      ],
+      "settings": {
+        "foreground": "#AF5A92FF"
+      }
+    },
+    {
+      "scope": [
+        "source.nginx punctuation.definition.variable"
+      ],
+      "settings": {
+        "foreground": "#8D7252FF"
+      }
+    },
+    {
+      "scope": [
         "meta.embedded.block.perl constant.other.key",
         "source.perl constant.other.key"
       ],
