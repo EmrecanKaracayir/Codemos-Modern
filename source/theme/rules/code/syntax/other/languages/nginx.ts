@@ -24,6 +24,13 @@ export const getRules = (themeContext: ThemeContext): object => {
         foreground: colors.scope10,
       },
     },
+    // Punctuation terminator
+    {
+      scope: ["source.nginx punctuation.terminator"],
+      settings: {
+        foreground: colors.scope17,
+      },
+    },
     // Raw text
     {
       scope: ["source.nginx meta.context"],

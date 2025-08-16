@@ -3126,6 +3126,14 @@
     },
     {
       "scope": [
+        "source.nginx punctuation.terminator"
+      ],
+      "settings": {
+        "foreground": "#FFFFFF8A"
+      }
+    },
+    {
+      "scope": [
         "source.nginx meta.context"
       ],
       "settings": {
