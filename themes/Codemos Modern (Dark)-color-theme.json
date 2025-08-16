@@ -3126,6 +3126,14 @@
     },
     {
       "scope": [
+        "source.nginx meta.context"
+      ],
+      "settings": {
+        "foreground": "#CB8569FF"
+      }
+    },
+    {
+      "scope": [
         "meta.embedded.block.perl constant.other.key",
         "source.perl constant.other.key"
       ],

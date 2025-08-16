@@ -24,5 +24,12 @@ export const getRules = (themeContext: ThemeContext): object => {
         foreground: colors.scope10,
       },
     },
+    // Raw text
+    {
+      scope: ["source.nginx meta.context"],
+      settings: {
+        foreground: colors.scope00,
+      },
+    },
   ];
 };
