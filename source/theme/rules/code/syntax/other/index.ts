@@ -15,6 +15,7 @@ import { getRules as getFishRules } from "./languages/fish";
 import { getRules as getFsharpRules } from "./languages/fsharp";
 import { getRules as getGoRules } from "./languages/go";
 import { getRules as getGroovyRules } from "./languages/groovy";
+import { getRules as getHelmRules } from "./languages/helm";
 import { getRules as getHlslRules } from "./languages/hlsl";
 import { getRules as getHtmlRules } from "./languages/html";
 import { getRules as getIniRules } from "./languages/ini";
@@ -58,6 +59,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     ...(<[]>getFsharpRules(themeContext)),
     ...(<[]>getGoRules(themeContext)),
     ...(<[]>getGroovyRules(themeContext)),
+    ...(<[]>getHelmRules(themeContext)),
     ...(<[]>getHlslRules(themeContext)),
     ...(<[]>getHtmlRules(themeContext)),
     ...(<[]>getIniRules(themeContext)),

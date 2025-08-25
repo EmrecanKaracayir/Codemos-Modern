@@ -56,6 +56,8 @@ export const getRules = (themeContext: ThemeContext): object => {
     "terminalSymbolIcon.methodForeground": colors.scope02,
     "terminalSymbolIcon.optionForeground": colors.scope11,
     "terminalSymbolIcon.optionValueForeground": colors.scope11,
+    "terminalSymbolIcon.symbolicLinkFileForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "terminalSymbolIcon.symbolicLinkFolderForeground": "#FF0000FF", // 🔵 Unknown attribute
   };
   const design = themeContext.variantConfig.design;
   if (design === "natural" || design === "minimal") {

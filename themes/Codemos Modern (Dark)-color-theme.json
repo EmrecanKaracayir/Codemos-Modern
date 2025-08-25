@@ -61,6 +61,8 @@
     "button.separator": "#000000FF",
     "checkbox.background": "#FFFFFF0F",
     "checkbox.border": "#FFFFFF14",
+    "checkbox.disabled.background": "#FF0000FF",
+    "checkbox.disabled.foreground": "#FF0000FF",
     "checkbox.foreground": "#FFFFFFFF",
     "checkbox.selectBackground": "#FFFFFF0F",
     "checkbox.selectBorder": "#FFFFFF14",
@@ -84,9 +86,15 @@
     "charts.yellow": "#BFAF40FF",
     "chat.avatarBackground": "#2A2A2A",
     "chat.avatarForeground": "#CB8569FF",
+    "chat.checkpointSeparator": "#FF0000FF",
     "chat.editedFileForeground": "#FF0000FF",
+    "chat.linesAddedForeground": "#FF0000FF",
+    "chat.linesRemovedForeground": "#FF0000FF",
     "chat.requestBackground": "#FFFFFF08",
     "chat.requestBorder": "#FFFFFF14",
+    "chat.requestBubbleBackground": "#FF0000FF",
+    "chat.requestBubbleHoverBackground": "#FF0000FF",
+    "chat.requestCodeBorder": "#FF0000FF",
     "chat.slashCommandBackground": "#FFFFFF0F",
     "chat.slashCommandForeground": "#CB8569FF",
     "commandCenter.activeBackground": "#FFFFFF14",
@@ -231,15 +239,18 @@
     "editorError.border": "#00000000",
     "editorError.foreground": "#EF6363FF",
     "editorGutter.addedBackground": "#45AA41FF",
+    "editorGutter.addedSecondaryBackground": "#FF0000FF",
     "editorGutter.background": "#171717FF",
     "editorGutter.commentGlyphForeground": "#FFFFFF8A",
     "editorGutter.commentRangeForeground": "#353535FF",
     "editorGutter.commentUnresolvedGlyphForeground": "#4B9ECDFF",
     "editorGutter.deletedBackground": "#EF6363FF",
+    "editorGutter.deletedSecondaryBackground": "#FF0000FF",
     "editorGutter.foldingControlForeground": "#FFFFFF8A",
     "editorGutter.itemBackground": "#CB8569FF",
     "editorGutter.itemGlyphForeground": "#000000FF",
     "editorGutter.modifiedBackground": "#4B9ECDFF",
+    "editorGutter.modifiedSecondaryBackground": "#FF0000FF",
     "editorHint.border": "#00000000",
     "editorHint.foreground": "#46A598FF",
     "editorIndentGuide.activeBackground1": "#ADA77FFF",
@@ -328,6 +339,7 @@
     "searchEditor.findMatchBackground": "#46A5985C",
     "searchEditor.findMatchBorder": "#FFFFFF14",
     "searchEditor.textInputBorder": "#FFFFFF14",
+    "editorStickyScrollGutter.background": "#1C1C1CFF",
     "editorGroup.border": "#FFFFFF14",
     "editorGroup.dropBackground": "#0000004D",
     "editorGroup.dropIntoPromptBackground": "#282828FF",
@@ -504,6 +516,8 @@
     "terminalSymbolIcon.methodForeground": "#D28342FF",
     "terminalSymbolIcon.optionForeground": "#ADA77FFF",
     "terminalSymbolIcon.optionValueForeground": "#ADA77FFF",
+    "terminalSymbolIcon.symbolicLinkFileForeground": "#FF0000FF",
+    "terminalSymbolIcon.symbolicLinkFolderForeground": "#FF0000FF",
     "inlineChat.background": "#282828FF",
     "inlineChat.border": "#75757552",
     "inlineChat.foreground": "#FFFFFFC7",
@@ -666,6 +680,7 @@
     "peekViewEditor.matchHighlightBorder": "#FFFFFF14",
     "peekViewEditorGutter.background": "#212121FF",
     "peekViewEditorStickyScroll.background": "#282828FF",
+    "peekViewEditorStickyScrollGutter.background": "#FF0000FF",
     "peekViewResult.background": "#212121FF",
     "peekViewResult.fileForeground": "#FFFFFF8A",
     "peekViewResult.lineForeground": "#FFFFFF8A",
@@ -1973,6 +1988,7 @@
       "scope": [
         "entity.name.operator",
         "keyword.operator",
+        "punctiation.accessor",
         "punctuation.brackets",
         "punctuation.separator",
         "storage.type.function.arrow",
@@ -2744,6 +2760,33 @@
       ],
       "settings": {
         "foreground": "#D19797FF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "source.helm constant.other.value"
+      ],
+      "settings": {
+        "foreground": "#ADA77FFF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "source.helm punctuation.definition.mapping"
+      ],
+      "settings": {
+        "foreground": "#87ABC0FF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "source.helm keyword.operator.pipe"
+      ],
+      "settings": {
+        "foreground": "#CD95b8FF",
         "fontStyle": ""
       }
     },

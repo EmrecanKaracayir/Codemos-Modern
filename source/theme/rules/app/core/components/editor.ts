@@ -72,15 +72,18 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorError.border": TRANSPARENT,
     "editorError.foreground": styles.basic.def.red.pri,
     "editorGutter.addedBackground": styles.basic.def.green.pri,
+    "editorGutter.addedSecondaryBackground": "#FF0000FF", // 🔵 Unknown attribute
     "editorGutter.background": styles.bg.solid.base,
     "editorGutter.commentGlyphForeground": styles.fill.text.sec,
     "editorGutter.commentRangeForeground": styles.fill.control.prominent,
     "editorGutter.commentUnresolvedGlyphForeground": styles.basic.def.blue.pri,
     "editorGutter.deletedBackground": styles.basic.def.red.pri,
+    "editorGutter.deletedSecondaryBackground": "#FF0000FF", // 🔵 Unknown attribute
     "editorGutter.foldingControlForeground": styles.fill.text.sec,
     "editorGutter.itemBackground": styles.fill.accent.pri,
     "editorGutter.itemGlyphForeground": styles.fill.onAccent.pri,
     "editorGutter.modifiedBackground": styles.basic.def.blue.pri,
+    "editorGutter.modifiedSecondaryBackground": "#FF0000FF", // 🔵 Unknown attribute
     "editorHint.border": TRANSPARENT,
     "editorHint.foreground": styles.basic.def.mint.pri,
     "editorIndentGuide.activeBackground1": styles.basic.alt.yellow.pri,
@@ -178,6 +181,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "searchEditor.findMatchBackground": styles.basic.def.mint.qua,
     "searchEditor.findMatchBorder": styles.stroke.control.default,
     "searchEditor.textInputBorder": styles.stroke.control.default,
+    "editorStickyScrollGutter.background": "#1C1C1CFF",
   };
   const design = themeContext.variantConfig.design;
   if (design === "natural" || design === "minimal") {
