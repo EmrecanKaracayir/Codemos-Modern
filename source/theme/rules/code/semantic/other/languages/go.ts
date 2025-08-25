@@ -2,14 +2,10 @@ import { ThemeContext } from "../../../../../../@types";
 
 export const getRules = (themeContext: ThemeContext): object => {
   const colors = themeContext.variantConfig.codeColors;
-  return [
-    // Named entities
-    {
-      scope: ["constant.character.entity"],
-      settings: {
-        foreground: colors.scope15,
-        fontStyle: "",
-      },
-    },
-  ];
+  return {
+    // Formatting symbols inside strings
+    "string.format": colors.scope14,
+    // nil, true, false
+    "variable.defaultLibrary:go": colors.scope06,
+  };
 };

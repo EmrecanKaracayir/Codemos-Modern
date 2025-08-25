@@ -119,7 +119,6 @@ Codemos Modern provides three configuration options through the command **Codemo
 ![ui-theme](images/conf-ui-theme-1.png)
 
 - **Bundled:** If you choose a bundled theme, there are additional configurations you can configure. See [modularity section](#modularity) for more information.
-
   1. **Design:** You can choose which design your Modern will use. (Design determines the overall look of the theme)
      ![ui-theme-bundled](images/conf-ui-theme-2.png)
   2. **Accent color:** You can configure which accent color your theme will use. Accent color can be selected from Modern's excellent palette or you can provide a custom one with its hex color code. (Accent color determines the color of the important ui elements; buttons, badges, links, emphasized text, etc. and effects the adaptability mode)
@@ -128,7 +127,6 @@ Codemos Modern provides three configuration options through the command **Codemo
      ![adaptation-mode](images/conf-ui-theme-4.png)
 
 - **From Registries:** You can also choose an auxiliary theme. Auxiliary themes are the themes that are not bundled with Modern but can be installed from the auxiliary theme registries. Codemos provides a built-in registry that features some of the most popular themes. You can also create your own registries. See [modularity section](#modularity) for more information.
-
   1. **Auxiliary UI Theme:** You can select which auxiliary theme your Modern will use as the UI theme. (Auxiliary theme will be installed and activated automatically from the indicated registry)
      ![ui-theme-from-registries](images/conf-ui-theme-2-a.png)
 
@@ -138,7 +136,6 @@ Codemos Modern provides three configuration options through the command **Codemo
 - **Bundled:** We worked hard to make sure that our bundled code theme provides the best developer experience possible. (See [color and code intelligibility section](#color-and-code-intelligibility) for more information) However, if you want to use an auxiliary code theme, you can select **From Registries** option and choose a code theme from the registries.
 
 - **From Registries:** You can also choose an auxiliary theme. Auxiliary themes are the themes that are not bundled with Modern but can be installed from the auxiliary theme registries. Codemos provides a built-in registry that features some of the most popular themes. You can also create your own registries. See [modularity section](#modularity) for more information.
-
   1. **Auxiliary Code Theme:** You can select which auxiliary theme your Modern will use as the code theme. (Auxiliary theme will be installed and activated automatically from the indicated registry)
      ![code-theme-from-registries](images/conf-code-theme-2-a.png)
 

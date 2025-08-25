@@ -45,16 +45,6 @@ export const getRules = (themeContext: ThemeContext): object => {
         foreground: colors.scope02,
       },
     },
-    // Function parenthesis
-    {
-      scope: [
-        "meta.embedded.block.python punctuation.definition.arguments",
-        "source.python punctuation.definition.arguments",
-      ],
-      settings: {
-        foreground: colors.scope17,
-      },
-    },
     // String literal prefix
     {
       scope: [
@@ -112,6 +102,30 @@ export const getRules = (themeContext: ThemeContext): object => {
       ],
       settings: {
         foreground: colors.scope15,
+      },
+    },
+    // Decorator parentheses
+    {
+      scope: ["meta.function.decorator.python punctuation.definition.arguments"],
+      settings: {
+        foreground: colors.scope01,
+      },
+    },
+    // Decorator punctuations
+    {
+      scope: [
+        "meta.function.decorator.python punctuation.separator",
+        "meta.function.decorator.python punctuation.definition.string",
+      ],
+      settings: {
+        foreground: colors.scope09,
+      },
+    },
+    // Decorator strings
+    {
+      scope: ["meta.function.decorator.python string"],
+      settings: {
+        foreground: colors.scope09,
       },
     },
   ];

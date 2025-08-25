@@ -7,7 +7,7 @@ import packageJSON from "../../package.json";
 
 const IMAGES_PATH = join(__dirname, "..", "..", "images");
 
-const VSCODE_VERSION = `v${packageJSON.engines.vscode.substring(1)}+`;
+const VSCODE_VERSION = `v${packageJSON.engines.vscode.substring(1).split(".").slice(0, 2).join(".")}+`;
 
 // Dynamics
 fetchModifySvg(
@@ -18,17 +18,17 @@ fetchModifySvg(
   false,
 );
 fetchModifySvg(
-  `https://img.shields.io/badge/${VSCODE_VERSION}-4B9ECD.svg?labelColor=373737&label=&logo=data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIzLjE1IDIuNTg3TDE4LjIxLjIxYTEuNDk0IDEuNDk0IDAgMDAtMS43MDUuMjlsLTkuNDYgOC42My00LjEyLTMuMTI4YS45OTkuOTk5IDAgMDAtMS4yNzYuMDU3TC4zMjcgNy4yNjFBMSAxIDAgMDAuMzI2IDguNzRMMy44OTkgMTIgLjMyNiAxNS4yNmExIDEgMCAwMC4wMDEgMS40NzlMMS42NSAxNy45NGEuOTk5Ljk5OSAwIDAwMS4yNzYuMDU3bDQuMTItMy4xMjggOS40NiA4LjYzYTEuNDkyIDEuNDkyIDAgMDAxLjcwNC4yOWw0Ljk0Mi0yLjM3N0ExLjUgMS41IDAgMDAyNCAyMC4wNlYzLjkzOWExLjUgMS41IDAgMDAtLjg1LTEuMzUyem0tNS4xNDYgMTQuODYxTDEwLjgyNiAxMmw3LjE3OC01LjQ0OHYxMC44OTZ6IiBmaWxsPSIjZDNkM2QzIi8+PC9zdmc+Cg==&logoColor=%23FFFFFFC7&style=for-the-badge`,
+  `https://img.shields.io/badge/-${VSCODE_VERSION}-4B9ECD.svg?labelColor=373737&label=&logo=data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIzLjE1IDIuNTg3TDE4LjIxLjIxYTEuNDk0IDEuNDk0IDAgMDAtMS43MDUuMjlsLTkuNDYgOC42My00LjEyLTMuMTI4YS45OTkuOTk5IDAgMDAtMS4yNzYuMDU3TC4zMjcgNy4yNjFBMSAxIDAgMDAuMzI2IDguNzRMMy44OTkgMTIgLjMyNiAxNS4yNmExIDEgMCAwMC4wMDEgMS40NzlMMS42NSAxNy45NGEuOTk5Ljk5OSAwIDAwMS4yNzYuMDU3bDQuMTItMy4xMjggOS40NiA4LjYzYTEuNDkyIDEuNDkyIDAgMDAxLjcwNC4yOWw0Ljk0Mi0yLjM3N0ExLjUgMS41IDAgMDAyNCAyMC4wNlYzLjkzOWExLjUgMS41IDAgMDAtLjg1LTEuMzUyem0tNS4xNDYgMTQuODYxTDEwLjgyNiAxMmw3LjE3OC01LjQ0OHYxMC44OTZ6IiBmaWxsPSIjZDNkM2QzIi8+PC9zdmc+Cg==&logoColor=%23FFFFFFC7&style=for-the-badge`,
   join(IMAGES_PATH, "badge-vscode.svg"),
   true,
-  true,
+  false,
   false,
 );
 fetchModifySvg(
   "https://img.shields.io/visual-studio-marketplace/i/codemos.codemos-modern?labelColor=373737&color=9B87EA&label=&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4XzE2KSI+CjxwYXRoIGQ9Ik0xMiAxOEw0LjUgMTAuNUw2LjYgOC4zMjVMMTAuNSAxMi4yMjVWMEgxMy41VjEyLjIyNUwxNy40IDguMzI1TDE5LjUgMTAuNUwxMiAxOFpNMyAyNEMyLjE3NSAyNCAxLjQ2ODc1IDIzLjcwNjMgMC44ODEyNSAyMy4xMTg4QzAuMjkzNzUgMjIuNTMxMiAwIDIxLjgyNSAwIDIxVjE2LjVIM1YyMUgyMVYxNi41SDI0VjIxQzI0IDIxLjgyNSAyMy43MDYzIDIyLjUzMTIgMjMuMTE4OCAyMy4xMTg4QzIyLjUzMTIgMjMuNzA2MyAyMS44MjUgMjQgMjEgMjRIM1oiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuNzgwMzkyIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMThfMTYiPgo8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==&logoColor=%23FFFFFFC7&style=for-the-badge",
   join(IMAGES_PATH, "badge-downloads.svg"),
   true,
-  false,
+  true,
   false,
 );
 fetchModifySvg(

@@ -5,7 +5,7 @@
   "icon": "resource/icon.gif",
   "description": "%ext.desc%",
   "pricing": "Free",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "license": "MIT",
   "private": true,
   "preview": true,
@@ -577,14 +577,14 @@
     "*.{ts,json,md}": "prettier --write"
   },
   "dependencies": {
-    "@octokit/rest": "^21.0.1",
+    "@octokit/rest": "^22.0.0",
     "@resvg/resvg-js": "^2.6.0",
     "axios": "^1.6.5",
     "jsdom": "^26.0.0"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.6",
-    "@types/node": "^22.5.1",
+    "@types/node": "^24.1.0",
     "@types/vscode": "^1.79.0",
     "@typescript-eslint/eslint-plugin": "^8.3.0",
     "@typescript-eslint/parser": "^8.3.0",
@@ -592,7 +592,7 @@
     "eslint": "^9.9.1",
     "eslint-config-prettier": "^10.0.0",
     "husky": "^9.0.10",
-    "lint-staged": "^15.2.0",
+    "lint-staged": "^16.1.2",
     "prettier": "^3.1.1",
     "tsx": "^4.16.2",
     "typescript": "^5.0.4",
