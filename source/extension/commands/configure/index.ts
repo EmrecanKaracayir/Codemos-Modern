@@ -126,12 +126,12 @@ export const configureCommand = async () => {
   setIsConfiguredFromCmd(true);
   await updateConfig(
     variant,
-    auxUiThemeId === null ? getConfig()[variant].auxiliaryUiTheme : auxUiThemeId,
+    auxUiThemeId,
     design === null ? getConfig()[variant].design : design,
     accentColor === null ? getConfig()[variant].accentColor : accentColor,
     adaptationColor === null ? getConfig()[variant].adaptationColor : adaptationColor,
     intensityNumber === null ? getConfig()[variant].adaptationIntensity : intensityNumber,
-    auxCodeThemeId === null ? getConfig()[variant].auxiliaryCodeTheme : auxCodeThemeId,
+    auxCodeThemeId,
     // getConfig()[variant].codeColors,
   );
   await applyTheme(variant);

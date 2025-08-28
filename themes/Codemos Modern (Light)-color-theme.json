@@ -680,7 +680,7 @@
     "peekViewEditor.matchHighlightBorder": "#0000001A",
     "peekViewEditorGutter.background": "#F9F9F9FF",
     "peekViewEditorStickyScroll.background": "#FCFCFCFF",
-    "peekViewEditorStickyScrollGutter.background": "#FF0000FF",
+    "peekViewEditorStickyScrollGutter.background": "#FCFCFCFF",
     "peekViewResult.background": "#F9F9F9FF",
     "peekViewResult.fileForeground": "#000000B8",
     "peekViewResult.lineForeground": "#000000B8",
