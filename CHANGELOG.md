@@ -4,6 +4,16 @@ All notable changes to the "codemos-modern" extension will be documented in this
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.7] - 2025-09-10 - Minor fixes 🛠
+
+### Added
+
+- More unknown theme tokens.
+
+### Fixed
+
+- Auxiliary theme selections not reseting after using bundled themes. Thanks to [rababR1](https://github.com/EmrecanKaracayir/Codemos-Modern/issues/262) for reporting.
+
 ## [3.0.6] - 2025-08-26 - VS Code v1.103.x support 🟢
 
 ### Added
@@ -522,6 +532,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Initial release
 
+[3.0.7]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.6...v3.0.7
 [3.0.6]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.5...v3.0.6
 [3.0.5]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.4...v3.0.5
 [3.0.4]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.3...v3.0.4

@@ -9,7 +9,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "peekViewEditor.matchHighlightBorder": styles.stroke.control.default,
     "peekViewEditorGutter.background": styles.bg.solid.layer,
     "peekViewEditorStickyScroll.background": styles.bg.solid.flyout,
-    "peekViewEditorStickyScrollGutter.background": "#FF0000FF", // 🔵 Unknown attribute
+    "peekViewEditorStickyScrollGutter.background": styles.bg.solid.flyout,
     "peekViewResult.background": styles.bg.solid.layer,
     "peekViewResult.fileForeground": styles.fill.text.sec,
     "peekViewResult.lineForeground": styles.fill.text.sec,

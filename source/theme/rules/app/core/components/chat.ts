@@ -12,9 +12,9 @@ export const getRules = (themeContext: ThemeContext): object => {
     "chat.linesRemovedForeground": "#FF0000FF", // 🔵 Unknown attribute
     "chat.requestBackground": styles.fill.control.subtle,
     "chat.requestBorder": styles.stroke.divider.default,
-    "chat.requestBubbleBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "chat.requestBubbleHoverBackground": "#FF0000FF", // 🔵 Unknown attribute
-    "chat.requestCodeBorder": "#FF0000FF", // 🔵 Unknown attribute
+    "chat.requestBubbleBackground": styles.fill.control.rest,
+    "chat.requestBubbleHoverBackground": styles.fill.control.hover,
+    "chat.requestCodeBorder": styles.stroke.control.default,
     "chat.slashCommandBackground": styles.fill.control.rest,
     "chat.slashCommandForeground": styles.fill.accentText.pri,
   };
