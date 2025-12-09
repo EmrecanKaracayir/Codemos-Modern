@@ -17,5 +17,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     "extensionIcon.sponsorForeground": styles.basic.def.red.pri,
     "extensionIcon.starForeground": styles.basic.def.yellow.pri,
     "extensionIcon.verifiedForeground": styles.basic.def.blue.pri,
+    "mcpIcon.starForeground": "#FF0000FF", // 🔵 Unknown attribute
   };
 };

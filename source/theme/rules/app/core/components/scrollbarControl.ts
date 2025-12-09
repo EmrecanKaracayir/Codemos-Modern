@@ -4,6 +4,7 @@ import { TRANSPARENT } from "../../../../../color/constants";
 export const getRules = (themeContext: ThemeContext): object => {
   const styles = themeContext.styles;
   const rules = {
+    "scrollbar.background": TRANSPARENT,
     "scrollbar.shadow": styles.effect.shadow.default,
     "scrollbarSlider.activeBackground": styles.fill.control.pressed,
     "scrollbarSlider.background": styles.fill.control.rest,

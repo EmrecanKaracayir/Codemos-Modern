@@ -4,6 +4,16 @@ All notable changes to the "codemos-modern" extension will be documented in this
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.8] - 2025-12-09 - VS Code v1.106.x support 🟢
+
+### Added
+
+- Support for VS Code v1.106.x.
+
+## Fixed
+
+- Java syntax highlighting for properties.
+
 ## [3.0.7] - 2025-09-10 - Minor fixes 🛠
 
 ### Added
@@ -532,6 +542,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Initial release
 
+[3.0.8]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.7...v3.0.8
 [3.0.7]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.6...v3.0.7
 [3.0.6]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.5...v3.0.6
 [3.0.5]: https://github.com/EmrecanKaracayir/codemos-modern/compare/v3.0.4...v3.0.5

@@ -4,6 +4,14 @@ export const getRules = (themeContext: ThemeContext): object => {
   const color = themeContext.variantConfig.codeColors.scope11;
   const decorations = themeContext.textDecorations;
   return [
+    // Property names
+    {
+      scope: ["support.type.property-name"],
+      settings: {
+        foreground: color,
+        fontStyle: "",
+      },
+    },
     // Properties (read/write)
     {
       scope: [

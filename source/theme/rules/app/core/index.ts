@@ -28,6 +28,7 @@ import { getRules as getIntegratedTerminalRules } from "./components/integratedT
 import { getRules as getKeybindingLabelRules } from "./components/keybindingLabel";
 import { getRules as getKeyboardShortcutTableRules } from "./components/keyboardShortcutTable";
 import { getRules as getListsAndTreesRules } from "./components/listsAndTrees";
+import { getRules as getMarkdownRules } from "./components/markdown";
 import { getRules as getMenuBarRules } from "./components/menuBar";
 import { getRules as getMergeConflictsRules } from "./components/mergeConflicts";
 import { getRules as getMinimapRules } from "./components/minimap";
@@ -84,6 +85,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     ...getInteractiveEditorRules(themeContext),
     ...getKeybindingLabelRules(themeContext),
     ...getKeyboardShortcutTableRules(themeContext),
+    ...getMarkdownRules(themeContext),
     ...getListsAndTreesRules(themeContext),
     ...getMenuBarRules(themeContext),
     ...getMergeConflictsRules(themeContext),

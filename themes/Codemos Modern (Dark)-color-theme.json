@@ -97,6 +97,7 @@
     "chat.requestCodeBorder": "#FFFFFF14",
     "chat.slashCommandBackground": "#FFFFFF0F",
     "chat.slashCommandForeground": "#CB8569FF",
+    "chatManagement.sashBorder": "#FF0000FF",
     "commandCenter.activeBackground": "#FFFFFF14",
     "commandCenter.activeBorder": "#FFFFFF14",
     "commandCenter.activeForeground": "#FFFFFFC7",
@@ -430,6 +431,7 @@
     "extensionIcon.sponsorForeground": "#EF6363FF",
     "extensionIcon.starForeground": "#BFAF40FF",
     "extensionIcon.verifiedForeground": "#4B9ECDFF",
+    "mcpIcon.starForeground": "#FF0000FF",
     "gauge.background": "#CB8569FF",
     "gauge.border": "#FFFFFF14",
     "gauge.errorBackground": "#EF6363FF",
@@ -509,6 +511,8 @@
     "terminalStickyScrollHover.background": "#2A2A2A",
     "terminalSymbolIcon.aliasForeground": "#BFAF40FF",
     "terminalSymbolIcon.argumentForeground": "#C59E7FFF",
+    "terminalSymbolIcon.branchForeground": "#FF0000FF",
+    "terminalSymbolIcon.commitForeground": "#FF0000FF",
     "terminalSymbolIcon.fileForeground": "#CB8569FF",
     "terminalSymbolIcon.flagForeground": "#ADA77FFF",
     "terminalSymbolIcon.folderForeground": "#CB8569FF",
@@ -516,8 +520,14 @@
     "terminalSymbolIcon.methodForeground": "#D28342FF",
     "terminalSymbolIcon.optionForeground": "#ADA77FFF",
     "terminalSymbolIcon.optionValueForeground": "#ADA77FFF",
+    "terminalSymbolIcon.pullRequestDoneForeground": "#FF0000FF",
+    "terminalSymbolIcon.pullRequestForeground": "#FF0000FF",
+    "terminalSymbolIcon.remoteForeground": "#FF0000FF",
+    "terminalSymbolIcon.stashForeground": "#FF0000FF",
     "terminalSymbolIcon.symbolicLinkFileForeground": "#FF0000FF",
     "terminalSymbolIcon.symbolicLinkFolderForeground": "#FF0000FF",
+    "terminalSymbolIcon.symbolText": "#FF0000FF",
+    "terminalSymbolIcon.tagForeground": "#FF0000FF",
     "inlineChat.background": "#282828FF",
     "inlineChat.border": "#75757552",
     "inlineChat.foreground": "#FFFFFFC7",
@@ -534,6 +544,11 @@
     "keybindingLabel.foreground": "#FFFFFFC7",
     "keybindingTable.headerBackground": "#282828FF",
     "keybindingTable.rowsBackground": "#282828FF",
+    "markdownAlert.caution.foreground": "#EF6363FF",
+    "markdownAlert.important.foreground": "#9B87EAFF",
+    "markdownAlert.note.foreground": "#4B9ECDFF",
+    "markdownAlert.tip.foreground": "#45AA41FF",
+    "markdownAlert.warning.foreground": "#D28342FF",
     "list.activeSelectionBackground": "#FFFFFF0F",
     "list.activeSelectionForeground": "#FFFFFFC7",
     "list.activeSelectionIconForeground": "#FFFFFFC7",
@@ -703,6 +718,7 @@
     "quickInputList.focusForeground": "#FFFFFFC7",
     "quickInputList.focusIconForeground": "#FFFFFFC7",
     "quickInputTitle.background": "#171717FF",
+    "scrollbar.background": "#FFFFFF0F",
     "scrollbar.shadow": "#00000042",
     "scrollbarSlider.activeBackground": "#FFFFFF08",
     "scrollbarSlider.background": "#FFFFFF0F",
@@ -1767,6 +1783,15 @@
     },
     {
       "scope": [
+        "support.type.property-name"
+      ],
+      "settings": {
+        "foreground": "#ADA77FFF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
         "entity.name.variable.field",
         "entity.name.variable.property",
         "meta.class variable",
@@ -1907,8 +1932,7 @@
     },
     {
       "scope": [
-        "entity.other.attribute-name",
-        "support.type.property-name"
+        "entity.other.attribute-name"
       ],
       "settings": {
         "foreground": "#87ABC0FF",

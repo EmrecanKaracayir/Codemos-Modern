@@ -49,6 +49,8 @@ export const getRules = (themeContext: ThemeContext): object => {
     "terminalStickyScrollHover.background": styles.fill.terminal.stickyScrollHover, // 🟢 Undesired solution
     "terminalSymbolIcon.aliasForeground": colors.scope03,
     "terminalSymbolIcon.argumentForeground": colors.scope10,
+    "terminalSymbolIcon.branchForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "terminalSymbolIcon.commitForeground": "#FF0000FF", // 🔵 Unknown attribute
     "terminalSymbolIcon.fileForeground": styles.fill.accentText.pri,
     "terminalSymbolIcon.flagForeground": colors.scope11,
     "terminalSymbolIcon.folderForeground": styles.fill.accentText.pri,
@@ -56,8 +58,14 @@ export const getRules = (themeContext: ThemeContext): object => {
     "terminalSymbolIcon.methodForeground": colors.scope02,
     "terminalSymbolIcon.optionForeground": colors.scope11,
     "terminalSymbolIcon.optionValueForeground": colors.scope11,
+    "terminalSymbolIcon.pullRequestDoneForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "terminalSymbolIcon.pullRequestForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "terminalSymbolIcon.remoteForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "terminalSymbolIcon.stashForeground": "#FF0000FF", // 🔵 Unknown attribute
     "terminalSymbolIcon.symbolicLinkFileForeground": "#FF0000FF", // 🔵 Unknown attribute
     "terminalSymbolIcon.symbolicLinkFolderForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "terminalSymbolIcon.symbolText": "#FF0000FF", // 🔵 Unknown attribute
+    "terminalSymbolIcon.tagForeground": "#FF0000FF", // 🔵 Unknown attribute
   };
   const design = themeContext.variantConfig.design;
   if (design === "natural" || design === "minimal") {
