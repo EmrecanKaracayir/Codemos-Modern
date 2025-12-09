@@ -17,5 +17,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     "chat.requestCodeBorder": styles.stroke.control.default,
     "chat.slashCommandBackground": styles.fill.control.rest,
     "chat.slashCommandForeground": styles.fill.accentText.pri,
+    "chatManagement.sashBorder": "#FF0000FF", // 🔵 Unknown attribute
   };
 };
