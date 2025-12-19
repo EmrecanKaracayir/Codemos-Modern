@@ -19,9 +19,9 @@ export const getRules = (themeContext: ThemeContext): object => {
         fontStyle: "",
       },
     },
-    // Attribute names
+    // Attribute/Property names
     {
-      scope: ["entity.other.attribute-name"],
+      scope: ["entity.other.attribute-name", "support.type.property-name"],
       settings: {
         foreground: color,
         fontStyle: "",

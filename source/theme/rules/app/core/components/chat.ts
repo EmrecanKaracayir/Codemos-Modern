@@ -4,6 +4,7 @@ import { getMixedColorHex9 } from "../../../../../color";
 export const getRules = (themeContext: ThemeContext): object => {
   const styles = themeContext.styles;
   return {
+    "agentSessionReadIndicator.foreground": "#FF0000FF", // 🔵 Unknown attribute
     "chat.avatarBackground": getMixedColorHex9(styles.fill.control.rest, styles.bg.solid.surface),
     "chat.avatarForeground": styles.fill.accentText.pri,
     "chat.checkpointSeparator": "#FF0000FF", // 🔵 Unknown attribute

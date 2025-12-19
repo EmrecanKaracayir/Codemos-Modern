@@ -20,6 +20,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editor.foldPlaceholderForeground": styles.fill.text.ghost,
     "editor.foreground": styles.fill.text.sec,
     "editor.hoverHighlightBackground": styles.basic.neutral.sep,
+    "editor.inactiveLineHighlightBackground": TRANSPARENT,
     "editor.inactiveSelectionBackground": styles.basic.neutral.sep,
     "editor.lineHighlightBackground": TRANSPARENT,
     "editor.lineHighlightBorder": styles.stroke.control.default,
@@ -74,6 +75,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorGutter.addedBackground": styles.basic.alt.green.pri,
     "editorGutter.addedSecondaryBackground": styles.basic.def.green.pri,
     "editorGutter.background": styles.bg.solid.base,
+    "editorGutter.commentDraftGlyphForeground": "#FF0000FF", // 🔵 Unknown attribute
     "editorGutter.commentGlyphForeground": styles.fill.text.sec,
     "editorGutter.commentRangeForeground": styles.fill.control.prominent,
     "editorGutter.commentUnresolvedGlyphForeground": styles.basic.def.blue.pri,
@@ -128,6 +130,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorOverviewRuler.background": styles.bg.solid.base,
     "editorOverviewRuler.border": TRANSPARENT,
     "editorOverviewRuler.bracketMatchForeground": styles.basic.def.brown.sec,
+    "editorOverviewRuler.commentDraftForeground": "#FF0000FF", // 🔵 Unknown attribute
     "editorOverviewRuler.deletedForeground": styles.basic.def.red.sec,
     "editorOverviewRuler.errorForeground": styles.basic.def.red.pri,
     "editorOverviewRuler.findMatchForeground": styles.basic.def.mint.sec,
@@ -149,7 +152,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorWarning.background": TRANSPARENT,
     "editorWarning.border": TRANSPARENT,
     "editorWarning.foreground": styles.basic.def.orange.pri,
-    "editorWatermark.foreground": styles.fill.text.sec,
     "editorWhitespace.foreground": styles.fill.text.ghost,
     "inlineEdit.gutterIndicator.background": styles.basic.def.purple.sen,
     "inlineEdit.gutterIndicator.primaryBackground": styles.basic.def.purple.qua,
