@@ -84,6 +84,7 @@
     "charts.purple": "#7700EEFF",
     "charts.red": "#B70004FF",
     "charts.yellow": "#7D7000FF",
+    "agentSessionReadIndicator.foreground": "#FF0000FF",
     "chat.avatarBackground": "#E7E7E7",
     "chat.avatarForeground": "#9D6752FF",
     "chat.checkpointSeparator": "#FF0000FF",
@@ -188,6 +189,7 @@
     "editor.foldPlaceholderForeground": "#00000052",
     "editor.foreground": "#000000B8",
     "editor.hoverHighlightBackground": "#0000000D",
+    "editor.inactiveLineHighlightBackground": "#00000000",
     "editor.inactiveSelectionBackground": "#0000000D",
     "editor.lineHighlightBackground": "#00000000",
     "editor.lineHighlightBorder": "#0000001A",
@@ -242,6 +244,7 @@
     "editorGutter.addedBackground": "#528256FF",
     "editorGutter.addedSecondaryBackground": "#006904FF",
     "editorGutter.background": "#EDEDEDFF",
+    "editorGutter.commentDraftGlyphForeground": "#FF0000FF",
     "editorGutter.commentGlyphForeground": "#000000B8",
     "editorGutter.commentRangeForeground": "#CACACAFF",
     "editorGutter.commentUnresolvedGlyphForeground": "#0052C6FF",
@@ -290,6 +293,7 @@
     "editorOverviewRuler.background": "#EDEDEDFF",
     "editorOverviewRuler.border": "#00000000",
     "editorOverviewRuler.bracketMatchForeground": "#784F3FB8",
+    "editorOverviewRuler.commentDraftForeground": "#FF0000FF",
     "editorOverviewRuler.deletedForeground": "#B70004B8",
     "editorOverviewRuler.errorForeground": "#B70004FF",
     "editorOverviewRuler.findMatchForeground": "#006560B8",
@@ -311,7 +315,6 @@
     "editorWarning.background": "#00000000",
     "editorWarning.border": "#00000000",
     "editorWarning.foreground": "#9F5500FF",
-    "editorWatermark.foreground": "#000000B8",
     "editorWhitespace.foreground": "#00000052",
     "inlineEdit.gutterIndicator.background": "#7700EE14",
     "inlineEdit.gutterIndicator.primaryBackground": "#7700EE33",
@@ -718,7 +721,7 @@
     "quickInputList.focusForeground": "#000000E0",
     "quickInputList.focusIconForeground": "#000000E0",
     "quickInputTitle.background": "#EDEDEDFF",
-    "scrollbar.background": "#0000000D",
+    "scrollbar.background": "#00000000",
     "scrollbar.shadow": "#0000001F",
     "scrollbarSlider.activeBackground": "#00000008",
     "scrollbarSlider.background": "#0000000D",
@@ -1783,15 +1786,6 @@
     },
     {
       "scope": [
-        "support.type.property-name"
-      ],
-      "settings": {
-        "foreground": "#7D7852FF",
-        "fontStyle": ""
-      }
-    },
-    {
-      "scope": [
         "entity.name.variable.field",
         "entity.name.variable.property",
         "meta.class variable",
@@ -1932,7 +1926,8 @@
     },
     {
       "scope": [
-        "entity.other.attribute-name"
+        "entity.other.attribute-name",
+        "support.type.property-name"
       ],
       "settings": {
         "foreground": "#5B79A2FF",
