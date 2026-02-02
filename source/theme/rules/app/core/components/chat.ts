@@ -7,7 +7,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "agentSessionReadIndicator.foreground": "#FF0000FF", // 🔵 Unknown attribute
     "chat.avatarBackground": getMixedColorHex9(styles.fill.control.rest, styles.bg.solid.surface),
     "chat.avatarForeground": styles.fill.accentText.pri,
-    "chat.checkpointSeparator": "#FF0000FF", // 🔵 Unknown attribute
+    "chat.checkpointSeparator": styles.fill.accent.pri,
     "chat.editedFileForeground": "#FF0000FF", // 🔵 Unknown attribute
     "chat.linesAddedForeground": "#FF0000FF", // 🔵 Unknown attribute
     "chat.linesRemovedForeground": "#FF0000FF", // 🔵 Unknown attribute
