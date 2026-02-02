@@ -13,7 +13,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "button.separator": styles.fill.onAccent.pri,
     "checkbox.background": styles.fill.control.rest,
     "checkbox.border": styles.stroke.control.default,
-    "checkbox.disabled.background": "#FF0000FF", // 🔵 Unknown attribute
+    "checkbox.disabled.background": styles.fill.control.subtle,
     "checkbox.disabled.foreground": "#FF0000FF", // 🔵 Unknown attribute
     "checkbox.foreground": styles.fill.text.active,
     "checkbox.selectBackground": styles.fill.control.rest,
