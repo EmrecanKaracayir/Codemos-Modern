@@ -4,16 +4,17 @@ export const getRules = (themeContext: ThemeContext): object => {
   const styles = themeContext.styles;
   return {
     "button.background": styles.fill.accent.pri,
-    "button.border": styles.stroke.control.default,
+    "button.border": styles.stroke.control.alt,
     "button.foreground": styles.fill.onAccent.pri,
     "button.hoverBackground": styles.fill.accent.sec,
     "button.secondaryBackground": styles.fill.control.rest,
+    "button.secondaryBorder": styles.stroke.control.default,
     "button.secondaryForeground": styles.fill.text.pri,
     "button.secondaryHoverBackground": styles.fill.control.hover,
     "button.separator": styles.fill.onAccent.pri,
     "checkbox.background": styles.fill.control.rest,
     "checkbox.border": styles.stroke.control.default,
-    "checkbox.disabled.background": "#FF0000FF", // 🔵 Unknown attribute
+    "checkbox.disabled.background": styles.fill.control.subtle,
     "checkbox.disabled.foreground": "#FF0000FF", // 🔵 Unknown attribute
     "checkbox.foreground": styles.fill.text.active,
     "checkbox.selectBackground": styles.fill.control.rest,

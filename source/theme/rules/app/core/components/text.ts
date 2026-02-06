@@ -9,6 +9,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "textLink.activeForeground": styles.fill.accentText.sec,
     "textLink.foreground": styles.fill.accentText.pri,
     "textPreformat.background": styles.fill.system.bg.red,
+    "textPreformat.border": styles.stroke.control.default,
     "textPreformat.foreground": styles.fill.system.fg.red,
     "textSeparator.foreground": styles.stroke.divider.default,
   };

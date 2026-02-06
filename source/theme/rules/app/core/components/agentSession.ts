@@ -1,0 +1,10 @@
+import { ThemeContext } from "../../../../../@types";
+
+export const getRules = (themeContext: ThemeContext): object => {
+  const styles = themeContext.styles;
+  return {
+    "agentSessionReadIndicator.foreground": styles.fill.text.disabled,
+    "agentSessionSelectedBadge.border": styles.basic.def.blue.pri,
+    "agentSessionSelectedUnfocusedBadge.border": styles.basic.def.blue.ter,
+  };
+};

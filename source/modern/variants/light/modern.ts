@@ -383,6 +383,7 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
         default: `${palette.hic}${getHexAlpha(10)}`,
         alt: `${palette.loc}${getHexAlpha(10)}`,
         elevation: `${palette.hic}${getHexAlpha(10)}`,
+        accent: `${accentColor}${getHexAlpha(100)}`,
       },
       divider: {
         default: `${palette.hic}${getHexAlpha(10)}`,

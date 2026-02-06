@@ -2,6 +2,7 @@ import { ThemeContext } from "../../../../@types";
 import { getRules as getActionRules } from "./components/action";
 import { getRules as getActionBarRules } from "./components/actionBar";
 import { getRules as getActivityBarRules } from "./components/activityBar";
+import { getRules as getAgentSessionRules } from "./components/agentSession";
 import { getRules as getBadgeRules } from "./components/badge";
 import { getRules as getBannerRules } from "./components/banner";
 import { getRules as getBaseRules } from "./components/base";
@@ -60,6 +61,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     ...getActionRules(themeContext),
     ...getActionBarRules(themeContext),
     ...getActivityBarRules(themeContext),
+    ...getAgentSessionRules(themeContext),
     ...getBadgeRules(themeContext),
     ...getBannerRules(themeContext),
     ...getBaseRules(themeContext),

@@ -24,6 +24,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorStickyScroll.background": styles.bg.solid.surface,
     "editorStickyScroll.border": styles.stroke.divider.default,
     "editorStickyScroll.shadow": styles.effect.shadow.default,
+    "editorStickyScrollGutter.background": styles.bg.solid.layer,
     "editorStickyScrollHover.background": styles.fill.control.rest,
     "editorSuggestWidget.background": styles.bg.solid.flyout,
     "editorSuggestWidget.border": styles.stroke.surface.flyout,
