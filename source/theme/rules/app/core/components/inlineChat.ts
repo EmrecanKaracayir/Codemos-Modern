@@ -4,7 +4,7 @@ export const getRules = (themeContext: ThemeContext): object => {
   const styles = themeContext.styles;
   return {
     "inlineChat.background": styles.bg.solid.flyout,
-    "inlineChat.border": styles.stroke.surface.flyout,
+    "inlineChat.border": styles.basic.def.purple.pri,
     "inlineChat.foreground": styles.fill.text.pri,
     "inlineChat.shadow": styles.effect.shadow.default,
     "inlineChatDiff.inserted": styles.basic.def.green.qui,
