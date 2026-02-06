@@ -6,6 +6,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "extensionBadge.remoteBackground": styles.basic.def.mint.pri,
     "extensionBadge.remoteForeground": styles.fill.onColor.pri,
     "extensionButton.background": styles.fill.accent.pri,
+    "extensionButton.border": styles.stroke.control.alt,
     "extensionButton.foreground": styles.fill.onAccent.pri,
     "extensionButton.hoverBackground": styles.fill.accent.sec,
     "extensionButton.prominentBackground": styles.fill.accent.pri,
@@ -17,6 +18,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     "extensionIcon.sponsorForeground": styles.basic.def.red.pri,
     "extensionIcon.starForeground": styles.basic.def.yellow.pri,
     "extensionIcon.verifiedForeground": styles.basic.def.blue.pri,
-    "mcpIcon.starForeground": "#FF0000FF", // 🔵 Unknown attribute
+    "mcpIcon.starForeground": styles.basic.def.yellow.pri,
   };
 };

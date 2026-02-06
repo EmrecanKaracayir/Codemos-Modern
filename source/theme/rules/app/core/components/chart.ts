@@ -7,7 +7,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "chart.guide": "#FF0000FF", // 🔵 Unknown attribute
     "chart.line": "#FF0000FF", // 🔵 Unknown attribute
     "charts.blue": styles.basic.def.blue.pri,
-    "charts.foreground": styles.fill.onColor.pri,
+    "charts.foreground": styles.fill.text.pri,
     "charts.green": styles.basic.def.green.pri,
     "charts.lines": styles.stroke.divider.default,
     "charts.orange": styles.basic.def.orange.pri,

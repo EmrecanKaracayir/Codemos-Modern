@@ -334,6 +334,7 @@ export type Styles = {
       default: string;
       alt: string;
       elevation: string;
+      accent: string;
     };
     divider: {
       default: string;

@@ -8,7 +8,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "input.foreground": styles.fill.text.pri,
     "input.placeholderForeground": styles.fill.text.sec,
     "inputOption.activeBackground": styles.fill.accent.pri,
-    "inputOption.activeBorder": styles.stroke.control.default,
+    "inputOption.activeBorder": styles.stroke.control.alt,
     "inputOption.activeForeground": styles.fill.onAccent.pri,
     "inputOption.hoverBackground": styles.fill.control.rest,
     "inputValidation.errorBackground": styles.fill.system.bg.red,

@@ -49,6 +49,7 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorBracketHighlight.unexpectedBracket.foreground": styles.basic.def.red.pri,
     "editorBracketMatch.background": styles.basic.def.brown.qua,
     "editorBracketMatch.border": styles.stroke.control.default,
+    "editorBracketMatch.foreground": styles.fill.text.sec,
     "editorBracketPairGuide.activeBackground1": styles.basic.alt.yellow.pri,
     "editorBracketPairGuide.activeBackground2": styles.basic.alt.orange.pri,
     "editorBracketPairGuide.activeBackground3": styles.basic.alt.red.pri,
@@ -183,7 +184,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     "searchEditor.findMatchBackground": styles.basic.def.mint.qua,
     "searchEditor.findMatchBorder": styles.stroke.control.default,
     "searchEditor.textInputBorder": styles.stroke.control.default,
-    "editorStickyScrollGutter.background": "#1C1C1CFF",
   };
   const design = themeContext.variantConfig.design;
   if (design === "natural" || design === "minimal") {
