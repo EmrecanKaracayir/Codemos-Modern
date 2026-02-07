@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const rules = {
     "scrollbar.background": TRANSPARENT,
@@ -17,4 +17,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["scrollbar.shadow"] = TRANSPARENT;
   }
   return rules;
-};
+}

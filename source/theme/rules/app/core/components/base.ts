@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "icon.foreground": styles.fill.text.pri,
@@ -14,4 +14,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     focusBorder: styles.stroke.focus.default,
     foreground: styles.fill.text.pri,
   };
-};
+}

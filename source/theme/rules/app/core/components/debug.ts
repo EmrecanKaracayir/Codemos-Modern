@@ -1,11 +1,11 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "debugTokenExpression.boolean": styles.basic.def.blue.pri,
     "debugTokenExpression.error": styles.basic.def.red.pri,
-    "debugTokenExpression.name": styles.fill.accentText.pri,
+    "debugTokenExpression.name": styles.fill.accent.pri,
     "debugTokenExpression.number": styles.basic.alt.green.pri,
     "debugTokenExpression.string": styles.basic.def.brown.pri,
     "debugTokenExpression.type": styles.basic.def.mint.pri,
@@ -22,4 +22,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editor.inlineValuesForeground": styles.basic.def.yellow.pri,
     "editor.stackFrameHighlightBackground": styles.basic.def.yellow.qui,
   };
-};
+}

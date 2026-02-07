@@ -7,7 +7,9 @@ import { RESPONSE_OK } from "../api/constants";
 import { l10nT } from "../l10n";
 import { GITHUB_AUTH_PROVIDER_ID } from "./constants";
 
-export const authenticate = async (createIfNone: boolean): Promise<OnlineResult> => {
+export async function authenticate(
+  createIfNone: boolean,
+): Promise<OnlineResult> {
   const session = await authentication.getSession(GITHUB_AUTH_PROVIDER_ID, [], {
     createIfNone,
     silent: !createIfNone,
@@ -35,9 +37,11 @@ export const authenticate = async (createIfNone: boolean): Promise<OnlineResult>
           message = l10nT("notification.msg.apiUnauthorized");
           break;
         default:
-          message = l10nT("notification.msg.networkError$status", [error.status]);
+          message = l10nT("notification.msg.networkError$status", [
+            error.status,
+          ]);
           break;
       }
       return { success: false, message: message, data: null };
     });
-};
+}

@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "settings.checkboxBackground": styles.fill.control.rest,
@@ -25,4 +25,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "settings.textInputBorder": styles.stroke.control.default,
     "settings.textInputForeground": styles.fill.text.pri,
   };
-};
+}

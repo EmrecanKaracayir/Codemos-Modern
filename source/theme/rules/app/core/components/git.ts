@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "git.blame.editorDecorationForeground": styles.fill.text.ghost,
@@ -15,4 +15,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "gitDecoration.submoduleResourceForeground": styles.basic.def.mint.pri,
     "gitDecoration.untrackedResourceForeground": styles.basic.alt.green.pri,
   };
-};
+}

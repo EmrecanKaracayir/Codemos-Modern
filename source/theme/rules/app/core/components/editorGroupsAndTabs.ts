@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const rules = {
     "editorGroup.border": styles.stroke.divider.default,
@@ -58,4 +58,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["tab.unfocusedActiveBorder"] = styles.bg.solid.layer;
   }
   return rules;
-};
+}

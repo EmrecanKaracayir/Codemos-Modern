@@ -1,11 +1,14 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Strings
     {
-      scope: ["meta.embedded.block.dart string.interpolated", "source.dart string.interpolated"],
+      scope: [
+        "meta.embedded.block.dart string.interpolated",
+        "source.dart string.interpolated",
+      ],
       settings: {
         foreground: colors.scope00,
         fontStyle: "",
@@ -23,4 +26,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

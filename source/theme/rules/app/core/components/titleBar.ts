@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "titleBar.activeBackground": styles.bg.solid.base,
@@ -9,4 +9,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "titleBar.inactiveBackground": styles.bg.solid.base,
     "titleBar.inactiveForeground": styles.fill.text.sec,
   };
-};
+}

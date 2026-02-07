@@ -1,11 +1,10 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   const styles = themeContext.styles;
   return {
     // >-----------------------------------------< C# >-----------------------------------------< //
-
     // Excluded codes
     excludedCode: styles.fill.text.disabled,
     // Control keywords
@@ -38,11 +37,12 @@ export const getRules = (themeContext: ThemeContext): object => {
     extensionMethod: colors.scope02,
 
     // >---------------------------------------< RAZOR >----------------------------------------< //
-
     // Razor component elements
     razorComponentElement: colors.scope01, // Unknown
+
     // Razor component attributes
     razorComponentAttribute: colors.scope01, // Unknown
+
     // Razor tag helper elements
     razorTagHelperElement: colors.scope05,
     // Razor tag helper attributes
@@ -69,7 +69,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     equals: colors.scope17,
 
     // >---------------------------------------< REGEX >----------------------------------------< //
-
     // Comments
     regexComment: colors.scope04,
     // Character classes
@@ -90,7 +89,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     regexOtherEscape: colors.scope01,
 
     // >---------------------------------------< MARKUP >---------------------------------------< //
-
     // Comment punctuations
     markupCommentPunctuation: colors.scope04,
     // Tag delimiters
@@ -109,7 +107,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     markupComment: colors.scope04,
 
     // >----------------------------------------< XML >-----------------------------------------< //
-
     // Doc comments attribute names
     xmlDocCommentAttributeName: colors.scope14,
     // Doc comments attribute quotes
@@ -154,7 +151,6 @@ export const getRules = (themeContext: ThemeContext): object => {
     xmlLiteralText: colors.scope05,
 
     // >----------------------------------------< JSON >----------------------------------------< //
-
     // Comments
     jsonComment: colors.scope04,
     // Number literals
@@ -178,4 +174,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Constructor names
     jsonConstructorName: colors.scope17,
   };
-};
+}

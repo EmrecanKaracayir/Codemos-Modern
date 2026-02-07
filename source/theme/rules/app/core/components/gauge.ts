@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "gauge.background": styles.fill.accent.pri,
@@ -11,4 +11,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "gauge.warningBackground": styles.basic.def.orange.pri,
     "gauge.warningForeground": styles.basic.def.orange.qua,
   };
-};
+}

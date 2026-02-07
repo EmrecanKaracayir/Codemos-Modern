@@ -18,11 +18,11 @@ interface AuxExtensionQPI extends QuickPickItem {
   kind?: QuickPickItemKind;
 }
 
-export const extensionView = async (
+export async function extensionView(
   variant: Variant,
   themeKind: ThemeKind,
   isOnlineAvailable: boolean,
-): Promise<string | null> => {
+): Promise<string | null> {
   const quickPick = window.createQuickPick<AuxExtensionQPI>();
   quickPick.title = getCommonTitle(variant, themeKind);
   quickPick.placeholder = l10nT("quickPick.extension.placeHolder$kind", [
@@ -60,20 +60,23 @@ export const extensionView = async (
   const installedAuxThemeQPIs: AuxExtensionQPI[] = [];
   const availableAuxThemeQPIs: AuxExtensionQPI[] = [];
   for (const auxThemeRegIndexWithId of auxThemeRegIndexesWithId) {
-    const filteredAuxThemes = auxThemeRegIndexWithId.auxThemeRegIndex.themes[variant].filter(
-      (auxTheme, index, self) => {
-        return (
-          index ===
-          self.findIndex(
-            (firstAuxTheme) =>
-              firstAuxTheme.publisher === auxTheme.publisher &&
-              firstAuxTheme.extension === auxTheme.extension,
-          )
-        );
-      },
-    );
+    const filteredAuxThemes = auxThemeRegIndexWithId.auxThemeRegIndex.themes[
+      variant
+    ].filter((auxTheme, index, self) => {
+      return (
+        index ===
+        self.findIndex(
+          (firstAuxTheme) =>
+            firstAuxTheme.publisher === auxTheme.publisher &&
+            firstAuxTheme.extension === auxTheme.extension,
+        )
+      );
+    });
     const isVerifiedOwner = verifiedOwners.find((verifiedOwner) => {
-      return verifiedOwner === auxThemeRegIndexWithId.auxThemeRegId.owner.toLowerCase();
+      return (
+        verifiedOwner ===
+        auxThemeRegIndexWithId.auxThemeRegId.owner.toLowerCase()
+      );
     })
       ? true
       : false;
@@ -81,11 +84,7 @@ export const extensionView = async (
       const auxExtensionQPI: AuxExtensionQPI = {
         auxExtensionId: `${auxThemeRegIndexWithId.auxThemeRegId.owner}/${auxThemeRegIndexWithId.auxThemeRegId.repo}/${auxTheme.publisher}/${auxTheme.extension}`,
         label: `$(extensions) ${auxTheme.extension}`,
-        description: `${
-          auxThemeRegIndexWithId.auxThemeRegId.owner
-        }/${auxThemeRegIndexWithId.auxThemeRegId.repo} ${
-          isVerifiedOwner ? "$(verified-filled)" : "$(unverified)"
-        }`,
+        description: `${auxThemeRegIndexWithId.auxThemeRegId.owner}/${auxThemeRegIndexWithId.auxThemeRegId.repo} ${isVerifiedOwner ? "$(verified-filled)" : "$(unverified)"}`,
         detail: `$(organization) ${auxTheme.publisher} • $(compass) ${l10nT(
           `quickPick.extension.item.origin.${auxTheme.origin.toLowerCase()}`,
         )} • $(law) ${auxTheme.license}`,
@@ -128,4 +127,4 @@ export const extensionView = async (
       }
     });
   });
-};
+}

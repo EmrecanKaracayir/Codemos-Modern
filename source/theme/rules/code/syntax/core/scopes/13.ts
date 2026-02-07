@@ -1,11 +1,15 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const color = themeContext.variantConfig.codeColors.scope13;
   return [
     // Generics
     {
-      scope: ["entity.name.type.generic", "storage.type.generic", "support.generic"],
+      scope: [
+        "entity.name.type.generic",
+        "storage.type.generic",
+        "support.generic",
+      ],
       settings: {
         foreground: color,
         fontStyle: "",
@@ -49,4 +53,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

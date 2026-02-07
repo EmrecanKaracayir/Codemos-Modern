@@ -1,11 +1,14 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Commands
     {
-      scope: ["meta.embedded.block.batchfile keyword.command", "source.batchfile keyword.command"],
+      scope: [
+        "meta.embedded.block.batchfile keyword.command",
+        "source.batchfile keyword.command",
+      ],
       settings: {
         foreground: colors.scope03,
         fontStyle: "",
@@ -47,4 +50,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

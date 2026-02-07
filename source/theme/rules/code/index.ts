@@ -2,12 +2,16 @@ import { ThemeContext } from "../../../@types";
 import { getRules as getSemanticRules } from "./semantic";
 import { getRules as getSyntaxRules } from "./syntax";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   if (themeContext.auxCodeThemeObj) {
     const hasSemanticHighlighting =
-      themeContext.auxCodeThemeObj.semanticHighlighting !== undefined ? true : false;
+      themeContext.auxCodeThemeObj.semanticHighlighting !== undefined
+        ? true
+        : false;
     const hasSemanticTokenColorsProperty =
-      themeContext.auxCodeThemeObj.semanticTokenColors !== undefined ? true : false;
+      themeContext.auxCodeThemeObj.semanticTokenColors !== undefined
+        ? true
+        : false;
     const hasTokenColorsProperty =
       themeContext.auxCodeThemeObj.tokenColors !== undefined ? true : false;
     return {
@@ -29,4 +33,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     tokenColors: [...(<[]>getSyntaxRules(themeContext))],
   };
-};
+}

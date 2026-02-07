@@ -1,9 +1,9 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "badge.background": styles.fill.accent.pri,
     "badge.foreground": styles.fill.onAccent.pri,
   };
-};
+}

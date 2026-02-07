@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { getMixedColorHex9 } from "../../../../../color";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const rules = {
     "statusBar.background": styles.bg.solid.base,
@@ -73,12 +73,12 @@ export const getRules = (themeContext: ThemeContext): object => {
       styles.fill.control.hover,
       styles.bg.solid.base,
     );
-    rules["statusBarItem.remoteForeground"] = styles.fill.accentText.pri;
+    rules["statusBarItem.remoteForeground"] = styles.fill.accent.pri;
     rules["statusBarItem.remoteHoverBackground"] = getMixedColorHex9(
       styles.fill.control.doubleHover,
       styles.bg.solid.base,
     );
-    rules["statusBarItem.remoteHoverForeground"] = styles.fill.accentText.sec;
+    rules["statusBarItem.remoteHoverForeground"] = styles.fill.accent.sec;
   }
   return rules;
-};
+}

@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "testing.coverCountBadgeBackground": styles.fill.accent.pri,
@@ -37,4 +37,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "testing.uncoveredBranchBackground": "#FF0000FF", // 🔵 Unknown attribute
     "testing.uncoveredGutterBackground": styles.basic.def.red.qui,
   };
-};
+}

@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const color = themeContext.variantConfig.codeColors.scope02;
   return {
     // Functions
@@ -14,4 +14,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Overridden operators
     "operator.overridden": color,
   };
-};
+}

@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "diffEditor.border": styles.stroke.divider.default,
@@ -26,4 +26,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "multiDiffEditor.border": styles.stroke.focus.default,
     "multiDiffEditor.headerBackground": styles.bg.solid.flyout,
   };
-};
+}

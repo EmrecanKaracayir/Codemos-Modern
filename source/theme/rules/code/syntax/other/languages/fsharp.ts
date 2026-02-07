@@ -1,11 +1,14 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Operators
     {
-      scope: ["meta.embedded.block.fsharp keyword.symbol", "source.fsharp keyword.symbol"],
+      scope: [
+        "meta.embedded.block.fsharp keyword.symbol",
+        "source.fsharp keyword.symbol",
+      ],
       settings: {
         foreground: colors.scope17,
         fontStyle: "",
@@ -56,4 +59,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

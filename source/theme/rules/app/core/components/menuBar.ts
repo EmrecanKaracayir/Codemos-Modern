@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "menu.background": styles.bg.solid.flyout,
@@ -14,4 +14,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "menubar.selectionBorder": styles.stroke.control.default,
     "menubar.selectionForeground": styles.fill.text.pri,
   };
-};
+}

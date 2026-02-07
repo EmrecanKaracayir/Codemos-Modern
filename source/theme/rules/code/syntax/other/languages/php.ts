@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   const decorations = themeContext.textDecorations;
   return [
@@ -22,7 +22,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Constants
     {
-      scope: ["meta.embedded.block.php constant.other", "source.php constant.other"],
+      scope: [
+        "meta.embedded.block.php constant.other",
+        "source.php constant.other",
+      ],
       settings: {
         foreground: colors.scope10,
         fontStyle: "",
@@ -115,7 +118,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Blade php constructs
     {
-      scope: ["support.function.construct.begin", "support.function.construct.end"],
+      scope: [
+        "support.function.construct.begin",
+        "support.function.construct.end",
+      ],
       settings: {
         foreground: colors.scope14,
         fontStyle: "",
@@ -146,4 +152,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

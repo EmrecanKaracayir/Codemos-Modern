@@ -8,7 +8,7 @@ import { getStyles as getLightMinimalStyles } from "./light/minimal";
 import { getStyles as getLightModernStyles } from "./light/modern";
 import { getStyles as getLightNaturalStyles } from "./light/natural";
 
-export const getStyles = (variant: Variant, config: Config): Styles => {
+export function getStyles(variant: Variant, config: Config): Styles {
   switch (variant) {
     case "dark":
       if (config[variant].design === "modern") {
@@ -35,9 +35,12 @@ export const getStyles = (variant: Variant, config: Config): Styles => {
         return getLightModernStyles(config.light);
       }
   }
-};
+}
 
-export const getIntensity = (variant: Variant, preset: AdaptationPreset): number => {
+export function getIntensity(
+  variant: Variant,
+  preset: AdaptationPreset,
+): number {
   switch (variant) {
     case "dark":
       switch (preset) {
@@ -66,4 +69,4 @@ export const getIntensity = (variant: Variant, preset: AdaptationPreset): number
           throw new Error("Invalid preset");
       }
   }
-};
+}

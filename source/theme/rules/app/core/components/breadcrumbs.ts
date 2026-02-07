@@ -1,9 +1,9 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const rules = {
-    "breadcrumb.activeSelectionForeground": styles.fill.accentText.pri,
+    "breadcrumb.activeSelectionForeground": styles.fill.accent.pri,
     "breadcrumb.background": styles.bg.solid.base,
     "breadcrumb.focusForeground": styles.fill.text.pri,
     "breadcrumb.foreground": styles.fill.text.sec,
@@ -16,4 +16,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["breadcrumb.background"] = styles.bg.solid.layer;
   }
   return rules;
-};
+}

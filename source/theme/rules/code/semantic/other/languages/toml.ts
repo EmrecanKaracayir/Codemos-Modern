@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return {
     // Array keys
@@ -8,4 +8,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Table keys
     tomlTableKey: colors.scope05,
   };
-};
+}

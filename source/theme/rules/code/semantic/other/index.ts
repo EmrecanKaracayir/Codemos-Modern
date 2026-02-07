@@ -9,7 +9,7 @@ import { getRules as getPythonRules } from "./languages/python";
 import { getRules as getRustRules } from "./languages/rust";
 import { getRules as getTomlRules } from "./languages/toml";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   return {
     ...getCmakeRules(themeContext),
     ...getCppRules(themeContext),
@@ -21,4 +21,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     ...getRustRules(themeContext),
     ...getTomlRules(themeContext),
   };
-};
+}

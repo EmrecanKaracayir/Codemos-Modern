@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const color = themeContext.variantConfig.codeColors.scope03;
   return {
     // Classes
@@ -14,4 +14,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Types
     type: color,
   };
-};
+}

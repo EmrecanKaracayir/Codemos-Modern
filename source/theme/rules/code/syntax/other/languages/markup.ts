@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const colors = themeContext.variantConfig.codeColors;
   return [
@@ -90,9 +90,12 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Lists
     {
-      scope: ["string.other.link", "punctuation.definition.list.begin.markdown"],
+      scope: [
+        "string.other.link",
+        "punctuation.definition.list.begin.markdown",
+      ],
       settings: {
-        foreground: styles.fill.accentText.pri,
+        foreground: styles.fill.accent.pri,
         fontStyle: "",
       },
     },
@@ -100,13 +103,17 @@ export const getRules = (themeContext: ThemeContext): object => {
     {
       scope: ["punctuation.definition.table"],
       settings: {
-        foreground: styles.fill.accentText.pri,
+        foreground: styles.fill.accent.pri,
         fontStyle: "",
       },
     },
     // Code & Raw
     {
-      scope: ["markup.fenced_code.block", "markup.inline.raw", "markup.raw.block"],
+      scope: [
+        "markup.fenced_code.block",
+        "markup.inline.raw",
+        "markup.raw.block",
+      ],
       settings: {
         foreground: styles.basic.def.red.pri,
         fontStyle: "",
@@ -158,4 +165,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

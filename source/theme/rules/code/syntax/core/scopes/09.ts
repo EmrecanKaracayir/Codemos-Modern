@@ -1,11 +1,15 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const color = themeContext.variantConfig.codeColors.scope09;
   return [
     // Events
     {
-      scope: ["entity.name.event", "keyword.other.event", "variable.other.event"],
+      scope: [
+        "entity.name.event",
+        "keyword.other.event",
+        "variable.other.event",
+      ],
       settings: {
         foreground: color,
         fontStyle: "",
@@ -54,4 +58,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

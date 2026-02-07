@@ -3,7 +3,7 @@ import type { Variant } from "../../../@types";
 import { l10nT } from "../../../l10n";
 import { toggleInitialCase } from "../../helpers";
 
-export const getCommonTitle = (variant: Variant, themeKind: ThemeKind): string => {
+export function getCommonTitle(variant: Variant, themeKind: ThemeKind): string {
   switch (themeKind) {
     case "ui":
       return l10nT("quickPick.*.title$variant$kind", [
@@ -16,16 +16,16 @@ export const getCommonTitle = (variant: Variant, themeKind: ThemeKind): string =
         l10nT(`quickPick.*.title.kind.code`),
       ]);
   }
-};
+}
 
-export const getPaletteItemDetail = (color: string, variant: Variant): string => {
+export function getPaletteItemDetail(color: string, variant: Variant): string {
   return l10nT("quickPick.*.item.detail$color$variant", [
     l10nT(`quickPick.*.item.${color}.label`),
     toggleInitialCase(l10nT(`quickPick.variant.item.${variant}.label`)),
   ]);
-};
+}
 
-export const applyTheme = async (variant: Variant): Promise<void> => {
+export async function applyTheme(variant: Variant): Promise<void> {
   // Check if auto detect color scheme is enabled
   const autoDetectColorScheme = workspace
     .getConfiguration("window")
@@ -81,4 +81,4 @@ export const applyTheme = async (variant: Variant): Promise<void> => {
       `Codemos Modern (${toggleInitialCase(variant)})`,
       ConfigurationTarget.Global,
     );
-};
+}

@@ -50,7 +50,7 @@ export const palette: Palette = {
 
 export const LUM_SOURCE_ALPHA: number = 1;
 
-export const getStyles = (variantConfig: VariantConfig): Styles => {
+export function getStyles(variantConfig: VariantConfig): Styles {
   // Mimics
   const baseColor = getMimicHex7({
     backdropColor: variantConfig.adaptationColor,
@@ -63,17 +63,19 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
   const layerColor = getMixedColorHex7(palette.loc, 50, surfaceColor);
   const flyoutColor = getMixedColorHex7(palette.loc, 50, layerColor);
   // Accents
-  const accentColor = variantConfig.accentColor;
-  let accentTextColor = getContrastSafeColorHex7(
-    getMixedColorHex7(palette.hic, 72, layerColor),
-    accentColor,
-    false,
+  let accentColor = getContrastSafeColorHex7(
+    getMixedColorHex7(palette.hic, 72, baseColor),
+    variantConfig.accentColor,
+    true,
   );
-  if (!accentTextColor) {
-    accentTextColor = palette.basic.def.blue;
+  let isAccentColorFallback = false;
+  if (!accentColor) {
+    accentColor = palette.basic.def.blue;
+    isAccentColorFallback = true;
   }
   const onAccentColor = getOnAccentColor(accentColor, palette.loc, palette.hic);
   return {
+    isAccentColorFallback,
     basic: {
       def: {
         brown: {
@@ -308,10 +310,6 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
         sec: `${accentColor}${getHexAlpha(88)}`,
         ter: `${accentColor}${getHexAlpha(50)}`,
       },
-      accentText: {
-        pri: `${accentTextColor}${getHexAlpha(100)}`,
-        sec: `${accentTextColor}${getHexAlpha(88)}`,
-      },
       onAccent: {
         pri: `${onAccentColor}${getHexAlpha(100)}`,
       },
@@ -412,4 +410,4 @@ export const getStyles = (variantConfig: VariantConfig): Styles => {
       },
     },
   };
-};
+}

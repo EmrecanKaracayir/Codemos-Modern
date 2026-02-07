@@ -2,9 +2,10 @@ import { ThemeContext } from "../../../@types";
 import { getRules as getCoreRules } from "./core";
 import { getRules as getOtherRules } from "./other";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   if (themeContext.auxUiThemeObj) {
-    const hasColorsProperty = themeContext.auxUiThemeObj.colors !== undefined ? true : false;
+    const hasColorsProperty =
+      themeContext.auxUiThemeObj.colors !== undefined ? true : false;
     return {
       ...(hasColorsProperty && {
         colors: themeContext.auxUiThemeObj.colors,
@@ -17,4 +18,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       ...getOtherRules(themeContext),
     },
   };
-};
+}

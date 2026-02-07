@@ -13,7 +13,7 @@ import {
 import { intensityToAlpha } from "../../../helpers";
 import { genIntensityIcons, genPaletteIcons } from "./icons";
 
-export const prepColPalette = (variant: Variant, accent: string | null) => {
+export function prepColPalette(variant: Variant, accent: string | null) {
   let brown: string;
   let red: string;
   let orange: string;
@@ -94,9 +94,9 @@ export const prepColPalette = (variant: Variant, accent: string | null) => {
       );
       break;
   }
-};
+}
 
-export const prepIntPalette = (variant: Variant, adaptationColor: string) => {
+export function prepIntPalette(variant: Variant, adaptationColor: string) {
   let noneIntColor: string;
   let gentleIntColor: string;
   let moderateIntColor: string;
@@ -192,4 +192,4 @@ export const prepIntPalette = (variant: Variant, adaptationColor: string) => {
       );
       break;
   }
-};
+}

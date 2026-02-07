@@ -12,7 +12,7 @@ import { intensityInputView } from "./views/intensityInput";
 import { themeView } from "./views/theme";
 import { variantView } from "./views/variant";
 
-export const configureCommand = async () => {
+export async function configureCommand() {
   await checkAvail();
   const isOnlineAvailable = getOnlineAvail();
   // >----------< Variant selection >----------<
@@ -22,7 +22,11 @@ export const configureCommand = async () => {
     return;
   }
   // >----------< UI aux extension selection >----------<
-  const auxUiExtensionId = await extensionView(variant, "ui", isOnlineAvailable);
+  const auxUiExtensionId = await extensionView(
+    variant,
+    "ui",
+    isOnlineAvailable,
+  );
   // Dismissed, exit command
   if (auxUiExtensionId === null) {
     return;
@@ -30,7 +34,12 @@ export const configureCommand = async () => {
   let auxUiThemeId = null;
   if (auxUiExtensionId !== "_") {
     // >----------< UI aux theme selection >----------<
-    const auxUiThemeCandidate = await themeView(variant, auxUiExtensionId, "ui", isOnlineAvailable);
+    const auxUiThemeCandidate = await themeView(
+      variant,
+      auxUiExtensionId,
+      "ui",
+      isOnlineAvailable,
+    );
     // Dismissed, exit command
     if (auxUiThemeCandidate === null) {
       return;
@@ -44,7 +53,8 @@ export const configureCommand = async () => {
     return;
   }
   // >----------< Accent color selection (IF NOT AUX) >----------<
-  const accentColorSelect = auxUiThemeId === null ? await accentView(variant) : null;
+  const accentColorSelect =
+    auxUiThemeId === null ? await accentView(variant) : null;
   // Dismissed, exit command
   if (accentColorSelect === null && auxUiThemeId === null) {
     return;
@@ -77,7 +87,8 @@ export const configureCommand = async () => {
     }
   } else {
     // >----------< Custom adaptation color selection (IF NOT AUX) >----------<
-    adaptationColor = auxUiThemeId === null ? await adaptationInputView(variant) : null;
+    adaptationColor =
+      auxUiThemeId === null ? await adaptationInputView(variant) : null;
     // Dismissed, exit command
     if (adaptationColor === null && auxUiThemeId === null) {
       return;
@@ -85,7 +96,9 @@ export const configureCommand = async () => {
   }
   // >----------< Adaptation intensity selection (IF NOT AUX) >----------<
   const intensitySelect =
-    auxUiThemeId === null ? await intensityView(variant, adaptationColor!) : null;
+    auxUiThemeId === null
+      ? await intensityView(variant, adaptationColor!)
+      : null;
   // Dismissed, exit command
   if (intensitySelect === null && auxUiThemeId === null) {
     return;
@@ -95,14 +108,19 @@ export const configureCommand = async () => {
     intensityNumber = intensitySelect;
   } else {
     // >----------< Custom adaptation intensity selection (IF NOT AUX) >----------<
-    intensityNumber = auxUiThemeId === null ? await intensityInputView(variant) : null;
+    intensityNumber =
+      auxUiThemeId === null ? await intensityInputView(variant) : null;
     // Dismissed, exit command
     if (intensityNumber === null && auxUiThemeId === null) {
       return;
     }
   }
   // >----------< Code aux extension selection >----------<
-  const auxCodeThemeExtId = await extensionView(variant, "code", isOnlineAvailable);
+  const auxCodeThemeExtId = await extensionView(
+    variant,
+    "code",
+    isOnlineAvailable,
+  );
   // Dismissed, exit command
   if (auxCodeThemeExtId === null) {
     return;
@@ -129,10 +147,13 @@ export const configureCommand = async () => {
     auxUiThemeId,
     design === null ? getConfig()[variant].design : design,
     accentColor === null ? getConfig()[variant].accentColor : accentColor,
-    adaptationColor === null ? getConfig()[variant].adaptationColor : adaptationColor,
-    intensityNumber === null ? getConfig()[variant].adaptationIntensity : intensityNumber,
+    adaptationColor === null
+      ? getConfig()[variant].adaptationColor
+      : adaptationColor,
+    intensityNumber === null
+      ? getConfig()[variant].adaptationIntensity
+      : intensityNumber,
     auxCodeThemeId,
-    // getConfig()[variant].codeColors,
   );
   await applyTheme(variant);
-};
+}

@@ -5,7 +5,9 @@ import { getIntensity } from "../../../../modern/variants";
 import { validatePercentage } from "../../../helpers";
 import { getCommonTitle } from "../helpers";
 
-export const intensityInputView = async (variant: Variant): Promise<number | null> => {
+export async function intensityInputView(
+  variant: Variant,
+): Promise<number | null> {
   const number = await window.showInputBox({
     title: getCommonTitle(variant, "ui"),
     prompt: l10nT("quickPick.intensityInput.prompt"),
@@ -23,4 +25,4 @@ export const intensityInputView = async (variant: Variant): Promise<number | nul
     return null;
   }
   return Number(number);
-};
+}

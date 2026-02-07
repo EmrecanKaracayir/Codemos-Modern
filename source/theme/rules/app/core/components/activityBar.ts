@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const rules = {
     "activityBar.activeBackground": styles.fill.control.rest,
@@ -40,4 +40,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["activityBarTop.foreground"] = styles.fill.accent.pri;
   }
   return rules;
-};
+}

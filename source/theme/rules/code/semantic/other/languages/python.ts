@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return {
     // Magic functions
@@ -20,4 +20,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Class decorators
     "class.decorator:python": colors.scope01,
   };
-};
+}

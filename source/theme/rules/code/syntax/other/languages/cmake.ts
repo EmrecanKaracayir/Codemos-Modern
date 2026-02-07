@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Preprocessor fixes
@@ -13,7 +13,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Parentheses
     {
-      scope: ["source.cmake punctuation.parenthesis", "source.cmake punctuation.section.parens"],
+      scope: [
+        "source.cmake punctuation.parenthesis",
+        "source.cmake punctuation.section.parens",
+      ],
       settings: {
         foreground: colors.scope17,
       },
@@ -33,4 +36,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

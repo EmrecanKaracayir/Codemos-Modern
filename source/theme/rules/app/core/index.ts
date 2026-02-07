@@ -56,7 +56,7 @@ import { getRules as getTitleBarRules } from "./components/titleBar";
 import { getRules as getWelcomePageRules } from "./components/welcomePage";
 import { getRules as getWindowBorderRules } from "./components/windowBorder";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   return {
     ...getActionRules(themeContext),
     ...getActionBarRules(themeContext),
@@ -115,4 +115,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     ...getWelcomePageRules(themeContext),
     ...getWindowBorderRules(),
   };
-};
+}

@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "list.activeSelectionBackground": styles.fill.control.rest,
@@ -16,9 +16,9 @@ export const getRules = (themeContext: ThemeContext): object => {
     "list.focusAndSelectionOutline": styles.stroke.focus.default,
     "list.focusBackground": styles.fill.control.rest,
     "list.focusForeground": styles.fill.text.pri,
-    "list.focusHighlightForeground": styles.fill.accentText.pri,
+    "list.focusHighlightForeground": styles.fill.accent.pri,
     "list.focusOutline": styles.stroke.control.default,
-    "list.highlightForeground": styles.fill.accentText.pri,
+    "list.highlightForeground": styles.fill.accent.pri,
     "list.hoverBackground": styles.fill.control.subtle,
     "list.hoverForeground": styles.fill.text.pri,
     "list.inactiveFocusBackground": TRANSPARENT,
@@ -37,4 +37,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "tree.tableColumnsBorder": styles.stroke.divider.default,
     "tree.tableOddRowsBackground": styles.bg.solid.flyout,
   };
-};
+}

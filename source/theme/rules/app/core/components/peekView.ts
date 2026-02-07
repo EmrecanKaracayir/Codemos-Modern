@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "peekView.border": styles.basic.def.mint.pri,
@@ -20,4 +20,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "peekViewTitleDescription.foreground": styles.fill.text.sec,
     "peekViewTitleLabel.foreground": styles.fill.text.sec,
   };
-};
+}

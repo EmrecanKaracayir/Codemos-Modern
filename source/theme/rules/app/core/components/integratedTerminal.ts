@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   const styles = themeContext.styles;
   const rules = {
@@ -46,15 +46,17 @@ export const getRules = (themeContext: ThemeContext): object => {
     "terminalOverviewRuler.findMatchForeground": styles.basic.def.mint.sec,
     "terminalStickyScroll.background": styles.bg.solid.base,
     "terminalStickyScroll.border": styles.stroke.divider.default,
-    "terminalStickyScrollHover.background": styles.fill.terminal.stickyScrollHover, // 🟢 Undesired solution
+    "terminalStickyScrollHover.background":
+      styles.fill.terminal.stickyScrollHover, // 🟢 Undesired solution
     "terminalSymbolIcon.aliasForeground": colors.scope03,
     "terminalSymbolIcon.argumentForeground": colors.scope10,
     "terminalSymbolIcon.branchForeground": "#FF0000FF", // 🔵 Unknown attribute
     "terminalSymbolIcon.commitForeground": "#FF0000FF", // 🔵 Unknown attribute
-    "terminalSymbolIcon.fileForeground": styles.fill.accentText.pri,
+    "terminalSymbolIcon.fileForeground": styles.fill.accent.pri,
     "terminalSymbolIcon.flagForeground": colors.scope11,
-    "terminalSymbolIcon.folderForeground": styles.fill.accentText.pri,
-    "terminalSymbolIcon.inlineSuggestionForeground": styles.basic.def.yellow.pri,
+    "terminalSymbolIcon.folderForeground": styles.fill.accent.pri,
+    "terminalSymbolIcon.inlineSuggestionForeground":
+      styles.basic.def.yellow.pri,
     "terminalSymbolIcon.methodForeground": colors.scope02,
     "terminalSymbolIcon.optionForeground": colors.scope11,
     "terminalSymbolIcon.optionValueForeground": colors.scope11,
@@ -74,4 +76,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["terminal.background"] = styles.bg.solid.base;
   }
   return rules;
-};
+}

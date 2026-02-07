@@ -1,11 +1,14 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Types
     {
-      scope: ["meta.embedded.block.sql storage.type", "source.sql storage.type"],
+      scope: [
+        "meta.embedded.block.sql storage.type",
+        "source.sql storage.type",
+      ],
       settings: {
         foreground: colors.scope03,
         fontStyle: "",
@@ -26,7 +29,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Star operator
     {
-      scope: ["meta.embedded.block.sql keyword.operator.star", "source.sql keyword.operator.star"],
+      scope: [
+        "meta.embedded.block.sql keyword.operator.star",
+        "source.sql keyword.operator.star",
+      ],
       settings: {
         foreground: colors.scope12,
         fontStyle: "",
@@ -50,4 +56,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

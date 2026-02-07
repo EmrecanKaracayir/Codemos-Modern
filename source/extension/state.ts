@@ -8,9 +8,12 @@ export const defaultStateObj: StateObj = {
   config: defaultConfig,
 };
 
-export const getStateObj = (): StateObj => {
+export function getStateObj(): StateObj {
   try {
-    const stateStr = readFileSync(join(__dirname, "..", "..", "data", ".state.json"), "utf-8");
+    const stateStr = readFileSync(
+      join(__dirname, "..", "..", "data", ".state.json"),
+      "utf-8",
+    );
     const stateObj = JSON.parse(stateStr);
     return stateObj as StateObj;
   } catch (error) {
@@ -22,13 +25,13 @@ export const getStateObj = (): StateObj => {
     writeStateFile(defaultStateObj);
     return defaultStateObj;
   }
-};
+}
 
-export const updateState = (stateObj: StateObj) => {
+export function updateState(stateObj: StateObj) {
   writeStateFile(stateObj);
-};
+}
 
-const writeStateFile = (stateObj: StateObj) => {
+function writeStateFile(stateObj: StateObj) {
   const stateStr = JSON.stringify(stateObj, null, 2);
   const path = join(__dirname, "..", "..", "data", ".state.json");
   if (!existsSync(join(__dirname, "..", "..", "data"))) {
@@ -37,4 +40,4 @@ const writeStateFile = (stateObj: StateObj) => {
     });
   }
   writeFileSync(path, stateStr);
-};
+}

@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return {
     // Formatting symbols inside strings
@@ -8,4 +8,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     // nil, true, false
     "variable.defaultLibrary:go": colors.scope06,
   };
-};
+}
