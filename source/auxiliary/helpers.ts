@@ -1,6 +1,6 @@
 import { AuxThemeInfo, AuxThemeRegIndex } from "../@types";
 
-export const isAuxThemeRegIndex = (obj: any): obj is AuxThemeRegIndex => {
+export function isAuxThemeRegIndex(obj: any): obj is AuxThemeRegIndex {
   if (typeof obj !== "object" || obj === null) {
     return false;
   }
@@ -16,9 +16,9 @@ export const isAuxThemeRegIndex = (obj: any): obj is AuxThemeRegIndex => {
     }
   }
   return true;
-};
+}
 
-export const isAuxThemeInfo = (obj: any): obj is AuxThemeInfo => {
+export function isAuxThemeInfo(obj: any): obj is AuxThemeInfo {
   if (typeof obj !== "object" || obj === null) {
     return false;
   }
@@ -34,4 +34,4 @@ export const isAuxThemeInfo = (obj: any): obj is AuxThemeInfo => {
     return false;
   }
   return true;
-};
+}

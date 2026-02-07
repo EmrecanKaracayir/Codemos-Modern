@@ -1,10 +1,10 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "button.background": styles.fill.accent.pri,
-    "button.border": styles.stroke.control.alt,
+    "button.border": styles.stroke.control.default,
     "button.foreground": styles.fill.onAccent.pri,
     "button.hoverBackground": styles.fill.accent.sec,
     "button.secondaryBackground": styles.fill.control.rest,
@@ -27,4 +27,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "radio.inactiveForeground": styles.fill.text.pri,
     "radio.inactiveHoverBackground": styles.fill.control.hover,
   };
-};
+}

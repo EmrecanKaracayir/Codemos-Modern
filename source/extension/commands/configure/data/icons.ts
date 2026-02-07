@@ -2,7 +2,7 @@ import { existsSync, mkdirSync, writeFileSync } from "fs";
 import { join } from "path";
 import { Variant } from "../../../../@types";
 
-export const genPaletteIcons = (
+export function genPaletteIcons(
   variant: Variant,
   inDarkTheme: boolean,
   accent: string | null,
@@ -15,8 +15,15 @@ export const genPaletteIcons = (
   blue: string,
   purple: string,
   pink: string,
-) => {
-  const variantIconsDir = join(__dirname, "..", "..", "resource", "icons", variant);
+) {
+  const variantIconsDir = join(
+    __dirname,
+    "..",
+    "..",
+    "resource",
+    "icons",
+    variant,
+  );
   if (!existsSync(variantIconsDir)) {
     mkdirSync(variantIconsDir, {
       recursive: true,
@@ -57,17 +64,24 @@ export const genPaletteIcons = (
   const pinkIconPath = join(variantIconsDir, "palette_pink.svg");
   const pinkSvg = genSvg(inDarkTheme, pink);
   writeFileSync(pinkIconPath, pinkSvg);
-};
+}
 
-export const genIntensityIcons = (
+export function genIntensityIcons(
   variant: Variant,
   inDarkTheme: boolean,
   noneIntColor: string,
   gentleIntColor: string,
   moderateIntColor: string,
   aggressiveIntColor: string,
-) => {
-  const variantIconsDir = join(__dirname, "..", "..", "resource", "icons", variant);
+) {
+  const variantIconsDir = join(
+    __dirname,
+    "..",
+    "..",
+    "resource",
+    "icons",
+    variant,
+  );
   if (!existsSync(variantIconsDir)) {
     mkdirSync(variantIconsDir, {
       recursive: true,
@@ -82,18 +96,19 @@ export const genIntensityIcons = (
   const moderateModeIconPath = join(variantIconsDir, "intensity_moderate.svg");
   const moderateModeSvg = genSvg(inDarkTheme, moderateIntColor);
   writeFileSync(moderateModeIconPath, moderateModeSvg);
-  const aggressiveModeIconPath = join(variantIconsDir, "intensity_aggressive.svg");
+  const aggressiveModeIconPath = join(
+    variantIconsDir,
+    "intensity_aggressive.svg",
+  );
   const aggressiveModeSvg = genSvg(inDarkTheme, aggressiveIntColor);
   writeFileSync(aggressiveModeIconPath, aggressiveModeSvg);
-};
+}
 
-const genSvg = (inDarkTheme: boolean, color: string) => {
+function genSvg(inDarkTheme: boolean, color: string) {
   return `
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_6_2)">
-        <path d="M46.5 24C46.5 36.4264 36.4264 46.5 24 46.5C11.5736 46.5 1.5 36.4264 1.5 24C1.5 11.5736 11.5736 1.5 24 1.5C36.4264 1.5 46.5 11.5736 46.5 24Z" fill="${color}" stroke="${
-          inDarkTheme ? "white" : "black"
-        }" stroke-width="3" stroke-opacity="0.32"/>
+        <path d="M46.5 24C46.5 36.4264 36.4264 46.5 24 46.5C11.5736 46.5 1.5 36.4264 1.5 24C1.5 11.5736 11.5736 1.5 24 1.5C36.4264 1.5 46.5 11.5736 46.5 24Z" fill="${color}" stroke="${inDarkTheme ? "white" : "black"}" stroke-width="3" stroke-opacity="0.32"/>
       </g>
       <defs>
         <clipPath id="clip0_6_2">
@@ -102,9 +117,9 @@ const genSvg = (inDarkTheme: boolean, color: string) => {
       </defs>
     </svg>
   `;
-};
+}
 
-const genCustomSvg = (inDarkTheme: boolean) => {
+function genCustomSvg(inDarkTheme: boolean) {
   return `
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_1_2)">
@@ -470,9 +485,7 @@ const genCustomSvg = (inDarkTheme: boolean) => {
       <path d="M23.084 3.02C23.2182 3.01414 23.3525 3.00957 23.4869 3.00629L24 24L23.084 3.02Z" fill="#FF0009"/>
       <path d="M23.4503 3.00717C23.5846 3.00365 23.719 3.00143 23.8534 3.00049L24 24L23.4503 3.00717Z" fill="#FF0004"/>
       <path d="M24 45C35.598 45 45 35.598 45 24C45 12.402 35.598 3 24 3C12.402 3 3 12.402 3 24C3 35.598 12.402 45 24 45Z" fill="url(#paint0_radial_1_2)"/>
-      <path d="M46.5 24C46.5 36.4264 36.4264 46.5 24 46.5C11.5736 46.5 1.5 36.4264 1.5 24C1.5 11.5736 11.5736 1.5 24 1.5C36.4264 1.5 46.5 11.5736 46.5 24Z" stroke="${
-        inDarkTheme ? "white" : "black"
-      }" stroke-width="3" stroke-opacity="0.32"/>
+      <path d="M46.5 24C46.5 36.4264 36.4264 46.5 24 46.5C11.5736 46.5 1.5 36.4264 1.5 24C1.5 11.5736 11.5736 1.5 24 1.5C36.4264 1.5 46.5 11.5736 46.5 24Z" stroke="${inDarkTheme ? "white" : "black"}" stroke-width="3" stroke-opacity="0.32"/>
     </g>
     <defs>
       <radialGradient id="paint0_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24 24) scale(21 21)">
@@ -485,4 +498,4 @@ const genCustomSvg = (inDarkTheme: boolean) => {
     </defs>
   </svg>
 `;
-};
+}

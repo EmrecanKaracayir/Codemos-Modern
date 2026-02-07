@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Preprocessor fixes
@@ -13,7 +13,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Various operators
     {
-      scope: ["punctuation.definition.function.return-type", "storage.modifier.reference"],
+      scope: [
+        "punctuation.definition.function.return-type",
+        "storage.modifier.reference",
+      ],
       settings: {
         foreground: colors.scope17,
         fontStyle: "",
@@ -73,4 +76,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

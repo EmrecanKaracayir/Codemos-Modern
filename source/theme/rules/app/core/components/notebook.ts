@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "notebook.cellBorderColor": styles.stroke.control.default,
@@ -20,7 +20,8 @@ export const getRules = (themeContext: ThemeContext): object => {
     "notebook.selectedCellBackground": styles.fill.control.subtle,
     "notebook.selectedCellBorder": styles.fill.accent.pri,
     "notebook.symbolHighlightBackground": "#ff0000", // 🔵 Unknown attribute
-    "notebookEditorOverviewRuler.runningCellForeground": styles.basic.def.yellow.pri,
+    "notebookEditorOverviewRuler.runningCellForeground":
+      styles.basic.def.yellow.pri,
     "notebookScrollbarSlider.activeBackground": styles.fill.control.pressed,
     "notebookScrollbarSlider.background": styles.fill.control.rest,
     "notebookScrollbarSlider.hoverBackground": styles.fill.control.hover,
@@ -28,4 +29,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "notebookStatusRunningIcon.foreground": styles.basic.def.yellow.pri,
     "notebookStatusSuccessIcon.foreground": styles.basic.def.green.pri,
   };
-};
+}

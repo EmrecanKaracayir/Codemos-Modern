@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Annotation modifiers
@@ -15,14 +15,20 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Types
     {
-      scope: ["meta.embedded.block.java storage.type", "source.java storage.type"],
+      scope: [
+        "meta.embedded.block.java storage.type",
+        "source.java storage.type",
+      ],
       settings: {
         foreground: colors.scope03,
       },
     },
     // Storage keywords
     {
-      scope: ["meta.embedded.block.java storage.type.local", "source.java storage.type.local"],
+      scope: [
+        "meta.embedded.block.java storage.type.local",
+        "source.java storage.type.local",
+      ],
       settings: {
         foreground: colors.scope06,
       },
@@ -40,4 +46,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

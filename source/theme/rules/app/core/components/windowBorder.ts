@@ -1,6 +1,6 @@
-export const getRules = (): object => {
+export function getRules(): object {
   return {
     "window.activeBorder": null,
     "window.inactiveBorder": null,
   };
-};
+}

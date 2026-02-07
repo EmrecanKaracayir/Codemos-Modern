@@ -4,7 +4,9 @@ import { validateHex6 } from "../../../../color";
 import { l10nT } from "../../../../l10n";
 import { getCommonTitle } from "../helpers";
 
-export const accentInputView = async (variant: Variant): Promise<string | null> => {
+export async function accentInputView(
+  variant: Variant,
+): Promise<string | null> {
   const colorHex7 = await window.showInputBox({
     title: getCommonTitle(variant, "ui"),
     prompt: l10nT("quickPick.accentInput.prompt"),
@@ -22,4 +24,4 @@ export const accentInputView = async (variant: Variant): Promise<string | null> 
     return null;
   }
   return colorHex7;
-};
+}

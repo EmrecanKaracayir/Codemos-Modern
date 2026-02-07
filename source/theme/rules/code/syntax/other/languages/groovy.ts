@@ -1,11 +1,14 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Types
     {
-      scope: ["meta.embedded.block.groovy storage.type", "source.groovy storage.type"],
+      scope: [
+        "meta.embedded.block.groovy storage.type",
+        "source.groovy storage.type",
+      ],
       settings: {
         foreground: colors.scope03,
         fontStyle: "",
@@ -26,7 +29,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Enum members
     {
-      scope: ["meta.embedded.block.groovy constant.enum.name", "source.groovy constant.enum.name"],
+      scope: [
+        "meta.embedded.block.groovy constant.enum.name",
+        "source.groovy constant.enum.name",
+      ],
       settings: {
         foreground: colors.scope13,
         fontStyle: "",
@@ -60,7 +66,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Method calls
     {
-      scope: ["meta.embedded.block.groovy meta.method-call", "source.groovy meta.method-call"],
+      scope: [
+        "meta.embedded.block.groovy meta.method-call",
+        "source.groovy meta.method-call",
+      ],
       settings: {
         foreground: colors.scope02,
         fontStyle: "",
@@ -91,4 +100,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

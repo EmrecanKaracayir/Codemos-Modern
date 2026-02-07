@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "markdownAlert.caution.foreground": styles.basic.def.red.pri,
@@ -9,4 +9,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "markdownAlert.tip.foreground": styles.basic.def.green.pri,
     "markdownAlert.warning.foreground": styles.basic.def.orange.pri,
   };
-};
+}

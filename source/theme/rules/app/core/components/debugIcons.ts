@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "debugConsole.errorForeground": styles.basic.def.red.pri,
@@ -8,7 +8,8 @@ export const getRules = (themeContext: ThemeContext): object => {
     "debugConsole.sourceForeground": styles.fill.text.pri,
     "debugConsole.warningForeground": styles.basic.def.orange.pri,
     "debugConsoleInputIcon.foreground": styles.fill.accent.pri,
-    "debugIcon.breakpointCurrentStackframeForeground": styles.basic.def.yellow.pri,
+    "debugIcon.breakpointCurrentStackframeForeground":
+      styles.basic.def.yellow.pri,
     "debugIcon.breakpointDisabledForeground": styles.basic.neutral.qua,
     "debugIcon.breakpointForeground": styles.basic.def.red.pri,
     "debugIcon.breakpointStackframeForeground": styles.basic.def.yellow.ter,
@@ -24,4 +25,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "debugIcon.stepOverForeground": styles.basic.def.blue.pri,
     "debugIcon.stopForeground": styles.basic.def.red.pri,
   };
-};
+}

@@ -1,11 +1,14 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Commands
     {
-      scope: ["meta.embedded.block.fish support.function", "source.fish support.function"],
+      scope: [
+        "meta.embedded.block.fish support.function",
+        "source.fish support.function",
+      ],
       settings: {
         foreground: colors.scope03,
       },
@@ -24,7 +27,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Language variables
     {
-      scope: ["meta.embedded.block.fish variable.language", "source.fish variable.language"],
+      scope: [
+        "meta.embedded.block.fish variable.language",
+        "source.fish variable.language",
+      ],
       settings: {
         foreground: colors.scope13,
       },
@@ -44,4 +50,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

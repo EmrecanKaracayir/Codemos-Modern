@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const color = themeContext.variantConfig.codeColors.scope14;
   return [
     // String templates
@@ -40,4 +40,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

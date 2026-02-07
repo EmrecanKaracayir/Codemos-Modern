@@ -7,15 +7,18 @@ import { RESPONSE_OK } from "./constants";
 
 let octokit = new Octokit();
 
-export const getOctokit = (): Octokit => {
+export function getOctokit(): Octokit {
   return octokit;
-};
+}
 
-export const setOctokit = (newOctokit: Octokit) => {
+export function setOctokit(newOctokit: Octokit): void {
   octokit = newOctokit;
-};
+}
 
-export const checkRepo = async (owner: string, repo: string): Promise<OnlineResult> => {
+export async function checkRepo(
+  owner: string,
+  repo: string,
+): Promise<OnlineResult> {
   return await octokit
     .request("HEAD /repos/{owner}/{repo}", { owner, repo })
     .then((): OnlineResult => {
@@ -32,17 +35,24 @@ export const checkRepo = async (owner: string, repo: string): Promise<OnlineResu
           message = l10nT("notification.msg.apiRateLimit");
           break;
         case 404:
-          message = l10nT("notification.msg.repoNotFound$id", [`${owner}/${repo}`]);
+          message = l10nT("notification.msg.repoNotFound$id", [
+            `${owner}/${repo}`,
+          ]);
           break;
         default:
-          message = l10nT("notification.msg.networkError$status", [error.status]);
+          message = l10nT("notification.msg.networkError$status", [
+            error.status,
+          ]);
           break;
       }
       return { success: false, message: message, data: null };
     });
-};
+}
 
-export const getLatestVerTag = async (owner: string, repo: string): Promise<OnlineResult> => {
+export async function getLatestVerTag(
+  owner: string,
+  repo: string,
+): Promise<OnlineResult> {
   type GetLatestReleaseType = GetResponseTypeFromEndpointMethod<
     typeof octokit.repos.getLatestRelease
   >;
@@ -62,23 +72,29 @@ export const getLatestVerTag = async (owner: string, repo: string): Promise<Onli
           message = l10nT("notification.msg.apiRateLimit");
           break;
         case 404:
-          message = l10nT("notification.msg.releaseNotFound$id", [`${owner}/${repo}`]);
+          message = l10nT("notification.msg.releaseNotFound$id", [
+            `${owner}/${repo}`,
+          ]);
           break;
         default:
-          message = l10nT("notification.msg.networkError$status", [error.status]);
+          message = l10nT("notification.msg.networkError$status", [
+            error.status,
+          ]);
           break;
       }
       return { success: false, message: message, data: null };
     });
-};
+}
 
-export const getContentFromRelease = async (
+export async function getContentFromRelease(
   owner: string,
   repo: string,
   path: string,
   ref: string,
-): Promise<OnlineResult> => {
-  type GetContentType = GetResponseTypeFromEndpointMethod<typeof octokit.repos.getContent>;
+): Promise<OnlineResult> {
+  type GetContentType = GetResponseTypeFromEndpointMethod<
+    typeof octokit.repos.getContent
+  >;
   return await octokit.repos
     .getContent({
       owner,
@@ -100,7 +116,9 @@ export const getContentFromRelease = async (
         } else {
           return {
             success: false,
-            message: l10nT("notification.msg.contentNotFile$path", [response.data.path]),
+            message: l10nT("notification.msg.contentNotFile$path", [
+              response.data.path,
+            ]),
             data: null,
           };
         }
@@ -119,12 +137,17 @@ export const getContentFromRelease = async (
           message = l10nT("notification.msg.apiRateLimit");
           break;
         case 404:
-          message = l10nT("notification.msg.contentNotFound$path$id", [path, `${owner}/${repo}`]);
+          message = l10nT("notification.msg.contentNotFound$path$id", [
+            path,
+            `${owner}/${repo}`,
+          ]);
           break;
         default:
-          message = l10nT("notification.msg.networkError$status", [error.status]);
+          message = l10nT("notification.msg.networkError$status", [
+            error.status,
+          ]);
           break;
       }
       return { success: false, message: message, data: null };
     });
-};
+}

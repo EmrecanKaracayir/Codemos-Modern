@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const color = themeContext.variantConfig.codeColors.scope13;
   return {
     // Type parameters
@@ -10,4 +10,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Builtin variable
     "variable.defaultLibrary": color,
   };
-};
+}

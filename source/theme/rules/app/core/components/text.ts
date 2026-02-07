@@ -1,16 +1,16 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "textBlockQuote.background": styles.fill.control.subtle,
     "textBlockQuote.border": styles.fill.accent.pri,
     "textCodeBlock.background": styles.fill.control.subtle,
-    "textLink.activeForeground": styles.fill.accentText.sec,
-    "textLink.foreground": styles.fill.accentText.pri,
+    "textLink.activeForeground": styles.fill.accent.sec,
+    "textLink.foreground": styles.fill.accent.pri,
     "textPreformat.background": styles.fill.system.bg.red,
     "textPreformat.border": styles.stroke.control.default,
     "textPreformat.foreground": styles.fill.system.fg.red,
     "textSeparator.foreground": styles.stroke.divider.default,
   };
-};
+}

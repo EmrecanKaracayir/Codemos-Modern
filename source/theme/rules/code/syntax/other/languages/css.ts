@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Vendor property name
@@ -107,4 +107,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

@@ -39,9 +39,11 @@ import {
 } from "./shared";
 import { getStateObj } from "./state";
 
-export const checkAvail = async (): Promise<void> => {
+export async function checkAvail(): Promise<void> {
   const octokit = getOctokit();
-  type GetRateLimitType = GetResponseTypeFromEndpointMethod<typeof octokit.rateLimit.get>;
+  type GetRateLimitType = GetResponseTypeFromEndpointMethod<
+    typeof octokit.rateLimit.get
+  >;
   if (octokit) {
     await octokit.rateLimit
       .get()
@@ -50,7 +52,11 @@ export const checkAvail = async (): Promise<void> => {
           setOnlineAvail(true);
         } else {
           setOnlineAvail(false);
-          showWarningNotification(l10nT("notification.msg.apiRateLimit"), null, null);
+          showWarningNotification(
+            l10nT("notification.msg.apiRateLimit"),
+            null,
+            null,
+          );
         }
         return;
       })
@@ -59,17 +65,20 @@ export const checkAvail = async (): Promise<void> => {
         showWarningNotification(l10nT("notification.full.offline"), null, null);
       });
   }
-};
+}
 
-export const verifyState = (config?: Config): boolean => {
-  return JSON.stringify(getStateObj().config) === JSON.stringify(config ? config : getConfig());
-};
+export function verifyState(config?: Config): boolean {
+  return (
+    JSON.stringify(getStateObj().config) ===
+    JSON.stringify(config ? config : getConfig())
+  );
+}
 
-export const isUntouched = (): boolean => {
+export function isUntouched(): boolean {
   return getStateObj().isUntouched;
-};
+}
 
-export const getActiveVariant = (): Variant | undefined => {
+export function getActiveVariant(): Variant | undefined {
   // Get if autoDetectColorScheme is enabled
   const autoDetectColorScheme = workspace
     .getConfiguration("window")
@@ -94,7 +103,9 @@ export const getActiveVariant = (): Variant | undefined => {
           throw new Error("preferredDarkColorTheme is undefined");
         }
         // Check if theme is Modern
-        return preferredDarkColorTheme.startsWith("Codemos Modern") ? "dark" : undefined;
+        return preferredDarkColorTheme.startsWith("Codemos Modern")
+          ? "dark"
+          : undefined;
       }
       case ColorThemeKind.Light:
       case ColorThemeKind.HighContrastLight: {
@@ -107,13 +118,17 @@ export const getActiveVariant = (): Variant | undefined => {
           throw new Error("preferredLightColorTheme is undefined");
         }
         // Check if theme is Modern
-        return preferredLightColorTheme.startsWith("Codemos Modern") ? "light" : undefined;
+        return preferredLightColorTheme.startsWith("Codemos Modern")
+          ? "light"
+          : undefined;
       }
       default:
         return undefined;
     }
   } else {
-    const activeColorTheme = workspace.getConfiguration("workbench").get<string>("colorTheme");
+    const activeColorTheme = workspace
+      .getConfiguration("workbench")
+      .get<string>("colorTheme");
     if (!activeColorTheme) {
       return undefined;
     }
@@ -121,17 +136,21 @@ export const getActiveVariant = (): Variant | undefined => {
       case ColorThemeKind.Dark:
       case ColorThemeKind.HighContrast:
         // Check if theme is Modern
-        return activeColorTheme.startsWith("Codemos Modern") ? "dark" : undefined;
+        return activeColorTheme.startsWith("Codemos Modern")
+          ? "dark"
+          : undefined;
       case ColorThemeKind.Light:
       case ColorThemeKind.HighContrastLight:
-        return activeColorTheme.startsWith("Codemos Modern") ? "light" : undefined;
+        return activeColorTheme.startsWith("Codemos Modern")
+          ? "light"
+          : undefined;
       default:
         return undefined;
     }
   }
-};
+}
 
-export const getConfig = (): Config => {
+export function getConfig(): Config {
   const extSection = workspace.getConfiguration("codemosModern");
   return {
     auxiliaryThemeRegistries: extSection.get<string[]>(
@@ -143,7 +162,10 @@ export const getConfig = (): Config => {
         "textDecorations.strikeThrough",
         defaultConfig.textDecorations.strikeThrough,
       ),
-      bold: extSection.get<boolean>("textDecorations.bold", defaultConfig.textDecorations.bold),
+      bold: extSection.get<boolean>(
+        "textDecorations.bold",
+        defaultConfig.textDecorations.bold,
+      ),
       italic: extSection.get<boolean>(
         "textDecorations.italic",
         defaultConfig.textDecorations.italic,
@@ -163,7 +185,10 @@ export const getConfig = (): Config => {
         defaultConfig.dark.auxiliaryUiTheme,
       ),
       design: extSection.get<Design>("dark.design", defaultConfig.dark.design),
-      accentColor: extSection.get<string>("dark.accentColor", defaultConfig.dark.accentColor),
+      accentColor: extSection.get<string>(
+        "dark.accentColor",
+        defaultConfig.dark.accentColor,
+      ),
       adaptationColor: extSection.get<string>(
         "dark.adaptationColor",
         defaultConfig.dark.adaptationColor,
@@ -178,7 +203,10 @@ export const getConfig = (): Config => {
       ),
       codeColors: {
         ...defaultConfig.dark.codeColors,
-        ...extSection.get<CodeColors>("dark.codeColors", defaultConfig.dark.codeColors),
+        ...extSection.get<CodeColors>(
+          "dark.codeColors",
+          defaultConfig.dark.codeColors,
+        ),
       },
     },
     light: {
@@ -187,7 +215,10 @@ export const getConfig = (): Config => {
         defaultConfig.light.auxiliaryUiTheme,
       ),
       design: extSection.get<Design>("light.design", defaultConfig.dark.design),
-      accentColor: extSection.get<string>("light.accentColor", defaultConfig.light.accentColor),
+      accentColor: extSection.get<string>(
+        "light.accentColor",
+        defaultConfig.light.accentColor,
+      ),
       adaptationColor: extSection.get<string>(
         "light.adaptationColor",
         defaultConfig.light.adaptationColor,
@@ -202,13 +233,16 @@ export const getConfig = (): Config => {
       ),
       codeColors: {
         ...defaultConfig.light.codeColors,
-        ...extSection.get<CodeColors>("light.codeColors", defaultConfig.light.codeColors),
+        ...extSection.get<CodeColors>(
+          "light.codeColors",
+          defaultConfig.light.codeColors,
+        ),
       },
     },
   };
-};
+}
 
-export const updateConfig = async (
+export async function updateConfig(
   variant: Variant,
   auxUiTheme: string | null,
   design: Design,
@@ -216,32 +250,59 @@ export const updateConfig = async (
   adaptationColor: string,
   adaptationIntensity: number,
   auxCodeTheme: string | null,
-  // codeColors: CodeColors,
-) => {
+) {
   const variantSection = workspace.getConfiguration(`codemosModern.${variant}`);
   // codemosModern.*.auxiliaryUiTheme
   if (auxUiTheme !== defaultConfig[variant].auxiliaryUiTheme) {
-    await variantSection.update(`auxiliaryUiTheme`, auxUiTheme, ConfigurationTarget.Global);
+    await variantSection.update(
+      `auxiliaryUiTheme`,
+      auxUiTheme,
+      ConfigurationTarget.Global,
+    );
   } else {
-    await variantSection.update(`auxiliaryUiTheme`, undefined, ConfigurationTarget.Global);
+    await variantSection.update(
+      `auxiliaryUiTheme`,
+      undefined,
+      ConfigurationTarget.Global,
+    );
   }
   // codemosModern.*.design
   if (design !== defaultConfig[variant].design) {
     await variantSection.update(`design`, design, ConfigurationTarget.Global);
   } else {
-    await variantSection.update(`design`, undefined, ConfigurationTarget.Global);
+    await variantSection.update(
+      `design`,
+      undefined,
+      ConfigurationTarget.Global,
+    );
   }
   // codemosModern.*.accentColor
   if (accentColor !== defaultConfig[variant].accentColor) {
-    await variantSection.update(`accentColor`, accentColor, ConfigurationTarget.Global);
+    await variantSection.update(
+      `accentColor`,
+      accentColor,
+      ConfigurationTarget.Global,
+    );
   } else {
-    await variantSection.update(`accentColor`, undefined, ConfigurationTarget.Global);
+    await variantSection.update(
+      `accentColor`,
+      undefined,
+      ConfigurationTarget.Global,
+    );
   }
   // codemosModern.*.adaptationColor
   if (adaptationColor !== defaultConfig[variant].adaptationColor) {
-    await variantSection.update(`adaptationColor`, adaptationColor, ConfigurationTarget.Global);
+    await variantSection.update(
+      `adaptationColor`,
+      adaptationColor,
+      ConfigurationTarget.Global,
+    );
   } else {
-    await variantSection.update(`adaptationColor`, undefined, ConfigurationTarget.Global);
+    await variantSection.update(
+      `adaptationColor`,
+      undefined,
+      ConfigurationTarget.Global,
+    );
   }
   // codemosModern.*.adaptationIntensity
   if (adaptationIntensity !== defaultConfig[variant].adaptationIntensity) {
@@ -251,25 +312,37 @@ export const updateConfig = async (
       ConfigurationTarget.Global,
     );
   } else {
-    await variantSection.update(`adaptationIntensity`, undefined, ConfigurationTarget.Global);
+    await variantSection.update(
+      `adaptationIntensity`,
+      undefined,
+      ConfigurationTarget.Global,
+    );
   }
   // codemosModern.*.auxiliaryCodeTheme
   if (auxCodeTheme !== defaultConfig[variant].auxiliaryCodeTheme) {
-    await variantSection.update(`auxiliaryCodeTheme`, auxCodeTheme, ConfigurationTarget.Global);
+    await variantSection.update(
+      `auxiliaryCodeTheme`,
+      auxCodeTheme,
+      ConfigurationTarget.Global,
+    );
   } else {
-    await variantSection.update(`auxiliaryCodeTheme`, undefined, ConfigurationTarget.Global);
+    await variantSection.update(
+      `auxiliaryCodeTheme`,
+      undefined,
+      ConfigurationTarget.Global,
+    );
   }
   // await variantSection.update(`codeColors`, codeColors, ConfigurationTarget.Global);
   await updateBridge(variant, UpdateReason.CONFIG_CHANGE);
-};
+}
 
-export const updateModern = async (
+export async function updateModern(
   updateTarget: "none" | "all" | Variant,
   updateReason: UpdateReason,
   config: Config,
   themePaths: ThemePaths,
   activeVariant: Variant | undefined,
-) => {
+) {
   updateSettings(config, activeVariant);
   let variants: Variant[];
   switch (updateTarget) {
@@ -307,6 +380,13 @@ export const updateModern = async (
       auxUiThemeObj: null,
       auxCodeThemeObj: null,
     };
+    if (themeContext.styles.isAccentColorFallback) {
+      showWarningNotification(
+        l10nT("notification.msg.accentColorFallback"),
+        null,
+        null,
+      );
+    }
     if (themeContext.variantConfig.auxiliaryUiTheme) {
       if (!getIsConfiguredFromCmd()) {
         if (isOnlineAvail) {
@@ -377,9 +457,12 @@ export const updateModern = async (
   if (getIsConfiguredFromCmd()) {
     setIsConfiguredFromCmd(false);
   }
-};
+}
 
-export const updateSettings = (config: Config, activeVariant: Variant | undefined) => {
+export function updateSettings(
+  config: Config,
+  activeVariant: Variant | undefined,
+) {
   if (activeVariant) {
     const themeContext: ThemeContext = {
       textDecorations: config.textDecorations,
@@ -397,9 +480,9 @@ export const updateSettings = (config: Config, activeVariant: Variant | undefine
   } else {
     configureSettings(null);
   }
-};
+}
 
-const writeThemeFile = (themePath: string, themeObj: object) => {
+function writeThemeFile(themePath: string, themeObj: object) {
   return writeFile(themePath, JSON.stringify(themeObj, null, 2), (error) => {
     if (error) {
       showErrorNotification(
@@ -409,4 +492,4 @@ const writeThemeFile = (themePath: string, themeObj: object) => {
       );
     }
   });
-};
+}

@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "editorActionList.background": styles.bg.solid.flyout,
@@ -11,4 +11,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "toolbar.hoverBackground": styles.fill.control.rest,
     "toolbar.hoverOutline": styles.stroke.control.default,
   };
-};
+}

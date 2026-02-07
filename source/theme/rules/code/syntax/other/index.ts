@@ -41,7 +41,7 @@ import { getRules as getTypeScriptRules } from "./languages/typescript";
 import { getRules as getVueRules } from "./languages/vue";
 import { getRules as getYamlRules } from "./languages/yaml";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   return [
     ...(<[]>getAsmRules(themeContext)),
     ...(<[]>getBatchRules(themeContext)),
@@ -85,4 +85,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     ...(<[]>getVueRules(themeContext)),
     ...(<[]>getYamlRules(themeContext)),
   ];
-};
+}

@@ -248,24 +248,24 @@ We try to make Codemos Modern the most accessible theming extension for VS Code.
 
 ### Localization Table
 
-| Display Language    | Locale | Status | Released With | Maintainer | Notes                      |
-| ------------------- | ------ | ------ | ------------- | ---------- | -------------------------- |
-| English             | en     | 🟢     | v1.0.0        | Codemos    | -                          |
-| Turkish             | tr     | 🟢     | v2.4.0        | Codemos    | -                          |
-| Simplified Chinese  | zh-cn  | 💬     | v2.4.0        | Codemos    | Review needed              |
-| Japanese            | ja     | 💬     | v2.5.0        | Codemos    | Review needed              |
-| Spanish             | es     | 🟢     | v2.5.0        | Codemos    | -                          |
-| Russian             | ru     | 💬     | v2.6.0        | Codemos    | Review needed              |
-| Portuguese (Brazil) | pt-br  | 🟢     | v2.6.0        | Codemos    | -                          |
-| French              | fr     | 🟢     | v2.7.0        | Codemos    | -                          |
-| Korean              | ko     | 💬     | v2.7.0        | Codemos    | Review needed              |
-| German              | de     | 🟢     | v2.7.0        | Codemos    | -                          |
-| Traditional Chinese | zh-tw  | 🟢     | v2.8.0        | Codemos    | -                          |
-| Italian             | it     | 🟢     | v2.8.0        | Codemos    | -                          |
-| Polish              | pl     | 🟡     | v2.9.0        | -          | Will be released by v2.9.0 |
-| Hungarian           | hu     | 🔴     | -             | -          | Not planned                |
-| Czech               | cs     | 🔴     | -             | -          | Not planned                |
-| Bulgarian           | bg     | 🔴     | -             | -          | Not planned                |
+| Display Language    | Locale | Status | Released With | Maintainer | Notes         |
+| ------------------- | ------ | ------ | ------------- | ---------- | ------------- |
+| English             | en     | 🟢     | v1.0.0        | Codemos    | -             |
+| Turkish             | tr     | 🟢     | v2.4.0        | Codemos    | -             |
+| Simplified Chinese  | zh-cn  | 💬     | v2.4.0        | Codemos    | Review needed |
+| Japanese            | ja     | 💬     | v2.5.0        | Codemos    | Review needed |
+| Spanish             | es     | 💬     | v2.5.0        | Codemos    | Review needed |
+| Russian             | ru     | 💬     | v2.6.0        | Codemos    | Review needed |
+| Portuguese (Brazil) | pt-br  | 💬     | v2.6.0        | Codemos    | Review needed |
+| French              | fr     | 💬     | v2.7.0        | Codemos    | Review needed |
+| Korean              | ko     | 💬     | v2.7.0        | Codemos    | Review needed |
+| German              | de     | 💬     | v2.7.0        | Codemos    | Review needed |
+| Traditional Chinese | zh-tw  | 💬     | v2.8.0        | Codemos    | Review needed |
+| Italian             | it     | 💬     | v2.8.0        | Codemos    | Review needed |
+| Polish              | pl     | 🔴     | -             | -          | Not planned   |
+| Hungarian           | hu     | 🔴     | -             | -          | Not planned   |
+| Czech               | cs     | 🔴     | -             | -          | Not planned   |
+| Bulgarian           | bg     | 🔴     | -             | -          | Not planned   |
 
 <br/>
 

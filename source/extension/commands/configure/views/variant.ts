@@ -10,22 +10,34 @@ interface VariantQPI extends QuickPickItem {
   iconPath: Uri;
 }
 
-export const variantView = async (): Promise<Variant | null> => {
+export async function variantView(): Promise<Variant | null> {
   // 🟡 Hacky workaround for the vscode api not picking the correct icon based on the active ui theme
   let darkModeIconUri: Uri;
   let lightModeIconUri: Uri;
   switch (window.activeColorTheme.kind) {
     case ColorThemeKind.Dark || ColorThemeKind.HighContrast:
-      darkModeIconUri = Uri.file(`${__dirname}/../../resource/icons/dark/dark_mode.svg`);
-      lightModeIconUri = Uri.file(`${__dirname}/../../resource/icons/dark/light_mode.svg`);
+      darkModeIconUri = Uri.file(
+        `${__dirname}/../../resource/icons/dark/dark_mode.svg`,
+      );
+      lightModeIconUri = Uri.file(
+        `${__dirname}/../../resource/icons/dark/light_mode.svg`,
+      );
       break;
     case ColorThemeKind.Light || ColorThemeKind.HighContrastLight:
-      darkModeIconUri = Uri.file(`${__dirname}/../../resource/icons/light/dark_mode.svg`);
-      lightModeIconUri = Uri.file(`${__dirname}/../../resource/icons/light/light_mode.svg`);
+      darkModeIconUri = Uri.file(
+        `${__dirname}/../../resource/icons/light/dark_mode.svg`,
+      );
+      lightModeIconUri = Uri.file(
+        `${__dirname}/../../resource/icons/light/light_mode.svg`,
+      );
       break;
     default:
-      darkModeIconUri = Uri.file(`${__dirname}/../../resource/icons/dark/dark_mode.svg`);
-      lightModeIconUri = Uri.file(`${__dirname}/../../resource/icons/dark/light_mode.svg`);
+      darkModeIconUri = Uri.file(
+        `${__dirname}/../../resource/icons/dark/dark_mode.svg`,
+      );
+      lightModeIconUri = Uri.file(
+        `${__dirname}/../../resource/icons/dark/light_mode.svg`,
+      );
       break;
   }
   const selectedItem = await window.showQuickPick<VariantQPI>(
@@ -55,4 +67,4 @@ export const variantView = async (): Promise<Variant | null> => {
     return null;
   }
   return selectedItem._variant;
-};
+}

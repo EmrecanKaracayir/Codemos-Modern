@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const rules = {
     "outputView.background": styles.bg.solid.surface,
@@ -42,4 +42,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["panelTitle.activeForeground"] = styles.fill.accent.pri;
   }
   return rules;
-};
+}

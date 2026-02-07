@@ -1,17 +1,22 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "gitlens.closedAutolinkedIssueIconColor": styles.basic.def.purple.pri,
     "gitlens.closedPullRequestIconColor": styles.basic.def.red.pri,
     "gitlens.decorations.addedForegroundColor": styles.basic.def.green.pri,
-    "gitlens.decorations.branchAheadForegroundColor": styles.basic.def.green.pri,
-    "gitlens.decorations.branchBehindForegroundColor": styles.basic.def.orange.pri,
-    "gitlens.decorations.branchDivergedForegroundColor": styles.basic.def.yellow.pri,
-    "gitlens.decorations.branchMissingUpstreamForegroundColor": styles.basic.def.orange.pri,
-    "gitlens.decorations.branchUnpublishedForegroundColor": styles.basic.def.blue.pri,
+    "gitlens.decorations.branchAheadForegroundColor":
+      styles.basic.def.green.pri,
+    "gitlens.decorations.branchBehindForegroundColor":
+      styles.basic.def.orange.pri,
+    "gitlens.decorations.branchDivergedForegroundColor":
+      styles.basic.def.yellow.pri,
+    "gitlens.decorations.branchMissingUpstreamForegroundColor":
+      styles.basic.def.orange.pri,
+    "gitlens.decorations.branchUnpublishedForegroundColor":
+      styles.basic.def.blue.pri,
     "gitlens.decorations.branchUpToDateForegroundColor": styles.fill.text.sec,
     "gitlens.decorations.copiedForegroundColor": styles.basic.def.yellow.pri,
     "gitlens.decorations.deletedForegroundColor": styles.basic.alt.red.pri,
@@ -20,13 +25,19 @@ export const getRules = (themeContext: ThemeContext): object => {
     "gitlens.decorations.renamedForegroundColor": styles.basic.def.yellow.pri,
     "gitlens.decorations.statusMergingOrRebasingConflictForegroundColor":
       styles.basic.def.orange.pri,
-    "gitlens.decorations.statusMergingOrRebasingForegroundColor": styles.basic.alt.yellow.pri,
+    "gitlens.decorations.statusMergingOrRebasingForegroundColor":
+      styles.basic.alt.yellow.pri,
     "gitlens.decorations.untrackedForegroundColor": styles.basic.alt.green.pri,
-    "gitlens.decorations.workspaceCurrentForegroundColor": styles.basic.def.green.pri,
-    "gitlens.decorations.workspaceRepoMissingForegroundColor": styles.fill.text.disabled,
-    "gitlens.decorations.workspaceRepoOpenForegroundColor": styles.basic.def.green.pri,
-    "gitlens.decorations.worktreeHasUncommittedChangesForegroundColor": styles.basic.alt.blue.pri,
-    "gitlens.decorations.worktreeMissingForegroundColor": styles.basic.def.red.pri,
+    "gitlens.decorations.workspaceCurrentForegroundColor":
+      styles.basic.def.green.pri,
+    "gitlens.decorations.workspaceRepoMissingForegroundColor":
+      styles.fill.text.disabled,
+    "gitlens.decorations.workspaceRepoOpenForegroundColor":
+      styles.basic.def.green.pri,
+    "gitlens.decorations.worktreeHasUncommittedChangesForegroundColor":
+      styles.basic.alt.blue.pri,
+    "gitlens.decorations.worktreeMissingForegroundColor":
+      styles.basic.def.red.pri,
     "gitlens.graphChangesColumnAddedColor": styles.basic.def.green.pri,
     "gitlens.graphChangesColumnDeletedColor": styles.basic.def.red.pri,
     "gitlens.graphLane10Color": styles.basic.def.orange.pri,
@@ -59,7 +70,8 @@ export const getRules = (themeContext: ThemeContext): object => {
     "gitlens.gutterForegroundColor": styles.fill.text.sec,
     "gitlens.gutterUncommittedForegroundColor": styles.basic.alt.blue.pri,
     "gitlens.launchpadIndicatorAttentionColor": styles.basic.def.orange.pri,
-    "gitlens.launchpadIndicatorAttentionHoverColor": styles.basic.def.orange.sec,
+    "gitlens.launchpadIndicatorAttentionHoverColor":
+      styles.basic.def.orange.sec,
     "gitlens.launchpadIndicatorBlockedColor": styles.basic.def.red.pri,
     "gitlens.launchpadIndicatorBlockedHoverColor": styles.basic.def.red.sec,
     "gitlens.launchpadIndicatorMergeableColor": styles.basic.def.green.pri,
@@ -75,4 +87,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "gitlens.unpublishedCommitIconColor": styles.basic.def.green.pri,
     "gitlens.unpulledChangesIconColor": styles.basic.def.orange.pri,
   };
-};
+}

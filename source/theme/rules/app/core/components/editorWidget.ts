@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const rules = {
     "debugExceptionWidget.background": styles.basic.loc.red.pri,
@@ -20,7 +20,8 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorMarkerNavigationInfo.background": styles.basic.def.blue.pri,
     "editorMarkerNavigationInfo.headerBackground": styles.basic.loc.blue.pri,
     "editorMarkerNavigationWarning.background": styles.basic.def.orange.pri,
-    "editorMarkerNavigationWarning.headerBackground": styles.basic.loc.orange.pri,
+    "editorMarkerNavigationWarning.headerBackground":
+      styles.basic.loc.orange.pri,
     "editorStickyScroll.background": styles.bg.solid.surface,
     "editorStickyScroll.border": styles.stroke.divider.default,
     "editorStickyScroll.shadow": styles.effect.shadow.default,
@@ -28,9 +29,9 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorStickyScrollHover.background": styles.fill.control.rest,
     "editorSuggestWidget.background": styles.bg.solid.flyout,
     "editorSuggestWidget.border": styles.stroke.surface.flyout,
-    "editorSuggestWidget.focusHighlightForeground": styles.fill.accentText.pri,
+    "editorSuggestWidget.focusHighlightForeground": styles.fill.accent.pri,
     "editorSuggestWidget.foreground": styles.fill.text.sec,
-    "editorSuggestWidget.highlightForeground": styles.fill.accentText.pri,
+    "editorSuggestWidget.highlightForeground": styles.fill.accent.pri,
     "editorSuggestWidget.selectedBackground": styles.fill.control.rest,
     "editorSuggestWidget.selectedForeground": styles.fill.text.pri,
     "editorSuggestWidget.selectedIconForeground": styles.fill.text.pri,
@@ -47,4 +48,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["editorStickyScroll.background"] = styles.bg.solid.layer;
   }
   return rules;
-};
+}

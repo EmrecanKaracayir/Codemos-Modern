@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { OPAQUE } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const rules = {
     "editorMinimap.inlineChatInserted": styles.basic.def.green.qua,
@@ -28,4 +28,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["minimap.background"] = styles.bg.solid.layer;
   }
   return rules;
-};
+}

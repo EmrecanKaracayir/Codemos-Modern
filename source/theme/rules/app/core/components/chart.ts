@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "chart.axis": "#FF0000FF", // 🔵 Unknown attribute
@@ -15,4 +15,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "charts.red": styles.basic.def.red.pri,
     "charts.yellow": styles.basic.def.yellow.pri,
   };
-};
+}

@@ -10,7 +10,7 @@ interface DesignQPI extends QuickPickItem {
   detail: string;
 }
 
-export const designView = async (variant: Variant): Promise<Design | null> => {
+export async function designView(variant: Variant): Promise<Design | null> {
   const selectedItem = await window.showQuickPick<DesignQPI>(
     [
       {
@@ -48,4 +48,4 @@ export const designView = async (variant: Variant): Promise<Design | null> => {
     return null;
   }
   return selectedItem._design;
-};
+}

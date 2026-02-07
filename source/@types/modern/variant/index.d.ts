@@ -46,6 +46,7 @@ export type MimicInfo = {
 };
 
 export type Styles = {
+  isAccentColorFallback: boolean;
   basic: {
     def: {
       brown: {
@@ -288,10 +289,6 @@ export type Styles = {
       pri: string;
       sec: string;
       ter: string;
-    };
-    accentText: {
-      pri: string;
-      sec: string;
     };
     onAccent: {
       pri: string;

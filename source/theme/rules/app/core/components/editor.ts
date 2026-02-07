@@ -3,7 +3,7 @@ import { getMixedColorHex9 } from "../../../../../color";
 import { TRANSPARENT } from "../../../../../color/constants";
 import { matchHex9Alpha } from "../../../../../color/utils";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const rules = {
     "editor.background": styles.bg.solid.layer,
@@ -46,7 +46,8 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorBracketHighlight.foreground4": styles.basic.alt.purple.pri,
     "editorBracketHighlight.foreground5": styles.basic.alt.blue.pri,
     "editorBracketHighlight.foreground6": styles.basic.alt.green.pri,
-    "editorBracketHighlight.unexpectedBracket.foreground": styles.basic.def.red.pri,
+    "editorBracketHighlight.unexpectedBracket.foreground":
+      styles.basic.def.red.pri,
     "editorBracketMatch.background": styles.basic.def.brown.qua,
     "editorBracketMatch.border": styles.stroke.control.default,
     "editorBracketMatch.foreground": styles.fill.text.sec,
@@ -110,19 +111,21 @@ export const getRules = (themeContext: ThemeContext): object => {
       themeContext.variantConfig.codeColors.scope10,
       styles.basic.neutral.qui,
     ),
-    "editorInlayHint.parameterForeground": themeContext.variantConfig.codeColors.scope10,
+    "editorInlayHint.parameterForeground":
+      themeContext.variantConfig.codeColors.scope10,
     "editorInlayHint.typeBackground": matchHex9Alpha(
       themeContext.variantConfig.codeColors.scope03,
       styles.basic.neutral.qui,
     ),
-    "editorInlayHint.typeForeground": themeContext.variantConfig.codeColors.scope03,
+    "editorInlayHint.typeForeground":
+      themeContext.variantConfig.codeColors.scope03,
     "editorLightBulb.foreground": styles.basic.def.yellow.pri,
     "editorLightBulbAi.foreground": styles.basic.def.purple.pri,
     "editorLightBulbAutoFix.foreground": styles.basic.def.green.pri,
     "editorLineNumber.activeForeground": styles.fill.text.pri,
     "editorLineNumber.dimmedForeground": styles.fill.text.ghost,
     "editorLineNumber.foreground": styles.fill.text.disabled,
-    "editorLink.activeForeground": styles.fill.accentText.pri,
+    "editorLink.activeForeground": styles.fill.accent.pri,
     "editorMultiCursor.primary.background": styles.fill.onAccent.pri,
     "editorMultiCursor.primary.foreground": styles.fill.accent.pri,
     "editorMultiCursor.secondary.background": styles.fill.onAccent.pri,
@@ -140,11 +143,14 @@ export const getRules = (themeContext: ThemeContext): object => {
     "editorOverviewRuler.inlineChatRemoved": styles.basic.def.red.sec,
     "editorOverviewRuler.modifiedForeground": styles.basic.def.blue.sec,
     "editorOverviewRuler.rangeHighlightForeground": styles.basic.neutral.sep,
-    "editorOverviewRuler.selectionHighlightForeground": styles.basic.neutral.sen,
+    "editorOverviewRuler.selectionHighlightForeground":
+      styles.basic.neutral.sen,
     "editorOverviewRuler.warningForeground": styles.basic.def.orange.pri,
     "editorOverviewRuler.wordHighlightForeground": styles.basic.def.pink.sec,
-    "editorOverviewRuler.wordHighlightStrongForeground": styles.basic.def.purple.sec,
-    "editorOverviewRuler.wordHighlightTextForeground": styles.basic.def.pink.sec,
+    "editorOverviewRuler.wordHighlightStrongForeground":
+      styles.basic.def.purple.sec,
+    "editorOverviewRuler.wordHighlightTextForeground":
+      styles.basic.def.pink.sec,
     "editorRuler.foreground": styles.stroke.divider.default,
     "editorUnicodeHighlight.background": TRANSPARENT,
     "editorUnicodeHighlight.border": styles.basic.def.yellow.pri,
@@ -158,10 +164,13 @@ export const getRules = (themeContext: ThemeContext): object => {
     "inlineEdit.gutterIndicator.primaryBackground": styles.basic.def.purple.qua,
     "inlineEdit.gutterIndicator.primaryBorder": styles.basic.def.purple.ter,
     "inlineEdit.gutterIndicator.primaryForeground": styles.basic.alt.purple.pri,
-    "inlineEdit.gutterIndicator.secondaryBackground": styles.basic.alt.purple.qua,
+    "inlineEdit.gutterIndicator.secondaryBackground":
+      styles.basic.alt.purple.qua,
     "inlineEdit.gutterIndicator.secondaryBorder": styles.basic.alt.purple.ter,
-    "inlineEdit.gutterIndicator.secondaryForeground": styles.basic.alt.purple.pri,
-    "inlineEdit.gutterIndicator.successfulBackground": styles.basic.def.purple.pri,
+    "inlineEdit.gutterIndicator.secondaryForeground":
+      styles.basic.alt.purple.pri,
+    "inlineEdit.gutterIndicator.successfulBackground":
+      styles.basic.def.purple.pri,
     "inlineEdit.gutterIndicator.successfulBorder": getMixedColorHex9(
       styles.basic.def.purple.pri,
       styles.stroke.control.default,
@@ -195,4 +204,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["editorOverviewRuler.background"] = styles.bg.solid.layer;
   }
   return rules;
-};
+}

@@ -1,4 +1,9 @@
-import { ConfigurationChangeEvent, ExtensionContext, commands, workspace } from "vscode";
+import {
+  ConfigurationChangeEvent,
+  ExtensionContext,
+  commands,
+  workspace,
+} from "vscode";
 import type { Variant } from "./@types";
 import { authenticate } from "./extension/authentication";
 import { authenticateCommand } from "./extension/commands/authenticate";
@@ -18,7 +23,9 @@ import {
   verifyState,
 } from "./extension/utils";
 
-export const activate = async (extensionContext: ExtensionContext) => {
+export async function activate(
+  extensionContext: ExtensionContext,
+): Promise<void> {
   extensionContext.subscriptions.push(
     commands.registerCommand("codemosModern.authenticate", authenticateCommand),
   );
@@ -26,36 +33,46 @@ export const activate = async (extensionContext: ExtensionContext) => {
     commands.registerCommand("codemosModern.configure", configureCommand),
   );
   await onStart(extensionContext);
-  workspace.onDidChangeConfiguration(async (event: ConfigurationChangeEvent) => {
-    if (event.affectsConfiguration("codemosModern.auxiliaryThemeRegistries")) {
-      await updateBridge("none", UpdateReason.CONFIG_CHANGE);
-    } else if (event.affectsConfiguration("codemosModern.textDecorations")) {
-      await updateBridge("all", UpdateReason.CONFIG_CHANGE);
-    } else if (event.affectsConfiguration("codemosModern.dark")) {
-      if (!getIsConfiguredFromCmd()) {
-        await updateBridge("dark", UpdateReason.CONFIG_CHANGE);
+  workspace.onDidChangeConfiguration(
+    async (event: ConfigurationChangeEvent) => {
+      if (
+        event.affectsConfiguration("codemosModern.auxiliaryThemeRegistries")
+      ) {
+        await updateBridge("none", UpdateReason.CONFIG_CHANGE);
+      } else if (event.affectsConfiguration("codemosModern.textDecorations")) {
+        await updateBridge("all", UpdateReason.CONFIG_CHANGE);
+      } else if (event.affectsConfiguration("codemosModern.dark")) {
+        if (!getIsConfiguredFromCmd()) {
+          await updateBridge("dark", UpdateReason.CONFIG_CHANGE);
+        }
+      } else if (event.affectsConfiguration("codemosModern.light")) {
+        if (!getIsConfiguredFromCmd()) {
+          await updateBridge("light", UpdateReason.CONFIG_CHANGE);
+        }
+      } else if (
+        event.affectsConfiguration("workbench.colorTheme") ||
+        event.affectsConfiguration("workbench.preferredDarkColorTheme") ||
+        event.affectsConfiguration("workbench.preferredLightColorTheme")
+      ) {
+        updateSettings(getConfig(), getActiveVariant());
       }
-    } else if (event.affectsConfiguration("codemosModern.light")) {
-      if (!getIsConfiguredFromCmd()) {
-        await updateBridge("light", UpdateReason.CONFIG_CHANGE);
-      }
-    } else if (
-      event.affectsConfiguration("workbench.colorTheme") ||
-      event.affectsConfiguration("workbench.preferredDarkColorTheme") ||
-      event.affectsConfiguration("workbench.preferredLightColorTheme")
-    ) {
-      updateSettings(getConfig(), getActiveVariant());
-    }
-  });
-};
+    },
+  );
+}
 
-export const updateBridge = async (
+export async function updateBridge(
   updateTarget: "none" | "all" | Variant,
   updateReason: UpdateReason,
-) => {
+): Promise<void> {
   const config = getConfig();
   if (!verifyState(config)) {
-    await updateModern(updateTarget, updateReason, config, getThemePaths(), getActiveVariant());
+    await updateModern(
+      updateTarget,
+      updateReason,
+      config,
+      getThemePaths(),
+      getActiveVariant(),
+    );
     const stateObj = getStateObj();
     if (stateObj.isUntouched) {
       stateObj.isUntouched = false;
@@ -63,15 +80,20 @@ export const updateBridge = async (
     stateObj.config = config;
     updateState(stateObj);
   }
-};
+}
 
-export const deactivate = () => {};
+export function deactivate(): void {}
 
-const onStart = async (extensionContext: ExtensionContext) => {
+async function onStart(extensionContext: ExtensionContext): Promise<void> {
   await authenticate(false);
   extensionContext.globalState.setKeysForSync([GLOBAL_STATE_MRV_KEY]);
-  const mostRecentVersion = extensionContext.globalState.get(GLOBAL_STATE_MRV_KEY) as string;
-  if (!mostRecentVersion || mostRecentVersion !== extensionContext.extension.packageJSON.version) {
+  const mostRecentVersion = extensionContext.globalState.get(
+    GLOBAL_STATE_MRV_KEY,
+  ) as string;
+  if (
+    !mostRecentVersion ||
+    mostRecentVersion !== extensionContext.extension.packageJSON.version
+  ) {
     extensionContext.globalState.update(
       GLOBAL_STATE_MRV_KEY,
       extensionContext.extension.packageJSON.version,
@@ -86,13 +108,16 @@ const onStart = async (extensionContext: ExtensionContext) => {
     let updateReason: UpdateReason;
     if (isUntouched()) {
       // Reinstall
-      if (mostRecentVersion === extensionContext.extension.packageJSON.version) {
+      if (
+        mostRecentVersion === extensionContext.extension.packageJSON.version
+      ) {
         updateReason = UpdateReason.REINSTALL;
       }
       // Major, minor, or patch update
       else {
         const mostRecentVersionParts = mostRecentVersion.split(".");
-        const currentVersionParts = extensionContext.extension.packageJSON.version.split(".");
+        const currentVersionParts =
+          extensionContext.extension.packageJSON.version.split(".");
         if (mostRecentVersionParts[0] !== currentVersionParts[0]) {
           updateReason = UpdateReason.MAJOR_UPDATE;
         } else if (mostRecentVersionParts[1] !== currentVersionParts[1]) {
@@ -108,9 +133,9 @@ const onStart = async (extensionContext: ExtensionContext) => {
     }
     await updateBridge("all", updateReason);
   }
-};
+}
 
-const firstInstallExperience = () => {
+function firstInstallExperience(): void {
   commands.executeCommand("codemosModern.configure");
   showInfoNotification(updateMessages[UpdateReason.FIRST_INSTALL], null, null);
-};
+}

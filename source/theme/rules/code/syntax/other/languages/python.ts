@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Class decorators
@@ -33,14 +33,20 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Member access
     {
-      scope: ["meta.embedded.block.python meta.attribute", "source.python meta.attribute"],
+      scope: [
+        "meta.embedded.block.python meta.attribute",
+        "source.python meta.attribute",
+      ],
       settings: {
         foreground: colors.scope11,
       },
     },
     // Function calls
     {
-      scope: ["meta.embedded.block.python meta.function-call", "source.python meta.function-call"],
+      scope: [
+        "meta.embedded.block.python meta.function-call",
+        "source.python meta.function-call",
+      ],
       settings: {
         foreground: colors.scope02,
       },
@@ -67,7 +73,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Fstrings
     {
-      scope: ["meta.embedded.block.python meta.fstring", "source.python meta.fstring"],
+      scope: [
+        "meta.embedded.block.python meta.fstring",
+        "source.python meta.fstring",
+      ],
       settings: {
         foreground: colors.scope00,
       },
@@ -106,7 +115,9 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Decorator parentheses
     {
-      scope: ["meta.function.decorator.python punctuation.definition.arguments"],
+      scope: [
+        "meta.function.decorator.python punctuation.definition.arguments",
+      ],
       settings: {
         foreground: colors.scope01,
       },
@@ -129,4 +140,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

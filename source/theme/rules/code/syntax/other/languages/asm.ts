@@ -1,10 +1,9 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // >--------------------------------------< x86 x64 >---------------------------------------< //
-
     // Functions
     {
       scope: ["source.asm entity.name.function"],
@@ -47,7 +46,9 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Control keywords
     {
-      scope: ["source.asm keyword.operator.word.mnemonic.general-purpose.control-transfer"],
+      scope: [
+        "source.asm keyword.operator.word.mnemonic.general-purpose.control-transfer",
+      ],
       settings: {
         foreground: colors.scope08,
         fontStyle: "",
@@ -80,4 +81,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const color = themeContext.variantConfig.codeColors.scope04;
   const decorations = themeContext.textDecorations;
   return {
@@ -13,4 +13,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       underline: decorations.forComments.includes("underline"),
     },
   };
-};
+}

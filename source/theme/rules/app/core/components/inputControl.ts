@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "input.background": styles.fill.control.restSolid, // 🟢 Undesired solution!
@@ -21,4 +21,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "inputValidation.warningBorder": styles.basic.def.orange.qua,
     "inputValidation.warningForeground": styles.fill.system.fg.orange,
   };
-};
+}

@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "issues.closed": styles.basic.def.purple.pri,
@@ -13,4 +13,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "pullRequests.notification": styles.basic.def.blue.pri,
     "pullRequests.open": styles.basic.def.green.pri,
   };
-};
+}

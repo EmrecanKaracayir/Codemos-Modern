@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Interpolated strings
@@ -18,7 +18,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Wordlike keywords
     {
-      scope: ["meta.embedded.block.kotlin keyword.operator", "source.kotlin keyword.operator"],
+      scope: [
+        "meta.embedded.block.kotlin keyword.operator",
+        "source.kotlin keyword.operator",
+      ],
       settings: {
         foreground: colors.scope06,
         fontStyle: "",
@@ -46,4 +49,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

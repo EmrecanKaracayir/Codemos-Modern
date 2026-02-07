@@ -1,11 +1,15 @@
 let isConfiguredFromCmd = false;
-export const getIsConfiguredFromCmd = () => isConfiguredFromCmd;
-export const setIsConfiguredFromCmd = (value: boolean) => {
+export function getIsConfiguredFromCmd() {
+  return isConfiguredFromCmd;
+}
+export function setIsConfiguredFromCmd(value: boolean) {
   isConfiguredFromCmd = value;
-};
+}
 
 let isOnlineAvail = false;
-export const getOnlineAvail = () => isOnlineAvail;
-export const setOnlineAvail = (value: boolean) => {
+export function getOnlineAvail() {
+  return isOnlineAvail;
+}
+export function setOnlineAvail(value: boolean) {
   isOnlineAvail = value;
-};
+}

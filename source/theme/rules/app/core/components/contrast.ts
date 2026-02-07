@@ -1,6 +1,6 @@
-export const getRules = (): object => {
+export function getRules(): object {
   return {
     contrastActiveBorder: null,
     contrastBorder: null,
   };
-};
+}

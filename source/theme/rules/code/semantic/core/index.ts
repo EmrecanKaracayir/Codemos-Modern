@@ -19,7 +19,7 @@ import { getRules as getScope16Rules } from "./scopes/16";
 import { getRules as getScope17Rules } from "./scopes/17";
 import { getRules as getScopeNARules } from "./scopes/NA";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   return {
     ...getScope00Rules(themeContext),
     ...getScope01Rules(themeContext),
@@ -41,4 +41,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     ...getScope17Rules(themeContext),
     ...getScopeNARules(themeContext),
   };
-};
+}

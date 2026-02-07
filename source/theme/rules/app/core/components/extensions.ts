@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "extensionBadge.remoteBackground": styles.basic.def.mint.pri,
@@ -20,4 +20,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "extensionIcon.verifiedForeground": styles.basic.def.blue.pri,
     "mcpIcon.starForeground": styles.basic.def.yellow.pri,
   };
-};
+}

@@ -1,7 +1,7 @@
 import { ThemeContext } from "../../../../../@types";
 import { TRANSPARENT } from "../../../../../color/constants";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   const rules = {
     "sideBar.background": styles.bg.solid.surface,
@@ -30,4 +30,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     rules["sideBarTitle.border"] = TRANSPARENT;
   }
   return rules;
-};
+}

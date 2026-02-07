@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "errorLens.errorBackground": styles.basic.def.red.qui,
@@ -34,4 +34,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "errorLens.warningMessageBackground": styles.basic.def.orange.qui,
     "errorLens.warningRangeBackground": styles.basic.def.orange.qui,
   };
-};
+}

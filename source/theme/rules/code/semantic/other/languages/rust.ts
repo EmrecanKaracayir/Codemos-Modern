@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   const decorations = themeContext.textDecorations;
   return {
@@ -96,4 +96,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Attribute generics
     "generic.attribute": colors.scope09,
   };
-};
+}

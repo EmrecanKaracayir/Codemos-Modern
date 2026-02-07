@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const color = themeContext.variantConfig.codeColors.scope03;
   const decorations = themeContext.textDecorations;
   return [
@@ -82,7 +82,11 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Types
     {
-      scope: ["entity.name.type", "entity.other.attribute-name.type", "support.type"],
+      scope: [
+        "entity.name.type",
+        "entity.other.attribute-name.type",
+        "support.type",
+      ],
       settings: {
         foreground: color,
         fontStyle: "",
@@ -90,11 +94,15 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Language variables
     {
-      scope: ["support.language.variable", "variable.language", "variable.other.language"],
+      scope: [
+        "support.language.variable",
+        "variable.language",
+        "variable.other.language",
+      ],
       settings: {
         foreground: color,
         fontStyle: "",
       },
     },
   ];
-};
+}

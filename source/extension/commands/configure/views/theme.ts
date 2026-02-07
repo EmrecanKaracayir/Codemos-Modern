@@ -1,7 +1,11 @@
 import { QuickPickItemKind, window, type QuickPickItem } from "vscode";
 import type { Variant } from "../../../../@types";
 import { verifiedOwners } from "../../../../auxiliary/constants";
-import { getAuxThemeRegIndexesWithId, prepAuxTheme, prepAuxThemeOffline } from "../../../../data";
+import {
+  getAuxThemeRegIndexesWithId,
+  prepAuxTheme,
+  prepAuxThemeOffline,
+} from "../../../../data";
 import { getAuxThemeId } from "../../../../data/helpers";
 import { l10nT } from "../../../../l10n";
 import { toggleInitialCase } from "../../../helpers";
@@ -16,12 +20,12 @@ interface AuxThemeQPI extends QuickPickItem {
   kind?: QuickPickItemKind;
 }
 
-export const themeView = async (
+export async function themeView(
   variant: Variant,
   auxExtensionId: string,
   themeKind: ThemeKind,
   isOnlineAvailable: boolean,
-): Promise<string | null> => {
+): Promise<string | null> {
   const quickPick = window.createQuickPick<AuxThemeQPI>();
   quickPick.title = getCommonTitle(variant, themeKind);
   quickPick.placeholder = l10nT("quickPick.theme.placeHolder$extension$kind", [
@@ -38,15 +42,19 @@ export const themeView = async (
   const availableAuxThemeQPIs: AuxThemeQPI[] = [];
   const auxThemeId = getAuxThemeId(auxExtensionId + "/theme");
   for (const auxThemeRegIndexWithId of auxThemeRegIndexesWithId) {
-    const filteredAuxThemes = auxThemeRegIndexWithId.auxThemeRegIndex.themes[variant].filter(
-      (auxTheme) => {
-        return (
-          auxTheme.publisher === auxThemeId.publisher && auxTheme.extension === auxThemeId.extension
-        );
-      },
-    );
+    const filteredAuxThemes = auxThemeRegIndexWithId.auxThemeRegIndex.themes[
+      variant
+    ].filter((auxTheme) => {
+      return (
+        auxTheme.publisher === auxThemeId.publisher &&
+        auxTheme.extension === auxThemeId.extension
+      );
+    });
     const isVerifiedOwner = verifiedOwners.find((verifiedOwner) => {
-      return verifiedOwner === auxThemeRegIndexWithId.auxThemeRegId.owner.toLowerCase();
+      return (
+        verifiedOwner ===
+        auxThemeRegIndexWithId.auxThemeRegId.owner.toLowerCase()
+      );
     })
       ? true
       : false;
@@ -54,14 +62,8 @@ export const themeView = async (
       const auxThemeQPI: AuxThemeQPI = {
         auxThemeId: `${auxThemeRegIndexWithId.auxThemeRegId.owner}/${auxThemeRegIndexWithId.auxThemeRegId.repo}/${auxTheme.publisher}/${auxTheme.extension}/${auxTheme.theme}`,
         label: `$(symbol-color) ${auxTheme.theme}`,
-        description: `${
-          auxThemeRegIndexWithId.auxThemeRegId.owner
-        }/${auxThemeRegIndexWithId.auxThemeRegId.repo} ${
-          isVerifiedOwner ? "$(verified-filled)" : "$(unverified)"
-        }`,
-        detail: `$(organization) ${auxTheme.publisher} • $(extensions) ${
-          auxTheme.extension
-        } • $(color-mode) ${toggleInitialCase(variant)}`,
+        description: `${auxThemeRegIndexWithId.auxThemeRegId.owner}/${auxThemeRegIndexWithId.auxThemeRegId.repo} ${isVerifiedOwner ? "$(verified-filled)" : "$(unverified)"}`,
+        detail: `$(organization) ${auxTheme.publisher} • $(extensions) ${auxTheme.extension} • $(color-mode) ${toggleInitialCase(variant)}`,
       };
       if (auxTheme.installed) {
         installedAuxThemeQPIs.push(auxThemeQPI);
@@ -99,9 +101,17 @@ export const themeView = async (
         if (selectedAuxThemeId) {
           let success: boolean;
           if (isOnlineAvailable) {
-            success = await prepAuxTheme(auxThemeRegs, selectedAuxThemeId, variant);
+            success = await prepAuxTheme(
+              auxThemeRegs,
+              selectedAuxThemeId,
+              variant,
+            );
           } else {
-            success = await prepAuxThemeOffline(auxThemeRegs, selectedAuxThemeId, variant);
+            success = await prepAuxThemeOffline(
+              auxThemeRegs,
+              selectedAuxThemeId,
+              variant,
+            );
           }
           if (!success) {
             return resolve(null);
@@ -115,4 +125,4 @@ export const themeView = async (
       }
     });
   });
-};
+}

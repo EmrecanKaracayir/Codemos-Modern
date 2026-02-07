@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   const styles = themeContext.styles;
   return {
@@ -14,8 +14,8 @@ export const getRules = (themeContext: ThemeContext): object => {
     "symbolIcon.enumeratorMemberForeground": colors.scope13,
     "symbolIcon.eventForeground": colors.scope09,
     "symbolIcon.fieldForeground": colors.scope11,
-    "symbolIcon.fileForeground": styles.fill.accentText.pri,
-    "symbolIcon.folderForeground": styles.fill.accentText.pri,
+    "symbolIcon.fileForeground": styles.fill.accent.pri,
+    "symbolIcon.folderForeground": styles.fill.accent.pri,
     "symbolIcon.functionForeground": colors.scope02,
     "symbolIcon.interfaceForeground": colors.scope03,
     "symbolIcon.keyForeground": colors.scope15,
@@ -38,4 +38,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "symbolIcon.unitForeground": colors.scope12,
     "symbolIcon.variableForeground": colors.scope10,
   };
-};
+}

@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "scmGraph.foreground1": styles.basic.def.green.pri,
@@ -10,11 +10,12 @@ export const getRules = (themeContext: ThemeContext): object => {
     "scmGraph.foreground5": styles.basic.def.pink.pri,
     "scmGraph.historyItemBaseRefColor": styles.basic.def.purple.pri,
     "scmGraph.historyItemHoverAdditionsForeground": styles.basic.def.green.pri,
-    "scmGraph.historyItemHoverDefaultLabelBackground": styles.fill.control.prominent,
+    "scmGraph.historyItemHoverDefaultLabelBackground":
+      styles.fill.control.prominent,
     "scmGraph.historyItemHoverDefaultLabelForeground": styles.fill.text.sec,
     "scmGraph.historyItemHoverDeletionsForeground": styles.basic.def.red.pri,
     "scmGraph.historyItemHoverLabelForeground": styles.fill.onColor.pri,
     "scmGraph.historyItemRefColor": styles.basic.def.blue.pri,
     "scmGraph.historyItemRemoteRefColor": styles.basic.def.mint.pri,
   };
-};
+}

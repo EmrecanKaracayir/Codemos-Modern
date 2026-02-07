@@ -1,11 +1,14 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Global variables
     {
-      scope: ["meta.embedded.block.clojure entity.global", "source.clojure entity.global"],
+      scope: [
+        "meta.embedded.block.clojure entity.global",
+        "source.clojure entity.global",
+      ],
       settings: {
         foreground: colors.scope13,
         fontStyle: "",
@@ -26,7 +29,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Keywords
     {
-      scope: ["meta.embedded.block.clojure storage.control", "source.clojure storage.control"],
+      scope: [
+        "meta.embedded.block.clojure storage.control",
+        "source.clojure storage.control",
+      ],
       settings: {
         foreground: colors.scope06,
         fontStyle: "",
@@ -34,11 +40,14 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Symbols
     {
-      scope: ["meta.embedded.block.clojure meta.symbol", "source.clojure meta.symbol"],
+      scope: [
+        "meta.embedded.block.clojure meta.symbol",
+        "source.clojure meta.symbol",
+      ],
       settings: {
         foreground: colors.scope10,
         fontStyle: "",
       },
     },
   ];
-};
+}

@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "dropdown.background": styles.fill.control.restSolid, // 🟢 Undesired solution!
@@ -8,4 +8,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "dropdown.foreground": styles.fill.text.pri,
     "dropdown.listBackground": styles.bg.solid.flyout,
   };
-};
+}

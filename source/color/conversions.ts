@@ -1,14 +1,14 @@
 import { HSL, LAB, RGB } from "../@types";
 
-export const hex6ToRgb = (hex6: string): RGB => {
+export function hex6ToRgb(hex6: string): RGB {
   const value = parseInt(hex6, 16);
   const r = (value >> 16) & 255;
   const g = (value >> 8) & 255;
   const b = value & 255;
   return [r, g, b] as RGB;
-};
+}
 
-export const rgbToHex7 = (rgb: RGB): string => {
+export function rgbToHex7(rgb: RGB): string {
   const r = Math.round(rgb[0]);
   const g = Math.round(rgb[1]);
   const b = Math.round(rgb[2]);
@@ -16,22 +16,28 @@ export const rgbToHex7 = (rgb: RGB): string => {
   const hexG = componentToHex(g);
   const hexB = componentToHex(b);
   return `#${hexR}${hexG}${hexB}`;
-};
+}
 
-export const rgbToHsl = (rgb: RGB): HSL => {
+export function rgbToHsl(rgb: RGB): HSL {
   let [r, g, b] = rgb;
   r /= 255;
   g /= 255;
   b /= 255;
   const l = Math.max(r, g, b);
   const s = l - Math.min(r, g, b);
-  const h = s ? (l === r ? (g - b) / s : l === g ? 2 + (b - r) / s : 4 + (r - g) / s) : 0;
+  const h = s
+    ? l === r
+      ? (g - b) / s
+      : l === g
+        ? 2 + (b - r) / s
+        : 4 + (r - g) / s
+    : 0;
   return [
     60 * h < 0 ? 60 * h + 360 : 60 * h,
     100 * (s ? (l <= 0.5 ? s / (2 * l - s) : s / (2 - (2 * l - s))) : 0),
     (100 * (2 * l - s)) / 2,
   ];
-};
+}
 
 export function rgbToLab(rgb: RGB): LAB {
   let r = rgb[0] / 255;
@@ -54,7 +60,7 @@ export function rgbToLab(rgb: RGB): LAB {
   return [116 * y - 16, 500 * (x - y), 200 * (y - z)];
 }
 
-export const hslToHex6 = (hsl: HSL): string => {
+export function hslToHex6(hsl: HSL): string {
   const h = hsl[0];
   let s = hsl[1];
   let l = hsl[2];
@@ -95,9 +101,9 @@ export const hslToHex6 = (hsl: HSL): string => {
   g = Math.round((g + m) * 255);
   b = Math.round((b + m) * 255);
   return componentToHex(r) + componentToHex(g) + componentToHex(b);
-};
+}
 
-const componentToHex = (c: number): string => {
+function componentToHex(c: number): string {
   const hex = c.toString(16).toUpperCase();
   return hex.length === 1 ? "0" + hex : hex;
-};
+}

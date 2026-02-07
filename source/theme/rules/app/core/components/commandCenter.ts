@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const styles = themeContext.styles;
   return {
     "commandCenter.activeBackground": styles.fill.control.hover,
@@ -13,4 +13,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     "commandCenter.inactiveBorder": styles.stroke.control.default,
     "commandCenter.inactiveForeground": styles.fill.text.sec,
   };
-};
+}

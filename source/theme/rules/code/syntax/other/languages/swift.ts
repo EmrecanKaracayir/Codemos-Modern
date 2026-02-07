@@ -1,11 +1,14 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Attributes
     {
-      scope: ["meta.attribute punctuation.definition.arguments", "storage.modifier.attribute"],
+      scope: [
+        "meta.attribute punctuation.definition.arguments",
+        "storage.modifier.attribute",
+      ],
       settings: {
         foreground: colors.scope01,
         fontStyle: "",
@@ -20,4 +23,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

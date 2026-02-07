@@ -1,6 +1,6 @@
 import { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const colors = themeContext.variantConfig.codeColors;
   return [
     // Entry properties
@@ -27,7 +27,10 @@ export const getRules = (themeContext: ThemeContext): object => {
     },
     // Square brackets
     {
-      scope: ["meta.embedded.block.bibtex support.variable", "text.bibtex support.variable"],
+      scope: [
+        "meta.embedded.block.bibtex support.variable",
+        "text.bibtex support.variable",
+      ],
       settings: {
         foreground: colors.scope13,
         fontStyle: "",
@@ -49,4 +52,4 @@ export const getRules = (themeContext: ThemeContext): object => {
       },
     },
   ];
-};
+}

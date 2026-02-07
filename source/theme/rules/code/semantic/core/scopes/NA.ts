@@ -1,6 +1,6 @@
 import type { ThemeContext } from "../../../../../../@types";
 
-export const getRules = (themeContext: ThemeContext): object => {
+export function getRules(themeContext: ThemeContext): object {
   const decorations = themeContext.textDecorations;
   return {
     // Read-only symbols
@@ -14,4 +14,4 @@ export const getRules = (themeContext: ThemeContext): object => {
     // Abstract symbols
     "*.abstract": { bold: decorations.bold },
   };
-};
+}
