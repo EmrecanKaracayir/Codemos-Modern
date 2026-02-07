@@ -5,10 +5,8 @@
   "icon": "resource/icon.gif",
   "description": "%ext.desc%",
   "pricing": "Free",
-  "version": "3.0.10",
+  "version": "3.1.0",
   "license": "MIT",
-  "private": true,
-  "preview": true,
   "homepage": "https://github.com/EmrecanKaracayir/Codemos-Modern",
   "repository": {
     "type": "git",
