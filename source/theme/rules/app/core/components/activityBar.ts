@@ -8,7 +8,7 @@ export function getRules(themeContext: ThemeContext): object {
     "activityBar.activeBorder": styles.fill.accent.pri,
     "activityBar.activeFocusBorder": styles.basic.neutral.pri,
     "activityBar.background": styles.bg.solid.base,
-    "activityBar.border": styles.stroke.divider.default,
+    "activityBar.border": styles.fill.accent.ghost,
     "activityBar.dropBorder": styles.fill.accent.pri,
     "activityBar.foreground": styles.fill.text.pri,
     "activityBar.inactiveForeground": styles.fill.text.sec,

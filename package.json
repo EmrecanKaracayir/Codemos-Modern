@@ -342,7 +342,7 @@
               },
               "scope16": {
                 "type": "string",
-                "default": "#CD95b8FF",
+                "default": "#CD95B8FF",
                 "description": "%conf.*.scope16.desc%",
                 "pattern": "^#[0-9A-Fa-f]{8}$",
                 "patternErrorMessage": "%conf.dark.codeColor.err%"

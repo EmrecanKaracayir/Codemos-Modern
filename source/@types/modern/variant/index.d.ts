@@ -288,7 +288,7 @@ export type Styles = {
     accent: {
       pri: string;
       sec: string;
-      ter: string;
+      ghost: string;
     };
     onAccent: {
       pri: string;

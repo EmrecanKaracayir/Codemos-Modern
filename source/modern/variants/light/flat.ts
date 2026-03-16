@@ -305,7 +305,7 @@ export function getStyles(variantConfig: VariantConfig): Styles {
       accent: {
         pri: `${accentColor}${getHexAlpha(100)}`,
         sec: `${accentColor}${getHexAlpha(88)}`,
-        ter: `${accentColor}${getHexAlpha(50)}`,
+        ghost: `${accentColor}${getHexAlpha(50)}`,
       },
       onAccent: {
         pri: `${onAccentColor}${getHexAlpha(100)}`,

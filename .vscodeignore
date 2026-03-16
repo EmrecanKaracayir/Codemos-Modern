@@ -4,6 +4,7 @@
 fonts/**
 images/**
 node_modules/**
+others/**
 out/int/**
 source/**
 **/.cspell.json

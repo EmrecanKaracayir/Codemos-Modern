@@ -33,7 +33,7 @@ export const defaultConfig: Config = {
       scope13: "#83AEA8FF",
       scope14: "#87ABC0FF",
       scope15: "#A9A0CBFF",
-      scope16: "#CD95b8FF",
+      scope16: "#CD95B8FF",
       scope17: "#FFFFFF8A",
     },
   },

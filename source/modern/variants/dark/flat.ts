@@ -34,7 +34,7 @@ const palette: Palette = {
       mint: "#83AEA8",
       blue: "#87ABC0",
       purple: "#A9A0CB",
-      pink: "#CD95b8",
+      pink: "#CD95B8",
     },
     loc: {
       red: "#3A2727",
@@ -305,7 +305,7 @@ export function getStyles(variantConfig: VariantConfig): Styles {
       accent: {
         pri: `${accentColor}${getHexAlpha(100)}`,
         sec: `${accentColor}${getHexAlpha(86)}`,
-        ter: `${accentColor}${getHexAlpha(54)}`,
+        ghost: `${accentColor}${getHexAlpha(54)}`,
       },
       onAccent: {
         pri: `${onAccentColor}${getHexAlpha(100)}`,
