@@ -5,15 +5,11 @@ set fish_greeting ""
 fish_add_path ~/.local/bin
 fish_add_path /opt/homebrew/sbin
 
-# FISHER
-set fisher_path /opt/homebrew/etc/fish
-
-begin # NVM INIT #
-    # nvm install #
+# NVM
+begin
     if test -e ".nvmrc"
         nvm install
     end
-    # node_modules/.bin to PATH #
     if test -e "$PWD/node_modules/.bin"
         set --global __node_binpath "$PWD/node_modules/.bin"
         set --append PATH $__node_binpath
@@ -24,7 +20,7 @@ begin # NVM INIT #
         and set --export PATH[$index]
         and set --export __node_binpath
     end
-end # NVM INIT #
+end
 
 # INTERACTIVE
 if status is-interactive

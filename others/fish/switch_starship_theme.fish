@@ -12,6 +12,5 @@ function switch_starship_theme
         print 0 INFORMATION "Switched to dark mode."
     end
 
-    # Reload Starship
     starship init fish | source
 end
