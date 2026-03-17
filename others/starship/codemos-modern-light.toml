@@ -37,10 +37,10 @@ right_format = """
 # COLORS
 palette = "CodemosModernDark"
 [palettes.CodemosModernDark]
-lc = "#A5A5A5"
-lq = "#797979"
-hq = "#444444"
-hc = "#181818"
+lc = "#A9A9A9"
+lq = "#7C7C7C"
+hq = "#474747"
+hc = "#000000"
 
 def_brown = "#784F3F"
 def_red = "#B70004"
