@@ -1,8 +1,8 @@
 .github/**
 .husky/**
 .vscode/**
+docs/**
 fonts/**
-images/**
 node_modules/**
 others/**
 out/int/**

@@ -598,8 +598,8 @@
   },
   "scripts": {
     "prepare": "husky",
-    "clean": "rm -rf out && rm -rf data/.state.json && rm -rf data/cache/*",
-    "winClean": "if exist out (rmdir /s /q out 2>nul) && if exist data\\.state.json (del /q data\\.state.json 2>nul) && if exist data\\cache (rmdir /s /q data\\cache 2>nul)",
+    "clean": "rm -rf out && rm -rf data",
+    "winClean": "rmdir /s /q out && rmdir /s /q data",
     "format": "prettier --write .",
     "lint": "eslint source && tsc --noEmit",
     "beforeBuild": "npm run clean && npm run format && npm run lint",
