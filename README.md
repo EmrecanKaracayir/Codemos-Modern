@@ -2,7 +2,7 @@
 
 <br/>
 
-<img src="resource/icon.gif" width="200"/>
+<img src="assets/icon.gif" width="200"/>
 
 <br/>
 
