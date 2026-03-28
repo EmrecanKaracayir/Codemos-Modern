@@ -2,8 +2,10 @@ import { existsSync, mkdirSync, writeFileSync } from "fs";
 import { join } from "path";
 import { defaultStateObj } from "../extension/state";
 
+const DATA_DIR = join(__dirname, "..", "..", "data");
+
 const stateStr = JSON.stringify(defaultStateObj, null, 2);
-if (!existsSync(join(__dirname, "..", "..", "data"))) {
-  mkdirSync(join(__dirname, "..", "..", "data"), { recursive: true });
+if (!existsSync(DATA_DIR)) {
+  mkdirSync(DATA_DIR, { recursive: true });
 }
-writeFileSync(join(__dirname, "..", "..", "data", ".state.json"), stateStr);
+writeFileSync(join(DATA_DIR, ".state.json"), stateStr);

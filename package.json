@@ -2,7 +2,7 @@
   "name": "codemos-modern",
   "displayName": "Codemos Modern",
   "publisher": "Codemos",
-  "icon": "resource/icon.gif",
+  "icon": "assets/icon.gif",
   "description": "%ext.desc%",
   "pricing": "Free",
   "version": "3.1.1",
@@ -570,10 +570,6 @@
       }
     ]
   },
-  "lint-staged": {
-    "*.ts": "eslint --fix",
-    "*.{ts,json,md}": "prettier --write"
-  },
   "dependencies": {
     "@octokit/rest": "^22.0.0",
     "@resvg/resvg-js": "^2.6.0",
@@ -591,7 +587,6 @@
     "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.0.10",
-    "lint-staged": "^16.1.2",
     "prettier": "^3.1.1",
     "tsx": "^4.16.2",
     "typescript": "^5.0.0",
@@ -610,8 +605,8 @@
     "compile:themes": "tsx source/hooks/compileThemes.ts",
     "compile": "tsc",
     "compile-all": "npm run compile && npm run compile:stateFile && npm run compile:themes",
-    "package:dev": "node esbuild.js --dev",
-    "package:prod": "node esbuild.js --prod",
+    "package:dev": "node esbuild.config.mjs --dev",
+    "package:prod": "node esbuild.config.mjs --prod",
     "build": "npm run beforeBuild && npm run compile-all && npm run package:prod",
     "winBuild": "npm run winBeforeBuild && npm run compile-all && npm run package:prod",
     "debug": "DEBUG=1 && npm run beforeBuild && npm run compile-all && npm run package:dev",
