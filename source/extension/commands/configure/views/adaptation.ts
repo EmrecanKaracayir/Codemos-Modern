@@ -1,9 +1,9 @@
 import { QuickPickItemKind, Uri, window, type QuickPickItem } from "vscode";
 import type { Variant } from "../../../../@types";
+import { ICONS_DIR_PATH } from "../../../../data/paths";
 import { l10nT } from "../../../../l10n";
 import { palette as darkPalette } from "../../../../modern/variants/dark/modern";
 import { palette as lightPalette } from "../../../../modern/variants/light/modern";
-import { ICONS_DIR } from "../constants";
 import { prepColPalette } from "../data/palette";
 import { getCommonTitle, getPaletteItemDetail } from "../helpers";
 
@@ -49,7 +49,7 @@ export async function adaptationView(
       label: l10nT("quickPick.*.item.custom.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: l10nT("quickPick.*.item.custom.detail"),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_custom.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_custom.svg`),
     },
     {
       _color: "",
@@ -61,7 +61,7 @@ export async function adaptationView(
       label: l10nT("quickPick.*.item.accent.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: l10nT("quickPick.adaptation.item.accent.detail"),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_accent.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_accent.svg`),
     },
     {
       _color: "",
@@ -73,63 +73,63 @@ export async function adaptationView(
       label: l10nT("quickPick.*.item.brown.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: getPaletteItemDetail("brown", variant),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_brown.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_brown.svg`),
     },
     {
       _color: "red",
       label: l10nT("quickPick.*.item.red.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: getPaletteItemDetail("red", variant),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_red.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_red.svg`),
     },
     {
       _color: "orange",
       label: l10nT("quickPick.*.item.orange.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: getPaletteItemDetail("orange", variant),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_orange.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_orange.svg`),
     },
     {
       _color: "yellow",
       label: l10nT("quickPick.*.item.yellow.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: getPaletteItemDetail("yellow", variant),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_yellow.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_yellow.svg`),
     },
     {
       _color: "green",
       label: l10nT("quickPick.*.item.green.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: getPaletteItemDetail("green", variant),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_green.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_green.svg`),
     },
     {
       _color: "mint",
       label: l10nT("quickPick.*.item.mint.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: getPaletteItemDetail("mint", variant),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_mint.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_mint.svg`),
     },
     {
       _color: "blue",
       label: l10nT("quickPick.*.item.blue.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: getPaletteItemDetail("blue", variant),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_blue.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_blue.svg`),
     },
     {
       _color: "purple",
       label: l10nT("quickPick.*.item.purple.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: getPaletteItemDetail("purple", variant),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_purple.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_purple.svg`),
     },
     {
       _color: "pink",
       label: l10nT("quickPick.*.item.pink.label"),
       description: l10nT("quickPick.adaptation.item.desc"),
       detail: getPaletteItemDetail("pink", variant),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_pink.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_pink.svg`),
     },
   ];
   quickPick.busy = false;

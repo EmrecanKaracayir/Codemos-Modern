@@ -1,7 +1,7 @@
 import { ColorThemeKind, Uri, window, type QuickPickItem } from "vscode";
 import type { Variant } from "../../../../@types";
+import { ICONS_DIR_PATH } from "../../../../data/paths";
 import { l10nT } from "../../../../l10n";
-import { ICONS_DIR } from "../constants";
 
 interface VariantQPI extends QuickPickItem {
   _variant: Variant;
@@ -17,16 +17,16 @@ export async function variantView(): Promise<Variant | null> {
   let lightModeIconUri: Uri;
   switch (window.activeColorTheme.kind) {
     case ColorThemeKind.Dark || ColorThemeKind.HighContrast:
-      darkModeIconUri = Uri.file(`${ICONS_DIR}/dark/dark_mode.svg`);
-      lightModeIconUri = Uri.file(`${ICONS_DIR}/dark/light_mode.svg`);
+      darkModeIconUri = Uri.file(`${ICONS_DIR_PATH}/dark/dark_mode.svg`);
+      lightModeIconUri = Uri.file(`${ICONS_DIR_PATH}/dark/light_mode.svg`);
       break;
     case ColorThemeKind.Light || ColorThemeKind.HighContrastLight:
-      darkModeIconUri = Uri.file(`${ICONS_DIR}/light/dark_mode.svg`);
-      lightModeIconUri = Uri.file(`${ICONS_DIR}/light/light_mode.svg`);
+      darkModeIconUri = Uri.file(`${ICONS_DIR_PATH}/light/dark_mode.svg`);
+      lightModeIconUri = Uri.file(`${ICONS_DIR_PATH}/light/light_mode.svg`);
       break;
     default:
-      darkModeIconUri = Uri.file(`${ICONS_DIR}/dark/dark_mode.svg`);
-      lightModeIconUri = Uri.file(`${ICONS_DIR}/dark/light_mode.svg`);
+      darkModeIconUri = Uri.file(`${ICONS_DIR_PATH}/dark/dark_mode.svg`);
+      lightModeIconUri = Uri.file(`${ICONS_DIR_PATH}/dark/light_mode.svg`);
       break;
   }
   const selectedItem = await window.showQuickPick<VariantQPI>(

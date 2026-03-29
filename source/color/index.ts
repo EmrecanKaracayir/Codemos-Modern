@@ -87,11 +87,11 @@ export function getMixedColorHex9(
 ): string {
   const [color1Hex7, color1AlphaHex] = splitHex9(sourceHex9);
   const color1AlphaPercent = getAlphaPercent(color1AlphaHex);
-  return getMixedColorHex7(
+  return `${getMixedColorHex7(
     color1Hex7,
     color1AlphaPercent,
     splitHex9(backdropHex9)[0],
-  );
+  )}FF`;
 }
 
 function getMixedColorRgb(

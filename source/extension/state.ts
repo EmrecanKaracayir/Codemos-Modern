@@ -1,9 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
-import { join } from "path";
 import { StateObj } from "../@types";
+import { DATA_DIR_PATH, STATE_FILE_PATH } from "../data/paths";
 import { defaultConfig } from "../modern";
-
-const DATA_DIR = join(__dirname, "..", "..", "data");
 
 export const defaultStateObj: StateObj = {
   isUntouched: true,
@@ -12,7 +10,7 @@ export const defaultStateObj: StateObj = {
 
 export function getStateObj(): StateObj {
   try {
-    const stateStr = readFileSync(join(DATA_DIR, ".state.json"), "utf-8");
+    const stateStr = readFileSync(STATE_FILE_PATH, "utf-8");
     const stateObj = JSON.parse(stateStr);
     return stateObj as StateObj;
   } catch (error) {
@@ -32,9 +30,9 @@ export function updateState(stateObj: StateObj) {
 
 function writeStateFile(stateObj: StateObj) {
   const stateStr = JSON.stringify(stateObj, null, 2);
-  const path = join(DATA_DIR, ".state.json");
-  if (!existsSync(DATA_DIR)) {
-    mkdirSync(DATA_DIR, {
+  const path = STATE_FILE_PATH;
+  if (!existsSync(DATA_DIR_PATH)) {
+    mkdirSync(DATA_DIR_PATH, {
       recursive: true,
     });
   }

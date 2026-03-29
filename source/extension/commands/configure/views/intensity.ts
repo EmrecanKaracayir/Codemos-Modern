@@ -1,8 +1,8 @@
 import { QuickPickItemKind, Uri, window, type QuickPickItem } from "vscode";
 import type { Variant } from "../../../../@types";
+import { ICONS_DIR_PATH } from "../../../../data/paths";
 import { l10nT } from "../../../../l10n";
 import { getIntensity } from "../../../../modern/variants";
-import { ICONS_DIR } from "../constants";
 import { prepIntPalette } from "../data/palette";
 import { getCommonTitle } from "../helpers";
 
@@ -37,7 +37,7 @@ export async function intensityView(
       label: l10nT("quickPick.*.item.custom.label"),
       description: l10nT("quickPick.intensity.item.desc"),
       detail: l10nT("quickPick.intensity.item.custom.detail"),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/palette_custom.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/palette_custom.svg`),
     },
     {
       _intensity: -1,
@@ -49,28 +49,30 @@ export async function intensityView(
       label: `${l10nT("quickPick.intensity.item.none.label")} (${getIntensity(variant, "none")}%)`,
       description: l10nT("quickPick.intensity.item.desc"),
       detail: l10nT("quickPick.intensity.item.none.detail"),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/intensity_none.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/intensity_none.svg`),
     },
     {
       _intensity: getIntensity(variant, "gentle"),
       label: `${l10nT("quickPick.intensity.item.gentle.label")} (${getIntensity(variant, "gentle")}%)`,
       description: l10nT("quickPick.intensity.item.desc"),
       detail: l10nT("quickPick.intensity.item.gentle.detail"),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/intensity_gentle.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/intensity_gentle.svg`),
     },
     {
       _intensity: getIntensity(variant, "moderate"),
       label: `${l10nT("quickPick.intensity.item.moderate.label")} (${getIntensity(variant, "moderate")}%)`,
       description: l10nT("quickPick.intensity.item.desc"),
       detail: l10nT("quickPick.intensity.item.moderate.detail"),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/intensity_moderate.svg`),
+      iconPath: Uri.file(`${ICONS_DIR_PATH}/${variant}/intensity_moderate.svg`),
     },
     {
       _intensity: getIntensity(variant, "aggressive"),
       label: `${l10nT("quickPick.intensity.item.aggressive.label")} (${getIntensity(variant, "aggressive")}%)`,
       description: l10nT("quickPick.intensity.item.desc"),
       detail: l10nT("quickPick.intensity.item.aggressive.detail"),
-      iconPath: Uri.file(`${ICONS_DIR}/${variant}/intensity_aggressive.svg`),
+      iconPath: Uri.file(
+        `${ICONS_DIR_PATH}/${variant}/intensity_aggressive.svg`,
+      ),
     },
   ];
   quickPick.busy = false;

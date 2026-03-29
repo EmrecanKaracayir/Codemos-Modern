@@ -11,7 +11,7 @@ export const defaultConfig: Config = {
   },
   dark: {
     auxiliaryUiTheme: null,
-    design: "modern",
+    design: "minimal",
     accentColor: "#CB8569",
     adaptationColor: "#CB8569",
     adaptationIntensity: 0,
@@ -39,7 +39,7 @@ export const defaultConfig: Config = {
   },
   light: {
     auxiliaryUiTheme: null,
-    design: "modern",
+    design: "natural",
     accentColor: "#784F3F",
     adaptationColor: "#784F3F",
     adaptationIntensity: 0,

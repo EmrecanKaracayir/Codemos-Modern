@@ -1,9 +1,7 @@
 import { existsSync, readFileSync } from "fs";
 import { join } from "path";
 import { env } from "vscode";
-import { L10N_DIR_NAME } from "../extension/constants";
-
-const L10N_DIR = join(__dirname, `../../assets/${L10N_DIR_NAME}`);
+import { L10N_DIR_PATH } from "../data/paths";
 
 let cache: Record<string, string>;
 
@@ -12,12 +10,12 @@ export function l10nT(
   args?: Array<string | number | boolean>,
 ): string {
   if (!cache) {
-    const filePath = join(L10N_DIR, `/bundle.l10n.${env.language}.json`);
+    const filePath = join(L10N_DIR_PATH, `/bundle.l10n.${env.language}.json`);
     if (existsSync(filePath)) {
       cache = JSON.parse(readFileSync(filePath, "utf-8"));
     } else {
       cache = JSON.parse(
-        readFileSync(join(L10N_DIR, "bundle.l10n.json"), "utf-8"),
+        readFileSync(join(L10N_DIR_PATH, "bundle.l10n.json"), "utf-8"),
       );
     }
   }

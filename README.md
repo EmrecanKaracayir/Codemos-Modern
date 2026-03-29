@@ -8,28 +8,28 @@
 
 # **Codemos Modern**
 
-<a href="https://github.com/EmrecanKaracayir/Codemos-Modern/releases/latest"><img src="resources/images/badge-release.png" height="32" alt="Latest release"></a>&nbsp;
-<a href="https://code.visualstudio.com/updates/"><img src="resources/images/badge-vscode.png" height="32" alt="Supported VS Code release"></a>&nbsp;
-<a href="https://marketplace.visualstudio.com/items?itemName=Codemos.codemos-modern"><img src="resources/images/badge-downloads.png" height="32" alt="Download count"></a>&nbsp;
-<a href="https://github.com/sponsors/EmrecanKaracayir"><img src="resources/images/badge-sponsors.png" height="32" alt="Sponsor count"></a>&nbsp;
-<a href="https://marketplace.visualstudio.com/items?itemName=Codemos.codemos-modern&ssr=false#review-details"><img src="resources/images/badge-rating.png" height="32" alt="Rating"></a>
+<a href="https://github.com/EmrecanKaracayir/Codemos-Modern/releases/latest"><img src="resources/badges/badge-release.png" height="32" alt="Latest release"></a>&nbsp;
+<a href="https://code.visualstudio.com/updates/"><img src="resources/badges/badge-vscode.png" height="32" alt="Supported VS Code release"></a>&nbsp;
+<a href="https://marketplace.visualstudio.com/items?itemName=Codemos.codemos-modern"><img src="resources/badges/badge-downloads.png" height="32" alt="Download count"></a>&nbsp;
+<a href="https://github.com/sponsors/EmrecanKaracayir"><img src="resources/badges/badge-sponsors.png" height="32" alt="Sponsor count"></a>&nbsp;
+<a href="https://marketplace.visualstudio.com/items?itemName=Codemos.codemos-modern&ssr=false#review-details"><img src="resources/badges/badge-rating.png" height="32" alt="Rating"></a>
 
 <div style="margin-bottom: 16px;"></div>
 
 Innovative, modern theme suite/hub for VS Code
 
-<img src="resources/images/badge-loc-en.png" height="24" alt="English (US)">&nbsp;
-<img src="resources/images/badge-loc-zh-cn.png" height="24" alt="Simplified Chinese">&nbsp;
-<img src="resources/images/badge-loc-ja.png" height="24" alt="Japanese">&nbsp;
-<img src="resources/images/badge-loc-es.png" height="24" alt="Spanish">&nbsp;
-<img src="resources/images/badge-loc-ru.png" height="24" alt="Russian">&nbsp;
-<img src="resources/images/badge-loc-pt-br.png" height="24" alt="Portuguese (Brazil)">&nbsp;
-<img src="resources/images/badge-loc-fr.png" height="24" alt="French">&nbsp;
-<img src="resources/images/badge-loc-ko.png" height="24" alt="Korean">&nbsp;
-<img src="resources/images/badge-loc-de.png" height="24" alt="German">&nbsp;
-<img src="resources/images/badge-loc-zh-tw.png" height="24" alt="Traditional Chinese">&nbsp;
-<img src="resources/images/badge-loc-it.png" height="24" alt="Italian">&nbsp;
-<img src="resources/images/badge-loc-tr.png" height="24" alt="Turkish">
+<img src="resources/badges/badge-loc-en.png" height="24" alt="English (US)">&nbsp;
+<img src="resources/badges/badge-loc-zh-cn.png" height="24" alt="Simplified Chinese">&nbsp;
+<img src="resources/badges/badge-loc-ja.png" height="24" alt="Japanese">&nbsp;
+<img src="resources/badges/badge-loc-es.png" height="24" alt="Spanish">&nbsp;
+<img src="resources/badges/badge-loc-ru.png" height="24" alt="Russian">&nbsp;
+<img src="resources/badges/badge-loc-pt-br.png" height="24" alt="Portuguese (Brazil)">&nbsp;
+<img src="resources/badges/badge-loc-fr.png" height="24" alt="French">&nbsp;
+<img src="resources/badges/badge-loc-ko.png" height="24" alt="Korean">&nbsp;
+<img src="resources/badges/badge-loc-de.png" height="24" alt="German">&nbsp;
+<img src="resources/badges/badge-loc-zh-tw.png" height="24" alt="Traditional Chinese">&nbsp;
+<img src="resources/badges/badge-loc-it.png" height="24" alt="Italian">&nbsp;
+<img src="resources/badges/badge-loc-tr.png" height="24" alt="Turkish">
 
 ![overview](resources/images/header-1.png)
 

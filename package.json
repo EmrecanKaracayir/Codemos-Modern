@@ -66,12 +66,12 @@
       {
         "label": "Codemos Modern (Dark)",
         "uiTheme": "vs-dark",
-        "path": "./themes/Codemos Modern (Dark)-color-theme.json"
+        "path": "./themes/vscode/Codemos Modern (Dark)-color-theme.json"
       },
       {
         "label": "Codemos Modern (Light)",
         "uiTheme": "vs",
-        "path": "./themes/Codemos Modern (Light)-color-theme.json"
+        "path": "./themes/vscode/Codemos Modern (Light)-color-theme.json"
       }
     ],
     "configuration": [

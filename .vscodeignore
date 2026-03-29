@@ -1,11 +1,12 @@
+# Exclude
 .github/
 .husky/
 .vscode/
 node_modules/
-others/
-out/int/
+out/
 resources/
 source/
+themes/
 .editorconfig
 .gitignore
 .nvmrc
@@ -13,3 +14,7 @@ source/
 esbuild.config.mjs
 eslint.config.mjs
 tsconfig.json
+
+# Include
+!out/bin/
+!themes/vscode/
