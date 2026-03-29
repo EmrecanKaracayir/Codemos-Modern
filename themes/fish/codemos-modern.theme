@@ -4,7 +4,7 @@
 # preferred_background: 171717
 fish_color_autosuggestion 6B6B6B
 fish_color_cancel D19797
-fish_color_command BFAf40
+fish_color_command BFAF40
 fish_color_comment 45AA41
 fish_color_cwd 87ABC0
 fish_color_cwd_root 87ABC0 --bold
@@ -15,14 +15,14 @@ fish_color_history_current 87ABC0 --bold
 fish_color_host 9B87EA
 fish_color_host_remote 46A598
 fish_color_keyword ED63BA
-fish_color_match --background=584036
+fish_color_match --background=583F35
 fish_color_normal CCCCCC
 fish_color_operator C59E7F
 fish_color_option ADA77F
 fish_color_param D28342
 fish_color_quote CB8569
 fish_color_redirection 4B9ECD
-fish_color_search_match --background=284A47
+fish_color_search_match --background=284A45
 fish_color_selection --background=2A2A2A
 fish_color_status EF6363
 fish_color_user A9A0CB
@@ -44,7 +44,7 @@ fish_pager_color_selected_prefix 46A598 --bold
 
 [light]
 # preferred_background: F9F9F9
-fish_color_autosuggestion 7C7C7C
+fish_color_autosuggestion 7D7D7D
 fish_color_cancel C35354
 fish_color_command 7D7000
 fish_color_comment 006904
@@ -57,15 +57,15 @@ fish_color_history_current 5B79A2 --bold
 fish_color_host 7700EE
 fish_color_host_remote 006560
 fish_color_keyword AC0074
-fish_color_match --background=E0D8D4
-fish_color_normal 1E1E1E
+fish_color_match --background=DFD7D4
+fish_color_normal 191919
 fish_color_operator 8D7252
 fish_color_option 7D7852
 fish_color_param 9F5500
 fish_color_quote 784F3F
 fish_color_redirection 0052C6
 fish_color_search_match --background=C7DBDA
-fish_color_selection --background=EDEDED
+fish_color_selection --background=E5E5E5
 fish_color_status B70004
 fish_color_user 8E64B9
 fish_color_valid_path 5B79A2 --underline
@@ -74,12 +74,12 @@ fish_pager_color_background
 fish_pager_color_completion 567E7C
 fish_pager_color_description 528256
 fish_pager_color_prefix 006560 --bold
-fish_pager_color_progress 7C7C7C
+fish_pager_color_progress 7D7D7D
 fish_pager_color_secondary_background --background=F2F2F2
 fish_pager_color_secondary_completion 567E7C
 fish_pager_color_secondary_description 528256
 fish_pager_color_secondary_prefix 006560 --bold
-fish_pager_color_selected_background --background=EDEDED
+fish_pager_color_selected_background --background=E5E5E5
 fish_pager_color_selected_completion 567E7C
 fish_pager_color_selected_description 528256
 fish_pager_color_selected_prefix 006560 --bold
@@ -88,7 +88,7 @@ fish_pager_color_selected_prefix 006560 --bold
 # preferred_background: 171717
 fish_color_autosuggestion 6B6B6B
 fish_color_cancel D19797
-fish_color_command BFAf40
+fish_color_command BFAF40
 fish_color_comment 45AA41
 fish_color_cwd 87ABC0
 fish_color_cwd_root 87ABC0 --bold
@@ -99,14 +99,14 @@ fish_color_history_current 87ABC0 --bold
 fish_color_host 9B87EA
 fish_color_host_remote 46A598
 fish_color_keyword ED63BA
-fish_color_match --background=584036
+fish_color_match --background=583F35
 fish_color_normal CCCCCC
 fish_color_operator C59E7F
 fish_color_option ADA77F
 fish_color_param D28342
 fish_color_quote CB8569
 fish_color_redirection 4B9ECD
-fish_color_search_match --background=284A47
+fish_color_search_match --background=284A45
 fish_color_selection --background=2A2A2A
 fish_color_status EF6363
 fish_color_user A9A0CB

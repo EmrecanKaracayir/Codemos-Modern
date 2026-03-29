@@ -1,54 +1,49 @@
 import { mkdirSync, writeFileSync } from "fs";
 import { join } from "path";
-import { ThemeContext, Variant } from "../@types";
-import { STYLES_DIR_PATH } from "../data/paths";
+import { Design, Styles, ThemeContext, Variant } from "../@types";
+import {
+  FISH_DIR_PATH,
+  GHOSTTY_DIR_PATH,
+  STARSHIP_DIR_PATH,
+  STYLES_DIR_PATH,
+} from "../data/paths";
 import { getThemePaths } from "../extension/helpers";
 import { defaultConfig } from "../modern";
 import { getStyles } from "../modern/variants";
-import { getStyles as getDarkModernStyles } from "../modern/variants/dark/modern";
 import { getThemeObj } from "../theme";
+import { processTemplates, StylesMap } from "../template";
+
+// Generate styles for all variant/design combinations
+const variants: Variant[] = ["dark", "light"];
+const designs: Design[] = ["flat", "minimal", "modern", "natural"];
+
+const stylesMap: StylesMap = {} as StylesMap;
+for (const variant of variants) {
+  stylesMap[variant] = {} as Record<Design, Styles>;
+  for (const design of designs) {
+    const config = {
+      ...defaultConfig,
+      [variant]: { ...defaultConfig[variant], design },
+    };
+    stylesMap[variant][design] = getStyles(variant, config);
+  }
+}
 
 // Export styles of all designs
-mkdirSync(join(STYLES_DIR_PATH, "dark"), { recursive: true });
-writeFileSync(
-  join(STYLES_DIR_PATH, "dark/flat.json"),
-  JSON.stringify(getStyles("dark", defaultConfig), null, 2),
-);
-writeFileSync(
-  join(STYLES_DIR_PATH, "dark/minimal.json"),
-  JSON.stringify(getStyles("dark", defaultConfig), null, 2),
-);
-writeFileSync(
-  join(STYLES_DIR_PATH, "dark/modern.json"),
-  JSON.stringify(getDarkModernStyles(defaultConfig.dark), null, 2),
-);
-writeFileSync(
-  join(STYLES_DIR_PATH, "dark/natural.json"),
-  JSON.stringify(getStyles("dark", defaultConfig), null, 2),
-);
-mkdirSync(join(STYLES_DIR_PATH, "light"), { recursive: true });
-writeFileSync(
-  join(STYLES_DIR_PATH, "light/flat.json"),
-  JSON.stringify(getStyles("light", defaultConfig), null, 2),
-);
-writeFileSync(
-  join(STYLES_DIR_PATH, "light/minimal.json"),
-  JSON.stringify(getStyles("light", defaultConfig), null, 2),
-);
-writeFileSync(
-  join(STYLES_DIR_PATH, "light/modern.json"),
-  JSON.stringify(getStyles("light", defaultConfig), null, 2),
-);
-writeFileSync(
-  join(STYLES_DIR_PATH, "light/natural.json"),
-  JSON.stringify(getStyles("light", defaultConfig), null, 2),
-);
+for (const variant of variants) {
+  mkdirSync(join(STYLES_DIR_PATH, variant), { recursive: true });
+  for (const design of designs) {
+    writeFileSync(
+      join(STYLES_DIR_PATH, `${variant}/${design}.json`),
+      JSON.stringify(stylesMap[variant][design], null, 2),
+    );
+  }
+}
 
 // Export themes
 const themePaths = getThemePaths();
 
 //  Export default vscode themes
-const variants: Variant[] = ["dark", "light"];
 variants.forEach((variant) => {
   const themeContext: ThemeContext = {
     textDecorations: defaultConfig.textDecorations,
@@ -63,3 +58,9 @@ variants.forEach((variant) => {
     JSON.stringify(getThemeObj(themeContext), null, 2),
   );
 });
+
+// Export other app themes
+const appDirs = [FISH_DIR_PATH, GHOSTTY_DIR_PATH, STARSHIP_DIR_PATH];
+for (const appDir of appDirs) {
+  processTemplates(appDir, stylesMap);
+}

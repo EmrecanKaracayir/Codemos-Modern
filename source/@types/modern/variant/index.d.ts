@@ -4,6 +4,7 @@ export type Palette = {
   hic: string;
   basic: {
     def: {
+      gray: string;
       brown: string;
       red: string;
       orange: string;

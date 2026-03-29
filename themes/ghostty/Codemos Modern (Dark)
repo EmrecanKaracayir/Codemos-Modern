@@ -5,14 +5,14 @@ selection-foreground = #FFFFFF
 selection-background = #2A2A2A
 
 # Palette
-palette =  0=#464646
+palette =  0=#454545
 palette =  1=#EF6363
 palette =  2=#45AA41
 palette =  3=#BFAF40
 palette =  4=#4B9ECD
 palette =  5=#ED63BA
 palette =  6=#46A598
-palette =  7=#959595
+palette =  7=#949494
 palette =  8=#6B6B6B
 palette =  9=#D19797
 palette = 10=#80B27F
@@ -28,6 +28,6 @@ cursor-text  = #000000
 
 # Search
 search-foreground          = #CCCCCC
-search-background          = #1F3331
+search-background          = #1F2E2C
 search-selected-foreground = #FFFFFF
-search-selected-background = #284A47
+search-selected-background = #284A45

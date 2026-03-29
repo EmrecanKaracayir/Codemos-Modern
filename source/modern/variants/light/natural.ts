@@ -16,6 +16,7 @@ const palette: Palette = {
   hic: "#000000",
   basic: {
     def: {
+      gray: "#858585",
       brown: "#784F3F",
       red: "#B70004",
       orange: "#9F5500",
@@ -384,10 +385,10 @@ export function getStyles(variantConfig: VariantConfig): Styles {
         default: `${palette.hic}${getHexAlpha(10)}`,
       },
       surface: {
-        flyout: `#858585${getHexAlpha(32)}`,
+        flyout: `${palette.basic.def.gray}${getHexAlpha(32)}`,
       },
       focus: {
-        default: `#858585${getHexAlpha(32)}`,
+        default: `${palette.basic.def.gray}${getHexAlpha(32)}`,
       },
     },
     bg: {
