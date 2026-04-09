@@ -79,26 +79,26 @@ format = "[$symbol]($style)"
 disabled = false
 
 [os.symbols]
-Macos = " "
+Macos = " "
 Windows = " "
 
 [directory]
 style = "fg:alt_blue bg:lc_blue"
 repo_root_style = "fg:def_blue bg:lc_blue"
-read_only = ""
+read_only = ""
 read_only_style = "fg:def_red bg:lc_blue"
 format = """
 [ $path ]($style)\
-([]($style)[ $read_only ]($read_only_style))"""
+([]($style)[ $read_only ]($read_only_style))"""
 repo_root_format = """
 [  ]($repo_root_style)\
 ([$path ]($style))\
-([]($style)[ $read_only ]($read_only_style))"""
+([]($style)[ $read_only ]($read_only_style))"""
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-symbol = "󰘬"
+symbol = ""
 style = "fg:lc_mint bg:def_mint"
 format = "[ $symbol $branch ]($style)"
 
